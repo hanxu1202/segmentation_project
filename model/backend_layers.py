@@ -148,6 +148,49 @@ def dense_layer(name,
         return tf.identity(conv, name='output')
 
 
+def upsampling_layer(name,
+                     x,
+                     channels,
+                     input_size,
+                     upsampling_type,
+                     filter_shape=None,
+                     upsample_rate=2,
+                     strides=(2, 2),
+                     padding='SAME',
+                     use_bn=True,
+                     use_bias=False,
+                     nl='relu',
+                     activation=True,
+                     is_training=True
+                     ):
+    with tf.variable_scope(name):
+        if upsampling_type=='conv2d_transpose':
+            filter = get_weights(shape=[filter_shape,filter_shape,channels,channels])
+            conv_transpose = tf.nn.conv2d_transpose(name='conv_transpose', value=x, filter=filter,
+                                                    output_shape=input_size * upsample_rate, strides=strides,
+                                                    padding= padding)
+            if use_bn:
+                bn = tf.layers.batch_normalization(inputs=conv_transpose, training=is_training, name='bn')
+                if activation:
+                    return tf.identity(nl_layer(bn, nl), name='output')
+                else:
+                    return tf.identity(bn, name='output')
+            elif use_bias:
+                bias = get_bias(shape=channels)
+                bias_add = tf.nn.bias_add(conv_transpose, bias, name='bias_add')
+                if activation:
+                    return tf.identity(nl_layer(bias_add, nl), name='output')
+                else:
+                    return tf.identity(bias_add, name='output')
+            elif activation:
+                return tf.identity(nl_layer(conv_transpose, nl), name='output')
+            else:
+                return tf.identity(conv_transpose, name='output')
+        if upsampling_type=='bilinear':
+            bilinear = tf.image.resize_bilinear(name='bilinear_layer', images=x,
+                                                size=(input_size*upsample_rate,input_size*upsample_rate))
+            return tf.identity(bilinear, name='output')
+
 def SEmodule(x,
              name,
              pool_size,

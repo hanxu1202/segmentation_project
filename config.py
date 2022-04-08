@@ -1,9 +1,9 @@
 from easydict import EasyDict as edict
 
 # use for debugging
-VAL_SET = edict({
+TEST_SET = edict({
     'LIST_DIR': 'E:\COCO2017/test.txt',
-    'BATCH_SIZE': 5,
+    'BATCH_SIZE': 1,
     'IMG_SIZE': 224,
     'NORM_MEAN': [0.485, 0.456, 0.406],
     'NORM_STD': [0.229, 0.224, 0.225],

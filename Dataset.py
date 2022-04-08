@@ -31,20 +31,24 @@ class Dataset(object):
         if self.batch_count == 1 and self.is_shuffle:
             random.shuffle(self.data_list)
 
-        start_index = (self.batch_count - 1) * self.batch_size
-        for i in range(start_index, start_index+self.batch_size):
-            cur_data_dir = self.data_list[i % self.data_num]
-            cur_img, cur_mask = self.read_data(cur_data_dir)
-            cur_img, cur_mask = self.preprocess(cur_img, cur_mask)
-            cur_img_batch.append(cur_img)
-            cur_mask_batch.append(cur_mask)
-        self.batch_count = self.batch_count % self.batch_num + 1
+        if self.batch_count <= self.batch_num:
+            start_index = (self.batch_count - 1) * self.batch_size
+            for i in range(start_index, start_index+self.batch_size):
+                cur_data_dir = self.data_list[i % self.data_num]
+                cur_img, cur_mask = self.read_data(cur_data_dir)
+                cur_img, cur_mask = self.preprocess(cur_img, cur_mask)
+                cur_img_batch.append(cur_img)
+                cur_mask_batch.append(cur_mask)
+            self.batch_count = self.batch_count + 1
 
-        cur_img_batch = np.asarray(cur_img_batch, dtype=np.float32)
-        cur_mask_batch = np.asarray(cur_mask_batch, dtype=np.float32)
-        cur_mask_batch = np.expand_dims(cur_mask_batch, axis=-1)
+            cur_img_batch = np.asarray(cur_img_batch, dtype=np.float32)
+            cur_mask_batch = np.asarray(cur_mask_batch, dtype=np.int32)
+            #cur_mask_batch = np.expand_dims(cur_mask_batch, axis=-1)
 
-        return cur_img_batch, cur_mask_batch
+            return cur_img_batch, cur_mask_batch, self.batch_count-1
+        else:
+            self.batch_count = 1
+            raise StopIteration
 
 
     def read_data(self, data_dir):
@@ -53,7 +57,7 @@ class Dataset(object):
         mask = cv2.imread(mask_dir,-1)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # RGB
 
-        return img, mask, self.batch_count
+        return img, mask
 
 
     def preprocess(self, img, mask):
@@ -72,8 +76,8 @@ class Dataset(object):
         return img, mask
 
 if __name__=='__main__':
-    dataset = Dataset(cfg.VAL_SET)
-    for img, mask in dataset:
+    dataset = Dataset(cfg.TEST_SET)
+    for img, mask, batch_count in dataset:
         color_mask = np.zeros((mask[0].shape[0],mask[0].shape[1],3), dtype=np.float32)
         for i in range(mask[0].shape[0]):
             for j in range(mask[0].shape[1]):
