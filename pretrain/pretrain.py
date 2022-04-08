@@ -4,7 +4,7 @@ import tensorflow as tf
 import numpy as np
 from pretrain_model import mobilenetv3_large
 from pretrain_dataset import Dataset
-from config import PRETRAIN, PRETRAIN_SET, PREVAL_SET
+from pretrain_config import PRETRAIN, PRETRAIN_SET, PREVAL_SET
 import logging
 
 
