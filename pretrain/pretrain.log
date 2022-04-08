@@ -1,0 +1,255 @@
+04/07/2022 20:14:02 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:24: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+04/07/2022 20:14:02 PM - WARNING - From E:\pycharm_project\segmentation_project\pretrain\pretrain_model.py:7: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+04/07/2022 20:14:02 PM - WARNING - From E:\pycharm_project\segmentation_project\model\backend_layers.py:6: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+04/07/2022 20:14:02 PM - WARNING - 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+04/07/2022 20:14:02 PM - WARNING - From E:\pycharm_project\segmentation_project\model\backend_layers.py:13: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+04/07/2022 20:14:02 PM - WARNING - From E:\pycharm_project\segmentation_project\model\backend_layers.py:13: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+04/07/2022 20:14:02 PM - WARNING - From E:\pycharm_project\segmentation_project\model\backend_layers.py:80: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.  In particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not be used (consult the `tf.keras.layers.batch_normalization` documentation).
+04/07/2022 20:14:02 PM - WARNING - From E:\Anaconda\envs\tf115\lib\site-packages\tensorflow_core\python\layers\normalization.py:327: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+04/07/2022 20:14:03 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:47: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+04/07/2022 20:14:03 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:51: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+04/07/2022 20:14:03 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:55: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+04/07/2022 20:14:05 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:60: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+04/07/2022 20:14:05 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:66: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+04/07/2022 20:14:05 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:70: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+04/07/2022 20:14:05 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:76: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+04/07/2022 20:14:05 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:79: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+04/07/2022 20:14:05 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:83: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+04/07/2022 20:14:15 PM - INFO - => Restoring weights from: E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv3_large.ckpt-14380 ... 
+04/07/2022 20:14:15 PM - INFO - Restoring parameters from E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv3_large.ckpt-14380
+04/07/2022 20:14:15 PM - INFO - ========================================================================================
+04/07/2022 20:14:15 PM - INFO - LIST ALL TRAINABLE VARIABLES
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_conv1/weights:0  shape: (3, 3, 3, 16)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_conv1/bn/gamma:0  shape: (16,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_conv1/bn/beta:0  shape: (16,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_dwconv/weights:0  shape: (3, 3, 16, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_dwconv/bn/gamma:0  shape: (16,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_dwconv/bn/beta:0  shape: (16,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_conv2/weights:0  shape: (1, 1, 16, 16)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_conv2/bn/gamma:0  shape: (16,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/head_conv2/bn/beta:0  shape: (16,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/expand_conv/weights:0  shape: (1, 1, 16, 64)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/expand_conv/bn/gamma:0  shape: (64,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/expand_conv/bn/beta:0  shape: (64,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/dp_conv/weights:0  shape: (3, 3, 64, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/dp_conv/bn/gamma:0  shape: (64,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/dp_conv/bn/beta:0  shape: (64,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/proj_conv/weights:0  shape: (1, 1, 64, 24)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/proj_conv/bn/gamma:0  shape: (24,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_1/proj_conv/bn/beta:0  shape: (24,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/expand_conv/weights:0  shape: (1, 1, 24, 72)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/expand_conv/bn/gamma:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/expand_conv/bn/beta:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/dp_conv/weights:0  shape: (3, 3, 72, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/dp_conv/bn/gamma:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/dp_conv/bn/beta:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/proj_conv/weights:0  shape: (1, 1, 72, 24)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/proj_conv/bn/gamma:0  shape: (24,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck1_2/proj_conv/bn/beta:0  shape: (24,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/expand_conv/weights:0  shape: (1, 1, 24, 72)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/expand_conv/bn/gamma:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/expand_conv/bn/beta:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/dp_conv/weights:0  shape: (5, 5, 72, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/dp_conv/bn/gamma:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/dp_conv/bn/beta:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/SEmodule/dense1/conv/weights:0  shape: (1, 1, 72, 24)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/SEmodule/dense1/conv/bias:0  shape: (24,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/SEmodule/dense2/conv/weights:0  shape: (1, 1, 24, 72)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/SEmodule/dense2/conv/bias:0  shape: (72,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/proj_conv/weights:0  shape: (1, 1, 72, 40)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/proj_conv/bn/gamma:0  shape: (40,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_1/proj_conv/bn/beta:0  shape: (40,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/expand_conv/weights:0  shape: (1, 1, 40, 120)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/expand_conv/bn/gamma:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/expand_conv/bn/beta:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/dp_conv/weights:0  shape: (5, 5, 120, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/dp_conv/bn/gamma:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/dp_conv/bn/beta:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/SEmodule/dense1/conv/weights:0  shape: (1, 1, 120, 32)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/SEmodule/dense1/conv/bias:0  shape: (32,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/SEmodule/dense2/conv/weights:0  shape: (1, 1, 32, 120)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/SEmodule/dense2/conv/bias:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/proj_conv/weights:0  shape: (1, 1, 120, 40)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/proj_conv/bn/gamma:0  shape: (40,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_2/proj_conv/bn/beta:0  shape: (40,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/expand_conv/weights:0  shape: (1, 1, 40, 120)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/expand_conv/bn/gamma:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/expand_conv/bn/beta:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/dp_conv/weights:0  shape: (5, 5, 120, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/dp_conv/bn/gamma:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/dp_conv/bn/beta:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/SEmodule/dense1/conv/weights:0  shape: (1, 1, 120, 32)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/SEmodule/dense1/conv/bias:0  shape: (32,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/SEmodule/dense2/conv/weights:0  shape: (1, 1, 32, 120)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/SEmodule/dense2/conv/bias:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/proj_conv/weights:0  shape: (1, 1, 120, 40)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/proj_conv/bn/gamma:0  shape: (40,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck2_3/proj_conv/bn/beta:0  shape: (40,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/expand_conv/weights:0  shape: (1, 1, 40, 240)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/expand_conv/bn/gamma:0  shape: (240,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/expand_conv/bn/beta:0  shape: (240,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/dp_conv/weights:0  shape: (3, 3, 240, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/dp_conv/bn/gamma:0  shape: (240,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/dp_conv/bn/beta:0  shape: (240,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/proj_conv/weights:0  shape: (1, 1, 240, 80)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/proj_conv/bn/gamma:0  shape: (80,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_1/proj_conv/bn/beta:0  shape: (80,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/expand_conv/weights:0  shape: (1, 1, 80, 200)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/expand_conv/bn/gamma:0  shape: (200,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/expand_conv/bn/beta:0  shape: (200,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/dp_conv/weights:0  shape: (3, 3, 200, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/dp_conv/bn/gamma:0  shape: (200,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/dp_conv/bn/beta:0  shape: (200,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/proj_conv/weights:0  shape: (1, 1, 200, 80)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/proj_conv/bn/gamma:0  shape: (80,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_2/proj_conv/bn/beta:0  shape: (80,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/expand_conv/weights:0  shape: (1, 1, 80, 184)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/expand_conv/bn/gamma:0  shape: (184,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/expand_conv/bn/beta:0  shape: (184,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/dp_conv/weights:0  shape: (3, 3, 184, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/dp_conv/bn/gamma:0  shape: (184,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/dp_conv/bn/beta:0  shape: (184,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/proj_conv/weights:0  shape: (1, 1, 184, 80)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/proj_conv/bn/gamma:0  shape: (80,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_3/proj_conv/bn/beta:0  shape: (80,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/expand_conv/weights:0  shape: (1, 1, 80, 184)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/expand_conv/bn/gamma:0  shape: (184,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/expand_conv/bn/beta:0  shape: (184,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/dp_conv/weights:0  shape: (3, 3, 184, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/dp_conv/bn/gamma:0  shape: (184,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/dp_conv/bn/beta:0  shape: (184,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/proj_conv/weights:0  shape: (1, 1, 184, 80)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/proj_conv/bn/gamma:0  shape: (80,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_4/proj_conv/bn/beta:0  shape: (80,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/expand_conv/weights:0  shape: (1, 1, 80, 480)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/expand_conv/bn/gamma:0  shape: (480,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/expand_conv/bn/beta:0  shape: (480,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/dp_conv/weights:0  shape: (3, 3, 480, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/dp_conv/bn/gamma:0  shape: (480,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/dp_conv/bn/beta:0  shape: (480,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/SEmodule/dense1/conv/weights:0  shape: (1, 1, 480, 120)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/SEmodule/dense1/conv/bias:0  shape: (120,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/SEmodule/dense2/conv/weights:0  shape: (1, 1, 120, 480)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/SEmodule/dense2/conv/bias:0  shape: (480,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/proj_conv/weights:0  shape: (1, 1, 480, 112)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/proj_conv/bn/gamma:0  shape: (112,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_5/proj_conv/bn/beta:0  shape: (112,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/expand_conv/weights:0  shape: (1, 1, 112, 672)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/expand_conv/bn/gamma:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/expand_conv/bn/beta:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/dp_conv/weights:0  shape: (3, 3, 672, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/dp_conv/bn/gamma:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/dp_conv/bn/beta:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/SEmodule/dense1/conv/weights:0  shape: (1, 1, 672, 168)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/SEmodule/dense1/conv/bias:0  shape: (168,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/SEmodule/dense2/conv/weights:0  shape: (1, 1, 168, 672)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/SEmodule/dense2/conv/bias:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/proj_conv/weights:0  shape: (1, 1, 672, 112)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/proj_conv/bn/gamma:0  shape: (112,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck3_6/proj_conv/bn/beta:0  shape: (112,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/expand_conv/weights:0  shape: (1, 1, 112, 672)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/expand_conv/bn/gamma:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/expand_conv/bn/beta:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/dp_conv/weights:0  shape: (5, 5, 672, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/dp_conv/bn/gamma:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/dp_conv/bn/beta:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/SEmodule/dense1/conv/weights:0  shape: (1, 1, 672, 168)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/SEmodule/dense1/conv/bias:0  shape: (168,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/SEmodule/dense2/conv/weights:0  shape: (1, 1, 168, 672)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/SEmodule/dense2/conv/bias:0  shape: (672,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/proj_conv/weights:0  shape: (1, 1, 672, 160)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/proj_conv/bn/gamma:0  shape: (160,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_1/proj_conv/bn/beta:0  shape: (160,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/expand_conv/weights:0  shape: (1, 1, 160, 960)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/expand_conv/bn/gamma:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/expand_conv/bn/beta:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/dp_conv/weights:0  shape: (5, 5, 960, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/dp_conv/bn/gamma:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/dp_conv/bn/beta:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/SEmodule/dense1/conv/weights:0  shape: (1, 1, 960, 240)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/SEmodule/dense1/conv/bias:0  shape: (240,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/SEmodule/dense2/conv/weights:0  shape: (1, 1, 240, 960)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/SEmodule/dense2/conv/bias:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/proj_conv/weights:0  shape: (1, 1, 960, 160)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/proj_conv/bn/gamma:0  shape: (160,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_2/proj_conv/bn/beta:0  shape: (160,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/expand_conv/weights:0  shape: (1, 1, 160, 960)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/expand_conv/bn/gamma:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/expand_conv/bn/beta:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/dp_conv/weights:0  shape: (5, 5, 960, 1)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/dp_conv/bn/gamma:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/dp_conv/bn/beta:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/SEmodule/dense1/conv/weights:0  shape: (1, 1, 960, 240)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/SEmodule/dense1/conv/bias:0  shape: (240,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/SEmodule/dense2/conv/weights:0  shape: (1, 1, 240, 960)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/SEmodule/dense2/conv/bias:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/proj_conv/weights:0  shape: (1, 1, 960, 160)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/proj_conv/bn/gamma:0  shape: (160,)
+04/07/2022 20:14:15 PM - INFO - name: encoder/mobilenetv3_large/bottleneck4_3/proj_conv/bn/beta:0  shape: (160,)
+04/07/2022 20:14:15 PM - INFO - name: decoder/conv1/weights:0  shape: (1, 1, 160, 960)
+04/07/2022 20:14:15 PM - INFO - name: decoder/conv1/bn/gamma:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: decoder/conv1/bn/beta:0  shape: (960,)
+04/07/2022 20:14:15 PM - INFO - name: decoder/conv2/weights:0  shape: (1, 1, 960, 1280)
+04/07/2022 20:14:15 PM - INFO - name: decoder/conv2/bias:0  shape: (1280,)
+04/07/2022 20:14:15 PM - INFO - name: decoder/logits/weights:0  shape: (1, 1, 1280, 3)
+04/07/2022 20:14:15 PM - INFO - name: decoder/logits/bias:0  shape: (3,)
+04/07/2022 20:14:15 PM - INFO - ========================================================================================
+04/07/2022 20:14:23 PM - INFO - global step: 10, epoch_1, lr: 0.00100, 10/719: Train average loss: 0.236
+04/07/2022 20:14:26 PM - INFO - global step: 20, epoch_1, lr: 0.00100, 20/719: Train average loss: 0.199
+04/07/2022 20:14:30 PM - INFO - global step: 30, epoch_1, lr: 0.00100, 30/719: Train average loss: 0.204
+04/07/2022 20:14:33 PM - INFO - global step: 40, epoch_1, lr: 0.00100, 40/719: Train average loss: 0.211
+04/07/2022 20:14:37 PM - INFO - global step: 50, epoch_1, lr: 0.00100, 50/719: Train average loss: 0.211
+04/07/2022 20:14:40 PM - INFO - global step: 60, epoch_1, lr: 0.00100, 60/719: Train average loss: 0.222
+04/07/2022 20:14:44 PM - INFO - global step: 70, epoch_1, lr: 0.00100, 70/719: Train average loss: 0.217
+04/07/2022 20:14:47 PM - INFO - global step: 80, epoch_1, lr: 0.00100, 80/719: Train average loss: 0.222
+04/07/2022 20:14:51 PM - INFO - global step: 90, epoch_1, lr: 0.00100, 90/719: Train average loss: 0.228
+04/07/2022 20:14:54 PM - INFO - global step: 100, epoch_1, lr: 0.00100, 100/719: Train average loss: 0.228
+04/07/2022 20:14:58 PM - INFO - global step: 110, epoch_1, lr: 0.00100, 110/719: Train average loss: 0.229
+04/07/2022 20:15:02 PM - INFO - global step: 120, epoch_1, lr: 0.00100, 120/719: Train average loss: 0.228
+04/07/2022 20:15:05 PM - INFO - global step: 130, epoch_1, lr: 0.00100, 130/719: Train average loss: 0.228
+04/07/2022 20:15:09 PM - INFO - global step: 140, epoch_1, lr: 0.00100, 140/719: Train average loss: 0.227
+04/07/2022 20:15:12 PM - INFO - global step: 150, epoch_1, lr: 0.00100, 150/719: Train average loss: 0.228
+04/07/2022 20:15:16 PM - INFO - global step: 160, epoch_1, lr: 0.00100, 160/719: Train average loss: 0.228
+04/07/2022 20:15:19 PM - INFO - global step: 170, epoch_1, lr: 0.00100, 170/719: Train average loss: 0.228
+04/07/2022 20:15:23 PM - INFO - global step: 180, epoch_1, lr: 0.00100, 180/719: Train average loss: 0.225
+04/07/2022 20:15:26 PM - INFO - global step: 190, epoch_1, lr: 0.00100, 190/719: Train average loss: 0.224
+04/07/2022 20:15:30 PM - INFO - global step: 200, epoch_1, lr: 0.00100, 200/719: Train average loss: 0.226
+04/07/2022 20:15:33 PM - INFO - global step: 210, epoch_1, lr: 0.00100, 210/719: Train average loss: 0.233
+04/07/2022 20:15:37 PM - INFO - global step: 220, epoch_1, lr: 0.00100, 220/719: Train average loss: 0.236
+04/07/2022 20:15:40 PM - INFO - global step: 230, epoch_1, lr: 0.00100, 230/719: Train average loss: 0.238
+04/07/2022 20:15:44 PM - INFO - global step: 240, epoch_1, lr: 0.00100, 240/719: Train average loss: 0.238
+04/07/2022 20:15:47 PM - INFO - global step: 250, epoch_1, lr: 0.00100, 250/719: Train average loss: 0.238
+04/07/2022 20:15:51 PM - INFO - global step: 260, epoch_1, lr: 0.00100, 260/719: Train average loss: 0.238
+04/07/2022 20:15:54 PM - INFO - global step: 270, epoch_1, lr: 0.00100, 270/719: Train average loss: 0.240
+04/07/2022 20:15:58 PM - INFO - global step: 280, epoch_1, lr: 0.00100, 280/719: Train average loss: 0.240
+04/07/2022 20:16:01 PM - INFO - global step: 290, epoch_1, lr: 0.00100, 290/719: Train average loss: 0.240
+04/07/2022 20:16:05 PM - INFO - global step: 300, epoch_1, lr: 0.00100, 300/719: Train average loss: 0.240
+04/07/2022 20:16:09 PM - INFO - global step: 310, epoch_1, lr: 0.00100, 310/719: Train average loss: 0.240
+04/07/2022 20:16:12 PM - INFO - global step: 320, epoch_1, lr: 0.00100, 320/719: Train average loss: 0.239
+04/07/2022 20:16:16 PM - INFO - global step: 330, epoch_1, lr: 0.00100, 330/719: Train average loss: 0.240
+04/07/2022 20:16:19 PM - INFO - global step: 340, epoch_1, lr: 0.00100, 340/719: Train average loss: 0.239
