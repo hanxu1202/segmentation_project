@@ -42,4 +42,32 @@ VAL_SET = edict({
     'AUG_PAR': None
 })
 
+TRAIN = edict({
+    'START_EPOCH': 1,
+    'TOTAL_EPOCH': 100,
+    'PRETRAINED_BACKBONE':'E:\pycharm_project\segmentation_project\\checkpoints\\pretrained_backbones\\mobilenetv3_add_prefix.ckpt' ,
+    'RESUME_CKPT': None,
+    'NUM_CLASSES': 3,
+    'INIT_LR': 0.001,
+    'LR_DECAY_STEP': 2000,
+    'LR_DECAY_RATE': 0.9,
+    'SUMMARY_STEP': 10,
+    'BACKBONE_TYPE': 'mobilenetv3_large',
+    'MODEL_TYPE':'FCN8s',
+    'SAVE_DIR': 'E:\pycharm_project\segmentation_project\\checkpoints\\',
+    'SAVE_EPOCH': 1,
+    'VALID_EPOCH': 1,
+})
 
+
+PREDICT = edict({
+    'IMAGE_DIR': 'E:\pycharm_project\segmentation_project\\test_img',
+    'IMG_SIZE': 224,
+    'NORM_MEAN': [0.485, 0.456, 0.406],
+    'NORM_STD': [0.229, 0.224, 0.225],
+    'MODEL_CKPT': None,
+    'NUM_CLASSES': 3,
+    'BACKBONE_TYPE': 'mobilenetv3_large',
+    'MODEL_TYPE': 'FCN8s',
+
+})

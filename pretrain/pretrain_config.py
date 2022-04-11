@@ -41,9 +41,9 @@ PREVAL_SET = edict({
 })
 
 PRETRAIN = edict({
-    'START_EPOCH': 1,
-    'TOTAL_EPOCH': 50,
-    'RESUME_CKPT': 'E:\pycharm_project\segmentation_project\pretrain\checkpoints\\mobilenetv3_large.ckpt-14380',
+    'START_EPOCH': 72,
+    'TOTAL_EPOCH': 100,
+    'RESUME_CKPT': 'E:\pycharm_project\segmentation_project\pretrain\checkpoints\\mobilenetv3_large.ckpt-51049',
     'NUM_CLASSES': 3,
     'INIT_LR': 0.001,
     'LR_DECAY_STEP': 1000,
