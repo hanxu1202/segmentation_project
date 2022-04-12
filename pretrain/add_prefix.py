@@ -3,7 +3,7 @@ import os
 
 old_model_path= 'E:\pycharm_project\segmentation_project\pretrain\\checkpoints\\mobilenetv3_large.ckpt-61115'
 new_model_path= 'E:\pycharm_project\segmentation_project\pretrain\\mobilenetv3_add_prefix.ckpt'
-add_prefix= 'FCN8s/'
+add_prefix= 'FCN/'
 
 def main():
     with tf.Session() as sess:

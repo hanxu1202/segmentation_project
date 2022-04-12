@@ -1,5 +1,7 @@
 import numpy as np
 import cv2
+import pydensecrf.densecrf as dcrf
+from pydensecrf.utils import unary_from_softmax
 
 def conmpute_confusion_matrix(pre, gt, num_classes):
     """
@@ -28,8 +30,31 @@ def draw_colored_mask(img, mask, color_map):
     for i in range(mask.shape[0]):
         for j in range(mask.shape[1]):
             color_mask[i][j][:] = color_map[mask[i][j]][:]
-    masked_img = cv2.addWeighted(img, 1, color_mask, 0.5, 0)
+    masked_img = cv2.addWeighted(img, 1, color_mask, 0.8, 0)
     return masked_img
+
+def CRF_process(ori_prob, ori_img, num_classes):
+    # CRF
+    d = dcrf.DenseCRF2D(ori_img.shape[1], ori_img.shape[0], num_classes) # w, h, n_classes
+
+    # get unary
+    prob = np.squeeze(ori_prob)
+    prob = cv2.resize(prob, (ori_img.shape[1], ori_img.shape[0])) # w, h
+    prob = prob.transpose(2, 0, 1)
+    U = unary_from_softmax(prob)
+    U = np.ascontiguousarray(U)
+    d.setUnaryEnergy(U)
+
+    # PAIRWISE
+    d.addPairwiseGaussian(sxy=3, compat=3)
+    #d.addPairwiseBilateral(sxy=80, srgb=13, rgbim=im, compat=10)
+
+    # inference
+    Q = d.inference(5)
+
+    # map
+    map = np.argmax(Q, axis=0).reshape((ori_img.shape[0], ori_img.shape[1]))
+    return map
 
 if __name__=='__main__':
     img = cv2.imread('../test_img.jpg', -1)

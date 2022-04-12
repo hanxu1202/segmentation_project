@@ -13,7 +13,7 @@ TEST_SET = edict({
 })
 
 TRAIN_SET = edict({
-    'LIST_DIR': 'E:\COCO2017/coco_train2017_catdog.txt',
+    'LIST_DIR': 'E:\dogcat_seg\\train.txt',
     'BATCH_SIZE': 16,
     'IMG_SIZE': 224,
     'NORM_MEAN': [0.485, 0.456, 0.406],
@@ -32,7 +32,7 @@ TRAIN_SET = edict({
 
 
 VAL_SET = edict({
-    'LIST_DIR': 'E:\COCO2017/coco_val2017_catdog.txt',
+    'LIST_DIR': 'E:\dogcat_seg\\val.txt',
     'BATCH_SIZE': 16,
     'IMG_SIZE': 224,
     'NORM_MEAN': [0.485, 0.456, 0.406],
@@ -44,16 +44,17 @@ VAL_SET = edict({
 
 TRAIN = edict({
     'START_EPOCH': 1,
-    'TOTAL_EPOCH': 100,
+    'TOTAL_EPOCH': 200,
     'PRETRAINED_BACKBONE':'E:\pycharm_project\segmentation_project\\checkpoints\\pretrained_backbones\\mobilenetv3_add_prefix.ckpt' ,
     'RESUME_CKPT': None,
     'NUM_CLASSES': 3,
     'INIT_LR': 0.001,
-    'LR_DECAY_STEP': 2000,
+    'LR_DECAY_STEP': 2500,
     'LR_DECAY_RATE': 0.9,
     'SUMMARY_STEP': 10,
     'BACKBONE_TYPE': 'mobilenetv3_large',
-    'MODEL_TYPE':'FCN8s',
+    'MODEL_TYPE': 'FCN',
+    'DS_FEATURE': 4,
     'SAVE_DIR': 'E:\pycharm_project\segmentation_project\\checkpoints\\',
     'SAVE_EPOCH': 1,
     'VALID_EPOCH': 1,
@@ -61,13 +62,15 @@ TRAIN = edict({
 
 
 PREDICT = edict({
-    'IMAGE_DIR': 'E:\pycharm_project\segmentation_project\\test_img',
+    'IMAGE_DIR': 'E:\pycharm_project\segmentation_project\\test_img\\6.jpg',
     'IMG_SIZE': 224,
     'NORM_MEAN': [0.485, 0.456, 0.406],
     'NORM_STD': [0.229, 0.224, 0.225],
     'MODEL_CKPT': None,
     'NUM_CLASSES': 3,
     'BACKBONE_TYPE': 'mobilenetv3_large',
-    'MODEL_TYPE': 'FCN8s',
+    'MODEL_TYPE': 'FCN',
+    'DS_FEATURE': 4,
+    'MODEL_CKPT': 'E:\pycharm_project\segmentation_project\checkpoints\\FCN8s_mobilenetv3_large.ckpt-32592'
 
 })

@@ -62,7 +62,7 @@ def mobilenetv3_large(input, is_training, input_size=224):
                                      output_channels=160, dpconv_ksize=5, nl='h_swish', is_ds=False, use_se=True,
                                      mid_channels=240, pool_size=int(input_size // 32), is_training=is_training)
 
-        return bottleneck2_3, bottleneck3_6, bottleneck4_3
+        return bottleneck1_2, bottleneck2_3, bottleneck3_6, bottleneck4_3
 
 
 if __name__=='__main__':

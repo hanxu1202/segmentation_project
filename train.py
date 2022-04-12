@@ -2,18 +2,19 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES']='0'
 import tensorflow as tf
 import numpy as np
-from model.FCN8s import FCN8s
+from model.FCN import FCN
 from dataset import Dataset
 from config import TRAIN, TRAIN_SET, VAL_SET
 from utils.utils import compute_miou
 import logging
-
+import datetime
 
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
 
-logging.basicConfig(filename='./train_FCN8s_mobilenetv3_large.log', filemode='w', level=logging.DEBUG, format=LOG_FORMAT, datefmt=DATE_FORMAT)
+filename='./'+ str(datetime.date.today())+'_train_'+TRAIN.MODEL_TYPE+str(TRAIN.DS_FEATURE)+'s_'+TRAIN.BACKBONE_TYPE +'.log'
+logging.basicConfig(filename=filename, filemode='w', level=logging.DEBUG, format=LOG_FORMAT, datefmt=DATE_FORMAT)
 
 
 def train(trainset, valset):
@@ -29,8 +30,8 @@ def train(trainset, valset):
                 x5 = tf.placeholder(dtype=tf.int32, name='global_step')
 
             # forward
-            if TRAIN.MODEL_TYPE == "FCN8s":
-                logits = FCN8s(input=x1, num_classes=TRAIN.NUM_CLASSES, backbone_type=TRAIN.BACKBONE_TYPE, is_training=x3, input_size=224)
+            if TRAIN.MODEL_TYPE == "FCN":
+                logits = FCN(input=x1, num_classes=TRAIN.NUM_CLASSES, backbone_type=TRAIN.BACKBONE_TYPE, is_training=x3, input_size=224, ds_feature=TRAIN.DS_FEATURE)
                 squeeze = tf.squeeze(logits)
 
             # define loss
@@ -134,7 +135,7 @@ def train(trainset, valset):
                 train_miou = np.mean(train_epoch_miou)
                 logging.info("epoch_%d: Train set(Aug) miou is: %.3f" % (epoch, train_miou))
                 if epoch % TRAIN.SAVE_EPOCH == 0:
-                    saver.save(sess, TRAIN.SAVE_DIR + "FCN8s_"+TRAIN.BACKBONE_TYPE + ".ckpt", global_step=global_step)
+                    saver.save(sess, TRAIN.SAVE_DIR + TRAIN.MODEL_TYPE+str(TRAIN.DS_FEATURE)+'s_'+TRAIN.BACKBONE_TYPE + ".ckpt", global_step=global_step)
 
                 if epoch % TRAIN.VALID_EPOCH == 0:
                     valid_epoch_miou = []
