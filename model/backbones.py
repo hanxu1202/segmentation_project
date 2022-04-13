@@ -54,7 +54,7 @@ def mobilenetv3_large(input, is_training, input_size=224):
 
         bottleneck4_1 = v3Bottleneck(name='bottleneck4_1', x=bottleneck3_6, input_channels=112, expand_channels=672,
                                      output_channels=160, dpconv_ksize=5, nl='h_swish', is_ds=True, use_se=True,
-                                     mid_channels=168, pool_size=int(input_size // 32), is_training=is_training) #/32
+                                     mid_channels=168, pool_size=int(input_size // 32), is_training=is_training)  # /32
         bottleneck4_2 = v3Bottleneck(name='bottleneck4_2', x=bottleneck4_1, input_channels=160, expand_channels=960,
                                      output_channels=160, dpconv_ksize=5, nl='h_swish', is_ds=False, use_se=True,
                                      mid_channels=240, pool_size=int(input_size // 32), is_training=is_training)

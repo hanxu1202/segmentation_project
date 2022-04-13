@@ -15,7 +15,7 @@ def predcit(image):
         x1 = tf.placeholder(dtype=tf.float32, shape=[1, 224, 224, 3])
 
         # forward
-        if PREDICT.MODEL_TYPE == 'FCN8s':
+        if PREDICT.MODEL_TYPE == 'FCN':
             logits_output = FCN(x1, 3, backbone_type=PREDICT.BACKBONE_TYPE, is_training=False, input_size=224, ds_feature=PREDICT.DS_FEATURE)
 
         # predict
@@ -25,7 +25,7 @@ def predcit(image):
         # loader
         load_var_list=[]
         for v in tf.global_variables():
-            if 'FCN8s' in v.name:
+            if 'FCN' in v.name:
                 load_var_list.append(v)
 
         loader = tf.train.Saver(var_list=load_var_list)
@@ -47,7 +47,6 @@ def predcit(image):
 
 if __name__=='__main__':    
     image = cv2.imread(PREDICT.IMAGE_DIR, -1)   # image.shape: h, w, c
-
     image_norm = (image/255 - PREDICT.NORM_MEAN) / PREDICT.NORM_STD
     img_resize = cv2.resize(image_norm, (PREDICT.IMG_SIZE, PREDICT.IMG_SIZE))
     img_resize = np.expand_dims(img_resize, 0)

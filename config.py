@@ -30,7 +30,6 @@ TRAIN_SET = edict({
 })
 
 
-
 VAL_SET = edict({
     'LIST_DIR': 'E:\dogcat_seg\\val.txt',
     'BATCH_SIZE': 16,
@@ -41,6 +40,7 @@ VAL_SET = edict({
     'IS_SHUFFLE': False,
     'AUG_PAR': None
 })
+
 
 TRAIN = edict({
     'START_EPOCH': 1,
@@ -62,7 +62,7 @@ TRAIN = edict({
 
 
 PREDICT = edict({
-    'IMAGE_DIR': 'E:\pycharm_project\segmentation_project\\test_img\\6.jpg',
+    'IMAGE_DIR': 'E:\pycharm_project\segmentation_project\\test_img\\1.jpg',
     'IMG_SIZE': 224,
     'NORM_MEAN': [0.485, 0.456, 0.406],
     'NORM_STD': [0.229, 0.224, 0.225],
@@ -71,6 +71,6 @@ PREDICT = edict({
     'BACKBONE_TYPE': 'mobilenetv3_large',
     'MODEL_TYPE': 'FCN',
     'DS_FEATURE': 4,
-    'MODEL_CKPT': 'E:\pycharm_project\segmentation_project\checkpoints\\FCN8s_mobilenetv3_large.ckpt-32592'
+    'MODEL_CKPT': 'E:\pycharm_project\segmentation_project\checkpoints\\FCN4s_mobilenetv3_large\\FCN4s_mobilenetv3_large.ckpt-77600'
 
 })

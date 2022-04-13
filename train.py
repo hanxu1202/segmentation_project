@@ -10,14 +10,20 @@ import logging
 import datetime
 
 
-LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
-DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
-
-filename='./'+ str(datetime.date.today())+'_train_'+TRAIN.MODEL_TYPE+str(TRAIN.DS_FEATURE)+'s_'+TRAIN.BACKBONE_TYPE +'.log'
-logging.basicConfig(filename=filename, filemode='w', level=logging.DEBUG, format=LOG_FORMAT, datefmt=DATE_FORMAT)
-
-
 def train(trainset, valset):
+
+    # logfile settings.
+    LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
+    DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
+
+    filename = './' + str(datetime.date.today()) + '_train_' + TRAIN.MODEL_TYPE + str(
+        TRAIN.DS_FEATURE) + 's_' + TRAIN.BACKBONE_TYPE + '.log'
+    logging.basicConfig(filename=filename, filemode='w', level=logging.DEBUG, format=LOG_FORMAT, datefmt=DATE_FORMAT)
+    logging.info('Train configuration:')
+    for key, value in TRAIN.items():
+        logging.info(key + ': ' + str(value))
+
+    # graph and operation
     with tf.device('/gpu:0'):
         g1 = tf.Graph()
         with g1.as_default():
@@ -159,7 +165,7 @@ def train(trainset, valset):
 
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     trianset = Dataset(TRAIN_SET)
     validset = Dataset(VAL_SET)
-    train(trianset,validset)
+    train(trianset, validset)
