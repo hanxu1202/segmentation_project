@@ -45,7 +45,7 @@ VAL_SET = edict({
 TRAIN = edict({
     'START_EPOCH': 1,
     'TOTAL_EPOCH': 200,
-    'PRETRAINED_BACKBONE':'E:\pycharm_project\segmentation_project\\checkpoints\\pretrained_backbones\\mobilenetv3_add_prefix.ckpt' ,
+    'PRETRAINED_BACKBONE': None ,
     'RESUME_CKPT': None,
     'NUM_CLASSES': 3,
     'INIT_LR': 0.001,

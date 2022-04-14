@@ -2,20 +2,24 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES']='0'
 import tensorflow as tf
 import numpy as np
-from pretrain_model import mobilenetv3_large
+from pretrain_model import mobilenetv3_large, mobilenetv3_large_16s
 from pretrain_dataset import Dataset
 from pretrain_config import PRETRAIN, PRETRAIN_SET, PREVAL_SET
 import logging
-
-
-
-LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
-DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
-
-logging.basicConfig(filename='./pretrain.log', filemode='w', level=logging.DEBUG, format=LOG_FORMAT, datefmt=DATE_FORMAT)
+import datetime
 
 
 def train(trainset, valset):
+    # logfile settings.
+    LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
+    DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
+
+    filename = './' + str(datetime.date.today()) + '_pretrain_' + PRETRAIN.MODEL_TYPE + '.log'
+    logging.basicConfig(filename=filename, filemode='w', level=logging.DEBUG, format=LOG_FORMAT, datefmt=DATE_FORMAT)
+    logging.info('Train configuration:')
+    for key, value in PRETRAIN.items():
+        logging.info(key + ': ' + str(value))
+
     with tf.device('/gpu:0'):
         g1 = tf.Graph()
         with g1.as_default():
@@ -28,8 +32,11 @@ def train(trainset, valset):
                 x5 = tf.placeholder(dtype=tf.int32, name='global_step')
 
             # forward
-            if PRETRAIN.NET_TYPE == "mobilenetv3_large":
+            if PRETRAIN.MODEL_TYPE == "mobilenetv3_large":
                 logits = mobilenetv3_large(input=x1, is_training=x3, input_size=PRETRAIN_SET.IMG_SIZE, num_classes=PRETRAIN.NUM_CLASSES)
+                squeeze = tf.squeeze(logits)
+            if PRETRAIN.MODEL_TYPE == "mobilenetv3_large_16s":
+                logits = mobilenetv3_large_16s(input=x1, is_training=x3, input_size=PRETRAIN_SET.IMG_SIZE, num_classes=PRETRAIN.NUM_CLASSES)
                 squeeze = tf.squeeze(logits)
 
             # define loss
@@ -120,7 +127,7 @@ def train(trainset, valset):
                 train_mean_acc = np.mean(train_epoch_acc)
                 logging.info("epoch_%d: Train set(Aug) acc is: %.3f" % (epoch, train_mean_acc))
                 if epoch % PRETRAIN.SAVE_EPOCH == 0:
-                    saver.save(sess, PRETRAIN.SAVE_DIR + "mobilenetv3_large.ckpt", global_step=global_step)
+                    saver.save(sess, PRETRAIN.SAVE_DIR + PRETRAIN.MODEL_TYPE + ".ckpt", global_step=global_step)
 
                 if epoch % PRETRAIN.VALID_EPOCH == 0:
                     valid_epoch_acc = []
