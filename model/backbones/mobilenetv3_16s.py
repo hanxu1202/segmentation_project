@@ -62,7 +62,7 @@ def mobilenetv3_large_16s(input, is_training, input_size=224):
                                      output_channels=160, dwconv_ksize=5, nl='h_swish', is_ds=False, use_se=True,
                                      mid_channels=240, pool_size=int(input_size // 16), is_training=is_training)
 
-        return bottleneck4_3
+        return bottleneck1_2, bottleneck4_3
 
 
 if __name__=='__main__':
@@ -77,6 +77,6 @@ if __name__=='__main__':
         with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
             constant_graph = graph_util.convert_variables_to_constants(sess, sess.graph_def,
-                                                                       ['mobilenetv3_large/bottleneck4_3/output'])
-            with tf.gfile.FastGFile('./model.pb', mode='wb') as f:
+                                                                       ['mobilenetv3_large_16s/bottleneck4_3/output'])
+            with tf.gfile.FastGFile('../visualization//mobilenetv3_large_16s.pb', mode='wb') as f:
                 f.write(constant_graph.SerializeToString())

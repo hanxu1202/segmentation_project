@@ -1,0 +1,316 @@
+04/15/2022 20:37:30 PM - INFO - Train configuration:
+04/15/2022 20:37:30 PM - INFO - START_EPOCH: 100
+04/15/2022 20:37:30 PM - INFO - TOTAL_EPOCH: 120
+04/15/2022 20:37:30 PM - INFO - RESUME_CKPT: E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv3_large_16s.ckpt-71181
+04/15/2022 20:37:30 PM - INFO - NUM_CLASSES: 3
+04/15/2022 20:37:30 PM - INFO - INIT_LR: 0.001
+04/15/2022 20:37:30 PM - INFO - LR_DECAY_STEP: 3000
+04/15/2022 20:37:30 PM - INFO - LR_DECAY_RATE: 0.9
+04/15/2022 20:37:30 PM - INFO - SUMMARY_STEP: 10
+04/15/2022 20:37:30 PM - INFO - MODEL_TYPE: mobilenetv3_large_16s
+04/15/2022 20:37:30 PM - INFO - SAVE_DIR: E:\pycharm_project\segmentation_project\pretrain\checkpoints\
+04/15/2022 20:37:30 PM - INFO - SAVE_EPOCH: 1
+04/15/2022 20:37:30 PM - INFO - VALID_EPOCH: 1
+04/15/2022 20:37:30 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:29: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+04/15/2022 20:37:30 PM - WARNING - From E:\pycharm_project\segmentation_project\pretrain\pretrain_model\pretrain_mobilenetv3_16s.py:8: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+04/15/2022 20:37:30 PM - WARNING - From E:\pycharm_project\segmentation_project\utils\backend_layers.py:6: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+04/15/2022 20:37:30 PM - WARNING - 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+04/15/2022 20:37:31 PM - WARNING - From E:\pycharm_project\segmentation_project\utils\backend_layers.py:13: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+04/15/2022 20:37:31 PM - WARNING - From E:\pycharm_project\segmentation_project\utils\backend_layers.py:13: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+04/15/2022 20:37:31 PM - WARNING - From E:\pycharm_project\segmentation_project\utils\backend_layers.py:84: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.  In particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not be used (consult the `tf.keras.layers.batch_normalization` documentation).
+04/15/2022 20:37:31 PM - WARNING - From E:\Anaconda\envs\tf115\lib\site-packages\tensorflow_core\python\layers\normalization.py:327: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+04/15/2022 20:37:32 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:54: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+04/15/2022 20:37:32 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:58: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+04/15/2022 20:37:32 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:62: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+04/15/2022 20:37:34 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:67: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+04/15/2022 20:37:34 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:73: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+04/15/2022 20:37:34 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:77: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+04/15/2022 20:37:34 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:83: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+04/15/2022 20:37:34 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:86: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+04/15/2022 20:37:34 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:90: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+04/15/2022 20:37:44 PM - INFO - => Restoring weights from: E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv3_large_16s.ckpt-71181 ... 
+04/15/2022 20:37:44 PM - INFO - Restoring parameters from E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv3_large_16s.ckpt-71181
+04/15/2022 20:37:44 PM - INFO - ========================================================================================
+04/15/2022 20:37:44 PM - INFO - LIST ALL TRAINABLE VARIABLES
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv1/weights:0  shape: (3, 3, 3, 16)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv1/bn/gamma:0  shape: (16,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv1/bn/beta:0  shape: (16,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_dwconv/weights:0  shape: (3, 3, 16, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_dwconv/bn/gamma:0  shape: (16,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_dwconv/bn/beta:0  shape: (16,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv2/weights:0  shape: (1, 1, 16, 16)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv2/bn/gamma:0  shape: (16,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv2/bn/beta:0  shape: (16,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/expand_conv/weights:0  shape: (1, 1, 16, 64)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/expand_conv/bn/gamma:0  shape: (64,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/expand_conv/bn/beta:0  shape: (64,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/dw_conv/weights:0  shape: (3, 3, 64, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/dw_conv/bn/gamma:0  shape: (64,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/dw_conv/bn/beta:0  shape: (64,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/proj_conv/weights:0  shape: (1, 1, 64, 24)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/proj_conv/bn/gamma:0  shape: (24,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/proj_conv/bn/beta:0  shape: (24,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/expand_conv/weights:0  shape: (1, 1, 24, 72)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/expand_conv/bn/gamma:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/expand_conv/bn/beta:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/dw_conv/weights:0  shape: (3, 3, 72, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/dw_conv/bn/gamma:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/dw_conv/bn/beta:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/proj_conv/weights:0  shape: (1, 1, 72, 24)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/proj_conv/bn/gamma:0  shape: (24,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/proj_conv/bn/beta:0  shape: (24,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/expand_conv/weights:0  shape: (1, 1, 24, 72)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/expand_conv/bn/gamma:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/expand_conv/bn/beta:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/dw_conv/weights:0  shape: (5, 5, 72, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/dw_conv/bn/gamma:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/dw_conv/bn/beta:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/SEmodule/dense1/conv/weights:0  shape: (1, 1, 72, 24)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/SEmodule/dense1/conv/bias:0  shape: (24,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/SEmodule/dense2/conv/weights:0  shape: (1, 1, 24, 72)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/SEmodule/dense2/conv/bias:0  shape: (72,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/proj_conv/weights:0  shape: (1, 1, 72, 40)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/proj_conv/bn/gamma:0  shape: (40,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/proj_conv/bn/beta:0  shape: (40,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/expand_conv/weights:0  shape: (1, 1, 40, 120)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/expand_conv/bn/gamma:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/expand_conv/bn/beta:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/dw_conv/weights:0  shape: (5, 5, 120, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/dw_conv/bn/gamma:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/dw_conv/bn/beta:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/SEmodule/dense1/conv/weights:0  shape: (1, 1, 120, 32)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/SEmodule/dense1/conv/bias:0  shape: (32,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/SEmodule/dense2/conv/weights:0  shape: (1, 1, 32, 120)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/SEmodule/dense2/conv/bias:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/proj_conv/weights:0  shape: (1, 1, 120, 40)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/proj_conv/bn/gamma:0  shape: (40,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/proj_conv/bn/beta:0  shape: (40,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/expand_conv/weights:0  shape: (1, 1, 40, 120)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/expand_conv/bn/gamma:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/expand_conv/bn/beta:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/dw_conv/weights:0  shape: (5, 5, 120, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/dw_conv/bn/gamma:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/dw_conv/bn/beta:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/SEmodule/dense1/conv/weights:0  shape: (1, 1, 120, 32)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/SEmodule/dense1/conv/bias:0  shape: (32,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/SEmodule/dense2/conv/weights:0  shape: (1, 1, 32, 120)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/SEmodule/dense2/conv/bias:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/proj_conv/weights:0  shape: (1, 1, 120, 40)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/proj_conv/bn/gamma:0  shape: (40,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/proj_conv/bn/beta:0  shape: (40,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/expand_conv/weights:0  shape: (1, 1, 40, 240)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/expand_conv/bn/gamma:0  shape: (240,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/expand_conv/bn/beta:0  shape: (240,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/dw_conv/weights:0  shape: (3, 3, 240, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/dw_conv/bn/gamma:0  shape: (240,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/dw_conv/bn/beta:0  shape: (240,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/proj_conv/weights:0  shape: (1, 1, 240, 80)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/proj_conv/bn/gamma:0  shape: (80,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/proj_conv/bn/beta:0  shape: (80,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/expand_conv/weights:0  shape: (1, 1, 80, 200)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/expand_conv/bn/gamma:0  shape: (200,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/expand_conv/bn/beta:0  shape: (200,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/dw_conv/weights:0  shape: (3, 3, 200, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/dw_conv/bn/gamma:0  shape: (200,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/dw_conv/bn/beta:0  shape: (200,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/proj_conv/weights:0  shape: (1, 1, 200, 80)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/proj_conv/bn/gamma:0  shape: (80,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/proj_conv/bn/beta:0  shape: (80,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/expand_conv/weights:0  shape: (1, 1, 80, 184)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/expand_conv/bn/gamma:0  shape: (184,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/expand_conv/bn/beta:0  shape: (184,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/dw_conv/weights:0  shape: (3, 3, 184, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/dw_conv/bn/gamma:0  shape: (184,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/dw_conv/bn/beta:0  shape: (184,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/proj_conv/weights:0  shape: (1, 1, 184, 80)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/proj_conv/bn/gamma:0  shape: (80,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/proj_conv/bn/beta:0  shape: (80,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/expand_conv/weights:0  shape: (1, 1, 80, 184)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/expand_conv/bn/gamma:0  shape: (184,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/expand_conv/bn/beta:0  shape: (184,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/dw_conv/weights:0  shape: (3, 3, 184, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/dw_conv/bn/gamma:0  shape: (184,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/dw_conv/bn/beta:0  shape: (184,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/proj_conv/weights:0  shape: (1, 1, 184, 80)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/proj_conv/bn/gamma:0  shape: (80,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/proj_conv/bn/beta:0  shape: (80,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/expand_conv/weights:0  shape: (1, 1, 80, 480)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/expand_conv/bn/gamma:0  shape: (480,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/expand_conv/bn/beta:0  shape: (480,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/dw_conv/weights:0  shape: (3, 3, 480, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/dw_conv/bn/gamma:0  shape: (480,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/dw_conv/bn/beta:0  shape: (480,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/SEmodule/dense1/conv/weights:0  shape: (1, 1, 480, 120)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/SEmodule/dense1/conv/bias:0  shape: (120,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/SEmodule/dense2/conv/weights:0  shape: (1, 1, 120, 480)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/SEmodule/dense2/conv/bias:0  shape: (480,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/proj_conv/weights:0  shape: (1, 1, 480, 112)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/proj_conv/bn/gamma:0  shape: (112,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/proj_conv/bn/beta:0  shape: (112,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/expand_conv/weights:0  shape: (1, 1, 112, 672)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/expand_conv/bn/gamma:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/expand_conv/bn/beta:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/dw_conv/weights:0  shape: (3, 3, 672, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/dw_conv/bn/gamma:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/dw_conv/bn/beta:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/SEmodule/dense1/conv/weights:0  shape: (1, 1, 672, 168)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/SEmodule/dense1/conv/bias:0  shape: (168,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/SEmodule/dense2/conv/weights:0  shape: (1, 1, 168, 672)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/SEmodule/dense2/conv/bias:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/proj_conv/weights:0  shape: (1, 1, 672, 112)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/proj_conv/bn/gamma:0  shape: (112,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/proj_conv/bn/beta:0  shape: (112,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/expand_conv/weights:0  shape: (1, 1, 112, 672)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/expand_conv/bn/gamma:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/expand_conv/bn/beta:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/dw_conv_dilation/weights:0  shape: (5, 5, 672, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/dw_conv_dilation/bn/gamma:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/dw_conv_dilation/bn/beta:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/SEmodule/dense1/conv/weights:0  shape: (1, 1, 672, 168)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/SEmodule/dense1/conv/bias:0  shape: (168,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/SEmodule/dense2/conv/weights:0  shape: (1, 1, 168, 672)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/SEmodule/dense2/conv/bias:0  shape: (672,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/proj_conv/weights:0  shape: (1, 1, 672, 160)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/proj_conv/bn/gamma:0  shape: (160,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/proj_conv/bn/beta:0  shape: (160,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/expand_conv/weights:0  shape: (1, 1, 160, 960)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/expand_conv/bn/gamma:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/expand_conv/bn/beta:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/dw_conv/weights:0  shape: (5, 5, 960, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/dw_conv/bn/gamma:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/dw_conv/bn/beta:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/SEmodule/dense1/conv/weights:0  shape: (1, 1, 960, 240)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/SEmodule/dense1/conv/bias:0  shape: (240,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/SEmodule/dense2/conv/weights:0  shape: (1, 1, 240, 960)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/SEmodule/dense2/conv/bias:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/proj_conv/weights:0  shape: (1, 1, 960, 160)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/proj_conv/bn/gamma:0  shape: (160,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/proj_conv/bn/beta:0  shape: (160,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/expand_conv/weights:0  shape: (1, 1, 160, 960)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/expand_conv/bn/gamma:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/expand_conv/bn/beta:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/dw_conv/weights:0  shape: (5, 5, 960, 1)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/dw_conv/bn/gamma:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/dw_conv/bn/beta:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/SEmodule/dense1/conv/weights:0  shape: (1, 1, 960, 240)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/SEmodule/dense1/conv/bias:0  shape: (240,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/SEmodule/dense2/conv/weights:0  shape: (1, 1, 240, 960)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/SEmodule/dense2/conv/bias:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/proj_conv/weights:0  shape: (1, 1, 960, 160)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/proj_conv/bn/gamma:0  shape: (160,)
+04/15/2022 20:37:44 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/proj_conv/bn/beta:0  shape: (160,)
+04/15/2022 20:37:44 PM - INFO - name: decoder/conv1/weights:0  shape: (1, 1, 160, 960)
+04/15/2022 20:37:44 PM - INFO - name: decoder/conv1/bn/gamma:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: decoder/conv1/bn/beta:0  shape: (960,)
+04/15/2022 20:37:44 PM - INFO - name: decoder/conv2/weights:0  shape: (1, 1, 960, 1280)
+04/15/2022 20:37:44 PM - INFO - name: decoder/conv2/bias:0  shape: (1280,)
+04/15/2022 20:37:44 PM - INFO - name: decoder/logits/weights:0  shape: (1, 1, 1280, 3)
+04/15/2022 20:37:44 PM - INFO - name: decoder/logits/bias:0  shape: (3,)
+04/15/2022 20:37:44 PM - INFO - ========================================================================================
+04/15/2022 20:37:53 PM - INFO - global step: 71191, epoch_100, lr: 0.00009, 10/719: Train average loss: 0.046
+04/15/2022 20:37:57 PM - INFO - global step: 71201, epoch_100, lr: 0.00009, 20/719: Train average loss: 0.049
+04/15/2022 20:38:01 PM - INFO - global step: 71211, epoch_100, lr: 0.00009, 30/719: Train average loss: 0.052
+04/15/2022 20:38:05 PM - INFO - global step: 71221, epoch_100, lr: 0.00009, 40/719: Train average loss: 0.051
+04/15/2022 20:38:09 PM - INFO - global step: 71231, epoch_100, lr: 0.00009, 50/719: Train average loss: 0.046
+04/15/2022 20:38:13 PM - INFO - global step: 71241, epoch_100, lr: 0.00009, 60/719: Train average loss: 0.050
+04/15/2022 20:38:17 PM - INFO - global step: 71251, epoch_100, lr: 0.00009, 70/719: Train average loss: 0.056
+04/15/2022 20:38:21 PM - INFO - global step: 71261, epoch_100, lr: 0.00009, 80/719: Train average loss: 0.053
+04/15/2022 20:38:25 PM - INFO - global step: 71271, epoch_100, lr: 0.00009, 90/719: Train average loss: 0.055
+04/15/2022 20:38:29 PM - INFO - global step: 71281, epoch_100, lr: 0.00009, 100/719: Train average loss: 0.056
+04/15/2022 20:38:33 PM - INFO - global step: 71291, epoch_100, lr: 0.00009, 110/719: Train average loss: 0.055
+04/15/2022 20:38:37 PM - INFO - global step: 71301, epoch_100, lr: 0.00009, 120/719: Train average loss: 0.054
+04/15/2022 20:38:41 PM - INFO - global step: 71311, epoch_100, lr: 0.00009, 130/719: Train average loss: 0.057
+04/15/2022 20:38:45 PM - INFO - global step: 71321, epoch_100, lr: 0.00009, 140/719: Train average loss: 0.058
+04/15/2022 20:38:49 PM - INFO - global step: 71331, epoch_100, lr: 0.00009, 150/719: Train average loss: 0.058
+04/15/2022 20:38:53 PM - INFO - global step: 71341, epoch_100, lr: 0.00009, 160/719: Train average loss: 0.056
+04/15/2022 20:38:57 PM - INFO - global step: 71351, epoch_100, lr: 0.00009, 170/719: Train average loss: 0.056
+04/15/2022 20:39:01 PM - INFO - global step: 71361, epoch_100, lr: 0.00009, 180/719: Train average loss: 0.055
+04/15/2022 20:39:05 PM - INFO - global step: 71371, epoch_100, lr: 0.00009, 190/719: Train average loss: 0.054
+04/15/2022 20:39:09 PM - INFO - global step: 71381, epoch_100, lr: 0.00009, 200/719: Train average loss: 0.055
+04/15/2022 20:39:14 PM - INFO - global step: 71391, epoch_100, lr: 0.00009, 210/719: Train average loss: 0.054
+04/15/2022 20:39:18 PM - INFO - global step: 71401, epoch_100, lr: 0.00009, 220/719: Train average loss: 0.055
+04/15/2022 20:39:22 PM - INFO - global step: 71411, epoch_100, lr: 0.00009, 230/719: Train average loss: 0.054
+04/15/2022 20:39:26 PM - INFO - global step: 71421, epoch_100, lr: 0.00009, 240/719: Train average loss: 0.054
+04/15/2022 20:39:30 PM - INFO - global step: 71431, epoch_100, lr: 0.00009, 250/719: Train average loss: 0.053
+04/15/2022 20:39:34 PM - INFO - global step: 71441, epoch_100, lr: 0.00009, 260/719: Train average loss: 0.054
+04/15/2022 20:39:38 PM - INFO - global step: 71451, epoch_100, lr: 0.00009, 270/719: Train average loss: 0.056
+04/15/2022 20:39:43 PM - INFO - global step: 71461, epoch_100, lr: 0.00009, 280/719: Train average loss: 0.056
+04/15/2022 20:39:47 PM - INFO - global step: 71471, epoch_100, lr: 0.00009, 290/719: Train average loss: 0.056
+04/15/2022 20:39:51 PM - INFO - global step: 71481, epoch_100, lr: 0.00009, 300/719: Train average loss: 0.057
+04/15/2022 20:39:54 PM - INFO - global step: 71491, epoch_100, lr: 0.00009, 310/719: Train average loss: 0.057
+04/15/2022 20:39:59 PM - INFO - global step: 71501, epoch_100, lr: 0.00009, 320/719: Train average loss: 0.057
+04/15/2022 20:40:03 PM - INFO - global step: 71511, epoch_100, lr: 0.00009, 330/719: Train average loss: 0.057
+04/15/2022 20:40:07 PM - INFO - global step: 71521, epoch_100, lr: 0.00009, 340/719: Train average loss: 0.057
+04/15/2022 20:40:11 PM - INFO - global step: 71531, epoch_100, lr: 0.00009, 350/719: Train average loss: 0.057
+04/15/2022 20:40:15 PM - INFO - global step: 71541, epoch_100, lr: 0.00009, 360/719: Train average loss: 0.056
+04/15/2022 20:40:19 PM - INFO - global step: 71551, epoch_100, lr: 0.00009, 370/719: Train average loss: 0.056
+04/15/2022 20:40:23 PM - INFO - global step: 71561, epoch_100, lr: 0.00009, 380/719: Train average loss: 0.057
+04/15/2022 20:40:27 PM - INFO - global step: 71571, epoch_100, lr: 0.00009, 390/719: Train average loss: 0.057
+04/15/2022 20:40:31 PM - INFO - global step: 71581, epoch_100, lr: 0.00009, 400/719: Train average loss: 0.056
+04/15/2022 20:40:35 PM - INFO - global step: 71591, epoch_100, lr: 0.00009, 410/719: Train average loss: 0.056
+04/15/2022 20:40:39 PM - INFO - global step: 71601, epoch_100, lr: 0.00009, 420/719: Train average loss: 0.056
+04/15/2022 20:40:43 PM - INFO - global step: 71611, epoch_100, lr: 0.00009, 430/719: Train average loss: 0.056
+04/15/2022 20:40:47 PM - INFO - global step: 71621, epoch_100, lr: 0.00009, 440/719: Train average loss: 0.057
+04/15/2022 20:40:51 PM - INFO - global step: 71631, epoch_100, lr: 0.00009, 450/719: Train average loss: 0.056
+04/15/2022 20:40:55 PM - INFO - global step: 71641, epoch_100, lr: 0.00009, 460/719: Train average loss: 0.056
+04/15/2022 20:40:59 PM - INFO - global step: 71651, epoch_100, lr: 0.00009, 470/719: Train average loss: 0.056
+04/15/2022 20:41:03 PM - INFO - global step: 71661, epoch_100, lr: 0.00009, 480/719: Train average loss: 0.056
+04/15/2022 20:41:07 PM - INFO - global step: 71671, epoch_100, lr: 0.00009, 490/719: Train average loss: 0.056
+04/15/2022 20:41:11 PM - INFO - global step: 71681, epoch_100, lr: 0.00009, 500/719: Train average loss: 0.056
+04/15/2022 20:41:15 PM - INFO - global step: 71691, epoch_100, lr: 0.00009, 510/719: Train average loss: 0.057
+04/15/2022 20:41:19 PM - INFO - global step: 71701, epoch_100, lr: 0.00009, 520/719: Train average loss: 0.056
+04/15/2022 20:41:23 PM - INFO - global step: 71711, epoch_100, lr: 0.00009, 530/719: Train average loss: 0.056
+04/15/2022 20:41:27 PM - INFO - global step: 71721, epoch_100, lr: 0.00009, 540/719: Train average loss: 0.056
+04/15/2022 20:41:31 PM - INFO - global step: 71731, epoch_100, lr: 0.00009, 550/719: Train average loss: 0.056
+04/15/2022 20:41:36 PM - INFO - global step: 71741, epoch_100, lr: 0.00009, 560/719: Train average loss: 0.056
+04/15/2022 20:41:40 PM - INFO - global step: 71751, epoch_100, lr: 0.00009, 570/719: Train average loss: 0.055
+04/15/2022 20:41:44 PM - INFO - global step: 71761, epoch_100, lr: 0.00009, 580/719: Train average loss: 0.055
+04/15/2022 20:41:48 PM - INFO - global step: 71771, epoch_100, lr: 0.00009, 590/719: Train average loss: 0.056
+04/15/2022 20:41:52 PM - INFO - global step: 71781, epoch_100, lr: 0.00009, 600/719: Train average loss: 0.056
+04/15/2022 20:41:56 PM - INFO - global step: 71791, epoch_100, lr: 0.00009, 610/719: Train average loss: 0.055
+04/15/2022 20:42:00 PM - INFO - global step: 71801, epoch_100, lr: 0.00009, 620/719: Train average loss: 0.055
+04/15/2022 20:42:04 PM - INFO - global step: 71811, epoch_100, lr: 0.00009, 630/719: Train average loss: 0.056
+04/15/2022 20:42:08 PM - INFO - global step: 71821, epoch_100, lr: 0.00009, 640/719: Train average loss: 0.056
+04/15/2022 20:42:12 PM - INFO - global step: 71831, epoch_100, lr: 0.00009, 650/719: Train average loss: 0.055
+04/15/2022 20:42:16 PM - INFO - global step: 71841, epoch_100, lr: 0.00009, 660/719: Train average loss: 0.055
+04/15/2022 20:42:20 PM - INFO - global step: 71851, epoch_100, lr: 0.00009, 670/719: Train average loss: 0.055
+04/15/2022 20:42:24 PM - INFO - global step: 71861, epoch_100, lr: 0.00009, 680/719: Train average loss: 0.055
+04/15/2022 20:42:28 PM - INFO - global step: 71871, epoch_100, lr: 0.00009, 690/719: Train average loss: 0.055
+04/15/2022 20:42:32 PM - INFO - global step: 71881, epoch_100, lr: 0.00009, 700/719: Train average loss: 0.054
+04/15/2022 20:42:36 PM - INFO - global step: 71891, epoch_100, lr: 0.00009, 710/719: Train average loss: 0.055
+04/15/2022 20:42:39 PM - INFO - ==========================================================
+04/15/2022 20:42:39 PM - INFO - epoch_100: Train set(Aug) acc is: 0.980
+04/15/2022 20:42:54 PM - INFO - epoch_100: Valid set average loss is: 0.128
+04/15/2022 20:42:54 PM - INFO - epoch_100: Valid set acc is: 0.956
+04/15/2022 20:42:54 PM - INFO - ==========================================================
+04/15/2022 20:42:58 PM - INFO - global step: 71910, epoch_101, lr: 0.00009, 10/719: Train average loss: 0.029
+04/15/2022 20:43:02 PM - INFO - global step: 71920, epoch_101, lr: 0.00009, 20/719: Train average loss: 0.043
+04/15/2022 20:43:06 PM - INFO - global step: 71930, epoch_101, lr: 0.00009, 30/719: Train average loss: 0.038
+04/15/2022 20:43:10 PM - INFO - global step: 71940, epoch_101, lr: 0.00009, 40/719: Train average loss: 0.041
+04/15/2022 20:43:14 PM - INFO - global step: 71950, epoch_101, lr: 0.00009, 50/719: Train average loss: 0.040
+04/15/2022 20:43:18 PM - INFO - global step: 71960, epoch_101, lr: 0.00009, 60/719: Train average loss: 0.043

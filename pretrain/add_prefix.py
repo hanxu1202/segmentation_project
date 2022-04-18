@@ -1,9 +1,9 @@
 import tensorflow as tf
 import os
 
-old_model_path= 'E:\pycharm_project\segmentation_project\pretrain\\checkpoints\\mobilenetv3_large.ckpt-61115'
-new_model_path= 'E:\pycharm_project\segmentation_project\pretrain\\mobilenetv3_add_prefix.ckpt'
-add_prefix= 'FCN/'
+old_model_path= 'E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv2_16s\\mobilenetv2_16s_3c.ckpt-71600'
+new_model_path= 'E:\pycharm_project\segmentation_project\pretrain\\mobilenetv2_16s_3c_for_Deeplabv3p.ckpt'
+add_prefix= 'Deeplabv3p/'
 
 def main():
     with tf.Session() as sess:

@@ -2,7 +2,10 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES']='0'
 import tensorflow as tf
 import numpy as np
-from pretrain_model import mobilenetv3_large, mobilenetv3_large_16s
+from pretrain_model.pretrain_mobilentv3 import mobilenetv3_large
+from pretrain_model.pretrain_mobilenetv3_16s import mobilenetv3_large_16s
+from pretrain_model.pretrain_mobilenetv2 import mobilenetv2
+from pretrain_model.pretrain_mobilenetv2_16s import mobilenetv2_16s
 from pretrain_dataset import Dataset
 from pretrain_config import PRETRAIN, PRETRAIN_SET, PREVAL_SET
 import logging
@@ -14,7 +17,7 @@ def train(trainset, valset):
     LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
     DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
 
-    filename = './' + str(datetime.date.today()) + '_pretrain_' + PRETRAIN.MODEL_TYPE + '.log'
+    filename = './' + str(datetime.date.today()) + '_pretrain_' + PRETRAIN.MODEL_TYPE +'_'+ str(PRETRAIN.NUM_CLASSES) +'c.log'
     logging.basicConfig(filename=filename, filemode='w', level=logging.DEBUG, format=LOG_FORMAT, datefmt=DATE_FORMAT)
     logging.info('Train configuration:')
     for key, value in PRETRAIN.items():
@@ -34,10 +37,13 @@ def train(trainset, valset):
             # forward
             if PRETRAIN.MODEL_TYPE == "mobilenetv3_large":
                 logits = mobilenetv3_large(input=x1, is_training=x3, input_size=PRETRAIN_SET.IMG_SIZE, num_classes=PRETRAIN.NUM_CLASSES)
-                squeeze = tf.squeeze(logits)
             if PRETRAIN.MODEL_TYPE == "mobilenetv3_large_16s":
                 logits = mobilenetv3_large_16s(input=x1, is_training=x3, input_size=PRETRAIN_SET.IMG_SIZE, num_classes=PRETRAIN.NUM_CLASSES)
-                squeeze = tf.squeeze(logits)
+            if PRETRAIN.MODEL_TYPE == "mobilenetv2":
+                logits = mobilenetv2(input=x1, is_training=x3, input_size=PRETRAIN_SET.IMG_SIZE, num_classes=PRETRAIN.NUM_CLASSES)
+            if PRETRAIN.MODEL_TYPE == "mobilenetv2_16s":
+                logits = mobilenetv2_16s(input=x1, is_training=x3, input_size=PRETRAIN_SET.IMG_SIZE, num_classes=PRETRAIN.NUM_CLASSES)
+            squeeze = tf.squeeze(logits)
 
             # define loss
             with tf.name_scope("loss"):
@@ -105,7 +111,7 @@ def train(trainset, valset):
             logging.info('========================================================================================')
 
             total_step = PRETRAIN.TOTAL_EPOCH * trainset.batch_num
-            for epoch in range(PRETRAIN.START_EPOCH, PRETRAIN.TOTAL_EPOCH+1):
+            for epoch in range(PRETRAIN.START_EPOCH, PRETRAIN.TOTAL_EPOCH + 1):
                 train_epoch_loss = []
                 train_epoch_acc = []
                 for image, label, batch_count in trainset:
@@ -127,7 +133,7 @@ def train(trainset, valset):
                 train_mean_acc = np.mean(train_epoch_acc)
                 logging.info("epoch_%d: Train set(Aug) acc is: %.3f" % (epoch, train_mean_acc))
                 if epoch % PRETRAIN.SAVE_EPOCH == 0:
-                    saver.save(sess, PRETRAIN.SAVE_DIR + PRETRAIN.MODEL_TYPE + ".ckpt", global_step=global_step)
+                    saver.save(sess, PRETRAIN.SAVE_DIR + PRETRAIN.MODEL_TYPE + '_' + str(PRETRAIN.NUM_CLASSES) + "c.ckpt", global_step=global_step)
 
                 if epoch % PRETRAIN.VALID_EPOCH == 0:
                     valid_epoch_acc = []

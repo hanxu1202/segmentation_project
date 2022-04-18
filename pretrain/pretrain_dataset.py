@@ -62,7 +62,7 @@ class Dataset(object):
     def preprocess(self, img):
         img = (img / 255 - self.cfg.NORM_MEAN) / self.cfg.NORM_STD
         if not self.is_aug:
-            img = cv2.resize(img, (self.img_size,self.img_size))
+            img = cv2.resize(img, (self.img_size, self.img_size))
         else:
             img = cv2.resize(img,(self.aug_par.CROP_IN, self.aug_par.CROP_IN))
             img = random_crop(img, self.aug_par.CROP_IN, self.img_size)

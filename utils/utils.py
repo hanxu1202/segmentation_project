@@ -33,7 +33,7 @@ def draw_colored_mask(img, mask, color_map):
     masked_img = cv2.addWeighted(img, 1, color_mask, 0.8, 0)
     return masked_img
 
-def CRF_process(ori_prob, ori_img, num_classes):
+def CRF_process(ori_prob, ori_img, num_classes, iteration=5):
     # CRF
     d = dcrf.DenseCRF2D(ori_img.shape[1], ori_img.shape[0], num_classes) # w, h, n_classes
 
@@ -50,7 +50,7 @@ def CRF_process(ori_prob, ori_img, num_classes):
     #d.addPairwiseBilateral(sxy=80, srgb=13, rgbim=im, compat=10)
 
     # inference
-    Q = d.inference(5)
+    Q = d.inference(iteration)
 
     # map
     map = np.argmax(Q, axis=0).reshape((ori_img.shape[0], ori_img.shape[1]))

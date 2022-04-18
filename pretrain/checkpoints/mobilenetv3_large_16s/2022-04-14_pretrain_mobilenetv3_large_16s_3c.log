@@ -1,0 +1,1777 @@
+04/14/2022 18:35:19 PM - INFO - Train configuration:
+04/14/2022 18:35:19 PM - INFO - START_EPOCH: 28
+04/14/2022 18:35:19 PM - INFO - TOTAL_EPOCH: 200
+04/14/2022 18:35:19 PM - INFO - RESUME_CKPT: E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv3_large_16s.ckpt-19413
+04/14/2022 18:35:19 PM - INFO - NUM_CLASSES: 3
+04/14/2022 18:35:19 PM - INFO - INIT_LR: 0.001
+04/14/2022 18:35:19 PM - INFO - LR_DECAY_STEP: 3000
+04/14/2022 18:35:19 PM - INFO - LR_DECAY_RATE: 0.9
+04/14/2022 18:35:19 PM - INFO - SUMMARY_STEP: 10
+04/14/2022 18:35:19 PM - INFO - MODEL_TYPE: mobilenetv3_large_16s
+04/14/2022 18:35:19 PM - INFO - SAVE_DIR: E:\pycharm_project\segmentation_project\pretrain\checkpoints\
+04/14/2022 18:35:19 PM - INFO - SAVE_EPOCH: 1
+04/14/2022 18:35:19 PM - INFO - VALID_EPOCH: 1
+04/14/2022 18:35:19 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:29: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+04/14/2022 18:35:19 PM - WARNING - From E:\pycharm_project\segmentation_project\pretrain\pretrain_model\pretrain_mobilenetv3_16s.py:8: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+04/14/2022 18:35:19 PM - WARNING - From E:\pycharm_project\segmentation_project\utils\backend_layers.py:6: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+04/14/2022 18:35:19 PM - WARNING - 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+04/14/2022 18:35:19 PM - WARNING - From E:\pycharm_project\segmentation_project\utils\backend_layers.py:13: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+04/14/2022 18:35:19 PM - WARNING - From E:\pycharm_project\segmentation_project\utils\backend_layers.py:13: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+04/14/2022 18:35:19 PM - WARNING - From E:\pycharm_project\segmentation_project\utils\backend_layers.py:84: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.  In particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not be used (consult the `tf.keras.layers.batch_normalization` documentation).
+04/14/2022 18:35:19 PM - WARNING - From E:\Anaconda\envs\tf115\lib\site-packages\tensorflow_core\python\layers\normalization.py:327: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+04/14/2022 18:35:20 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:54: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+04/14/2022 18:35:20 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:58: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+04/14/2022 18:35:20 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:62: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+04/14/2022 18:35:23 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:67: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+04/14/2022 18:35:23 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:73: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+04/14/2022 18:35:23 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:77: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+04/14/2022 18:35:23 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:83: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+04/14/2022 18:35:23 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:86: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+04/14/2022 18:35:23 PM - WARNING - From E:/pycharm_project/segmentation_project/pretrain/pretrain.py:90: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+04/14/2022 18:35:33 PM - INFO - => Restoring weights from: E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv3_large_16s.ckpt-19413 ... 
+04/14/2022 18:35:33 PM - INFO - Restoring parameters from E:\pycharm_project\segmentation_project\pretrain\checkpoints\mobilenetv3_large_16s.ckpt-19413
+04/14/2022 18:35:33 PM - INFO - ========================================================================================
+04/14/2022 18:35:33 PM - INFO - LIST ALL TRAINABLE VARIABLES
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv1/weights:0  shape: (3, 3, 3, 16)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv1/bn/gamma:0  shape: (16,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv1/bn/beta:0  shape: (16,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_dwconv/weights:0  shape: (3, 3, 16, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_dwconv/bn/gamma:0  shape: (16,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_dwconv/bn/beta:0  shape: (16,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv2/weights:0  shape: (1, 1, 16, 16)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv2/bn/gamma:0  shape: (16,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/head_conv2/bn/beta:0  shape: (16,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/expand_conv/weights:0  shape: (1, 1, 16, 64)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/expand_conv/bn/gamma:0  shape: (64,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/expand_conv/bn/beta:0  shape: (64,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/dw_conv/weights:0  shape: (3, 3, 64, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/dw_conv/bn/gamma:0  shape: (64,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/dw_conv/bn/beta:0  shape: (64,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/proj_conv/weights:0  shape: (1, 1, 64, 24)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/proj_conv/bn/gamma:0  shape: (24,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_1/proj_conv/bn/beta:0  shape: (24,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/expand_conv/weights:0  shape: (1, 1, 24, 72)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/expand_conv/bn/gamma:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/expand_conv/bn/beta:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/dw_conv/weights:0  shape: (3, 3, 72, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/dw_conv/bn/gamma:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/dw_conv/bn/beta:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/proj_conv/weights:0  shape: (1, 1, 72, 24)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/proj_conv/bn/gamma:0  shape: (24,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck1_2/proj_conv/bn/beta:0  shape: (24,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/expand_conv/weights:0  shape: (1, 1, 24, 72)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/expand_conv/bn/gamma:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/expand_conv/bn/beta:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/dw_conv/weights:0  shape: (5, 5, 72, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/dw_conv/bn/gamma:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/dw_conv/bn/beta:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/SEmodule/dense1/conv/weights:0  shape: (1, 1, 72, 24)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/SEmodule/dense1/conv/bias:0  shape: (24,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/SEmodule/dense2/conv/weights:0  shape: (1, 1, 24, 72)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/SEmodule/dense2/conv/bias:0  shape: (72,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/proj_conv/weights:0  shape: (1, 1, 72, 40)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/proj_conv/bn/gamma:0  shape: (40,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_1/proj_conv/bn/beta:0  shape: (40,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/expand_conv/weights:0  shape: (1, 1, 40, 120)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/expand_conv/bn/gamma:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/expand_conv/bn/beta:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/dw_conv/weights:0  shape: (5, 5, 120, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/dw_conv/bn/gamma:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/dw_conv/bn/beta:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/SEmodule/dense1/conv/weights:0  shape: (1, 1, 120, 32)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/SEmodule/dense1/conv/bias:0  shape: (32,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/SEmodule/dense2/conv/weights:0  shape: (1, 1, 32, 120)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/SEmodule/dense2/conv/bias:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/proj_conv/weights:0  shape: (1, 1, 120, 40)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/proj_conv/bn/gamma:0  shape: (40,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_2/proj_conv/bn/beta:0  shape: (40,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/expand_conv/weights:0  shape: (1, 1, 40, 120)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/expand_conv/bn/gamma:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/expand_conv/bn/beta:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/dw_conv/weights:0  shape: (5, 5, 120, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/dw_conv/bn/gamma:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/dw_conv/bn/beta:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/SEmodule/dense1/conv/weights:0  shape: (1, 1, 120, 32)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/SEmodule/dense1/conv/bias:0  shape: (32,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/SEmodule/dense2/conv/weights:0  shape: (1, 1, 32, 120)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/SEmodule/dense2/conv/bias:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/proj_conv/weights:0  shape: (1, 1, 120, 40)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/proj_conv/bn/gamma:0  shape: (40,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck2_3/proj_conv/bn/beta:0  shape: (40,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/expand_conv/weights:0  shape: (1, 1, 40, 240)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/expand_conv/bn/gamma:0  shape: (240,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/expand_conv/bn/beta:0  shape: (240,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/dw_conv/weights:0  shape: (3, 3, 240, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/dw_conv/bn/gamma:0  shape: (240,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/dw_conv/bn/beta:0  shape: (240,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/proj_conv/weights:0  shape: (1, 1, 240, 80)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/proj_conv/bn/gamma:0  shape: (80,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_1/proj_conv/bn/beta:0  shape: (80,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/expand_conv/weights:0  shape: (1, 1, 80, 200)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/expand_conv/bn/gamma:0  shape: (200,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/expand_conv/bn/beta:0  shape: (200,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/dw_conv/weights:0  shape: (3, 3, 200, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/dw_conv/bn/gamma:0  shape: (200,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/dw_conv/bn/beta:0  shape: (200,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/proj_conv/weights:0  shape: (1, 1, 200, 80)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/proj_conv/bn/gamma:0  shape: (80,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_2/proj_conv/bn/beta:0  shape: (80,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/expand_conv/weights:0  shape: (1, 1, 80, 184)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/expand_conv/bn/gamma:0  shape: (184,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/expand_conv/bn/beta:0  shape: (184,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/dw_conv/weights:0  shape: (3, 3, 184, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/dw_conv/bn/gamma:0  shape: (184,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/dw_conv/bn/beta:0  shape: (184,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/proj_conv/weights:0  shape: (1, 1, 184, 80)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/proj_conv/bn/gamma:0  shape: (80,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_3/proj_conv/bn/beta:0  shape: (80,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/expand_conv/weights:0  shape: (1, 1, 80, 184)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/expand_conv/bn/gamma:0  shape: (184,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/expand_conv/bn/beta:0  shape: (184,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/dw_conv/weights:0  shape: (3, 3, 184, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/dw_conv/bn/gamma:0  shape: (184,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/dw_conv/bn/beta:0  shape: (184,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/proj_conv/weights:0  shape: (1, 1, 184, 80)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/proj_conv/bn/gamma:0  shape: (80,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_4/proj_conv/bn/beta:0  shape: (80,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/expand_conv/weights:0  shape: (1, 1, 80, 480)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/expand_conv/bn/gamma:0  shape: (480,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/expand_conv/bn/beta:0  shape: (480,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/dw_conv/weights:0  shape: (3, 3, 480, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/dw_conv/bn/gamma:0  shape: (480,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/dw_conv/bn/beta:0  shape: (480,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/SEmodule/dense1/conv/weights:0  shape: (1, 1, 480, 120)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/SEmodule/dense1/conv/bias:0  shape: (120,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/SEmodule/dense2/conv/weights:0  shape: (1, 1, 120, 480)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/SEmodule/dense2/conv/bias:0  shape: (480,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/proj_conv/weights:0  shape: (1, 1, 480, 112)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/proj_conv/bn/gamma:0  shape: (112,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_5/proj_conv/bn/beta:0  shape: (112,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/expand_conv/weights:0  shape: (1, 1, 112, 672)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/expand_conv/bn/gamma:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/expand_conv/bn/beta:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/dw_conv/weights:0  shape: (3, 3, 672, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/dw_conv/bn/gamma:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/dw_conv/bn/beta:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/SEmodule/dense1/conv/weights:0  shape: (1, 1, 672, 168)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/SEmodule/dense1/conv/bias:0  shape: (168,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/SEmodule/dense2/conv/weights:0  shape: (1, 1, 168, 672)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/SEmodule/dense2/conv/bias:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/proj_conv/weights:0  shape: (1, 1, 672, 112)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/proj_conv/bn/gamma:0  shape: (112,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck3_6/proj_conv/bn/beta:0  shape: (112,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/expand_conv/weights:0  shape: (1, 1, 112, 672)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/expand_conv/bn/gamma:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/expand_conv/bn/beta:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/dw_conv_dilation/weights:0  shape: (5, 5, 672, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/dw_conv_dilation/bn/gamma:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/dw_conv_dilation/bn/beta:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/SEmodule/dense1/conv/weights:0  shape: (1, 1, 672, 168)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/SEmodule/dense1/conv/bias:0  shape: (168,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/SEmodule/dense2/conv/weights:0  shape: (1, 1, 168, 672)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/SEmodule/dense2/conv/bias:0  shape: (672,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/proj_conv/weights:0  shape: (1, 1, 672, 160)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/proj_conv/bn/gamma:0  shape: (160,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_1/proj_conv/bn/beta:0  shape: (160,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/expand_conv/weights:0  shape: (1, 1, 160, 960)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/expand_conv/bn/gamma:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/expand_conv/bn/beta:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/dw_conv/weights:0  shape: (5, 5, 960, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/dw_conv/bn/gamma:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/dw_conv/bn/beta:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/SEmodule/dense1/conv/weights:0  shape: (1, 1, 960, 240)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/SEmodule/dense1/conv/bias:0  shape: (240,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/SEmodule/dense2/conv/weights:0  shape: (1, 1, 240, 960)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/SEmodule/dense2/conv/bias:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/proj_conv/weights:0  shape: (1, 1, 960, 160)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/proj_conv/bn/gamma:0  shape: (160,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_2/proj_conv/bn/beta:0  shape: (160,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/expand_conv/weights:0  shape: (1, 1, 160, 960)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/expand_conv/bn/gamma:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/expand_conv/bn/beta:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/dw_conv/weights:0  shape: (5, 5, 960, 1)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/dw_conv/bn/gamma:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/dw_conv/bn/beta:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/SEmodule/dense1/conv/weights:0  shape: (1, 1, 960, 240)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/SEmodule/dense1/conv/bias:0  shape: (240,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/SEmodule/dense2/conv/weights:0  shape: (1, 1, 240, 960)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/SEmodule/dense2/conv/bias:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/proj_conv/weights:0  shape: (1, 1, 960, 160)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/proj_conv/bn/gamma:0  shape: (160,)
+04/14/2022 18:35:33 PM - INFO - name: encoder/mobilenetv3_large_16s/bottleneck4_3/proj_conv/bn/beta:0  shape: (160,)
+04/14/2022 18:35:33 PM - INFO - name: decoder/conv1/weights:0  shape: (1, 1, 160, 960)
+04/14/2022 18:35:33 PM - INFO - name: decoder/conv1/bn/gamma:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: decoder/conv1/bn/beta:0  shape: (960,)
+04/14/2022 18:35:33 PM - INFO - name: decoder/conv2/weights:0  shape: (1, 1, 960, 1280)
+04/14/2022 18:35:33 PM - INFO - name: decoder/conv2/bias:0  shape: (1280,)
+04/14/2022 18:35:33 PM - INFO - name: decoder/logits/weights:0  shape: (1, 1, 1280, 3)
+04/14/2022 18:35:33 PM - INFO - name: decoder/logits/bias:0  shape: (3,)
+04/14/2022 18:35:33 PM - INFO - ========================================================================================
+04/14/2022 18:35:41 PM - INFO - global step: 19423, epoch_28, lr: 0.00053, 10/719: Train average loss: 0.151
+04/14/2022 18:35:45 PM - INFO - global step: 19433, epoch_28, lr: 0.00053, 20/719: Train average loss: 0.130
+04/14/2022 18:35:49 PM - INFO - global step: 19443, epoch_28, lr: 0.00053, 30/719: Train average loss: 0.126
+04/14/2022 18:35:53 PM - INFO - global step: 19453, epoch_28, lr: 0.00053, 40/719: Train average loss: 0.123
+04/14/2022 18:35:57 PM - INFO - global step: 19463, epoch_28, lr: 0.00053, 50/719: Train average loss: 0.126
+04/14/2022 18:36:01 PM - INFO - global step: 19473, epoch_28, lr: 0.00053, 60/719: Train average loss: 0.137
+04/14/2022 18:36:05 PM - INFO - global step: 19483, epoch_28, lr: 0.00053, 70/719: Train average loss: 0.136
+04/14/2022 18:36:09 PM - INFO - global step: 19493, epoch_28, lr: 0.00053, 80/719: Train average loss: 0.137
+04/14/2022 18:36:12 PM - INFO - global step: 19503, epoch_28, lr: 0.00053, 90/719: Train average loss: 0.142
+04/14/2022 18:36:16 PM - INFO - global step: 19513, epoch_28, lr: 0.00053, 100/719: Train average loss: 0.141
+04/14/2022 18:36:21 PM - INFO - global step: 19523, epoch_28, lr: 0.00053, 110/719: Train average loss: 0.141
+04/14/2022 18:36:25 PM - INFO - global step: 19533, epoch_28, lr: 0.00053, 120/719: Train average loss: 0.141
+04/14/2022 18:36:29 PM - INFO - global step: 19543, epoch_28, lr: 0.00053, 130/719: Train average loss: 0.139
+04/14/2022 18:36:33 PM - INFO - global step: 19553, epoch_28, lr: 0.00053, 140/719: Train average loss: 0.139
+04/14/2022 18:36:37 PM - INFO - global step: 19563, epoch_28, lr: 0.00053, 150/719: Train average loss: 0.137
+04/14/2022 18:36:41 PM - INFO - global step: 19573, epoch_28, lr: 0.00053, 160/719: Train average loss: 0.137
+04/14/2022 18:36:45 PM - INFO - global step: 19583, epoch_28, lr: 0.00053, 170/719: Train average loss: 0.138
+04/14/2022 18:36:49 PM - INFO - global step: 19593, epoch_28, lr: 0.00053, 180/719: Train average loss: 0.139
+04/14/2022 18:36:53 PM - INFO - global step: 19603, epoch_28, lr: 0.00053, 190/719: Train average loss: 0.139
+04/14/2022 18:36:57 PM - INFO - global step: 19613, epoch_28, lr: 0.00053, 200/719: Train average loss: 0.139
+04/14/2022 18:37:02 PM - INFO - global step: 19623, epoch_28, lr: 0.00053, 210/719: Train average loss: 0.139
+04/14/2022 18:37:06 PM - INFO - global step: 19633, epoch_28, lr: 0.00053, 220/719: Train average loss: 0.138
+04/14/2022 18:37:10 PM - INFO - global step: 19643, epoch_28, lr: 0.00053, 230/719: Train average loss: 0.138
+04/14/2022 18:37:14 PM - INFO - global step: 19653, epoch_28, lr: 0.00053, 240/719: Train average loss: 0.136
+04/14/2022 18:37:18 PM - INFO - global step: 19663, epoch_28, lr: 0.00053, 250/719: Train average loss: 0.135
+04/14/2022 18:37:22 PM - INFO - global step: 19673, epoch_28, lr: 0.00053, 260/719: Train average loss: 0.135
+04/14/2022 18:37:26 PM - INFO - global step: 19683, epoch_28, lr: 0.00053, 270/719: Train average loss: 0.134
+04/14/2022 18:37:31 PM - INFO - global step: 19693, epoch_28, lr: 0.00053, 280/719: Train average loss: 0.133
+04/14/2022 18:37:35 PM - INFO - global step: 19703, epoch_28, lr: 0.00053, 290/719: Train average loss: 0.133
+04/14/2022 18:37:39 PM - INFO - global step: 19713, epoch_28, lr: 0.00053, 300/719: Train average loss: 0.132
+04/14/2022 18:37:43 PM - INFO - global step: 19723, epoch_28, lr: 0.00053, 310/719: Train average loss: 0.133
+04/14/2022 18:37:47 PM - INFO - global step: 19733, epoch_28, lr: 0.00053, 320/719: Train average loss: 0.134
+04/14/2022 18:37:51 PM - INFO - global step: 19743, epoch_28, lr: 0.00053, 330/719: Train average loss: 0.134
+04/14/2022 18:37:55 PM - INFO - global step: 19753, epoch_28, lr: 0.00053, 340/719: Train average loss: 0.134
+04/14/2022 18:38:00 PM - INFO - global step: 19763, epoch_28, lr: 0.00053, 350/719: Train average loss: 0.134
+04/14/2022 18:38:04 PM - INFO - global step: 19773, epoch_28, lr: 0.00053, 360/719: Train average loss: 0.133
+04/14/2022 18:38:08 PM - INFO - global step: 19783, epoch_28, lr: 0.00053, 370/719: Train average loss: 0.132
+04/14/2022 18:38:12 PM - INFO - global step: 19793, epoch_28, lr: 0.00053, 380/719: Train average loss: 0.131
+04/14/2022 18:38:16 PM - INFO - global step: 19803, epoch_28, lr: 0.00053, 390/719: Train average loss: 0.132
+04/14/2022 18:38:20 PM - INFO - global step: 19813, epoch_28, lr: 0.00053, 400/719: Train average loss: 0.133
+04/14/2022 18:38:24 PM - INFO - global step: 19823, epoch_28, lr: 0.00053, 410/719: Train average loss: 0.133
+04/14/2022 18:38:28 PM - INFO - global step: 19833, epoch_28, lr: 0.00053, 420/719: Train average loss: 0.134
+04/14/2022 18:38:32 PM - INFO - global step: 19843, epoch_28, lr: 0.00053, 430/719: Train average loss: 0.134
+04/14/2022 18:38:36 PM - INFO - global step: 19853, epoch_28, lr: 0.00053, 440/719: Train average loss: 0.134
+04/14/2022 18:38:40 PM - INFO - global step: 19863, epoch_28, lr: 0.00053, 450/719: Train average loss: 0.134
+04/14/2022 18:38:44 PM - INFO - global step: 19873, epoch_28, lr: 0.00053, 460/719: Train average loss: 0.135
+04/14/2022 18:38:48 PM - INFO - global step: 19883, epoch_28, lr: 0.00053, 470/719: Train average loss: 0.135
+04/14/2022 18:38:52 PM - INFO - global step: 19893, epoch_28, lr: 0.00053, 480/719: Train average loss: 0.135
+04/14/2022 18:38:56 PM - INFO - global step: 19903, epoch_28, lr: 0.00053, 490/719: Train average loss: 0.135
+04/14/2022 18:39:00 PM - INFO - global step: 19913, epoch_28, lr: 0.00053, 500/719: Train average loss: 0.135
+04/14/2022 18:39:04 PM - INFO - global step: 19923, epoch_28, lr: 0.00053, 510/719: Train average loss: 0.134
+04/14/2022 18:39:08 PM - INFO - global step: 19933, epoch_28, lr: 0.00053, 520/719: Train average loss: 0.133
+04/14/2022 18:39:12 PM - INFO - global step: 19943, epoch_28, lr: 0.00053, 530/719: Train average loss: 0.133
+04/14/2022 18:39:16 PM - INFO - global step: 19953, epoch_28, lr: 0.00053, 540/719: Train average loss: 0.134
+04/14/2022 18:39:20 PM - INFO - global step: 19963, epoch_28, lr: 0.00053, 550/719: Train average loss: 0.134
+04/14/2022 18:39:24 PM - INFO - global step: 19973, epoch_28, lr: 0.00053, 560/719: Train average loss: 0.133
+04/14/2022 18:39:28 PM - INFO - global step: 19983, epoch_28, lr: 0.00053, 570/719: Train average loss: 0.133
+04/14/2022 18:39:32 PM - INFO - global step: 19993, epoch_28, lr: 0.00053, 580/719: Train average loss: 0.133
+04/14/2022 18:39:36 PM - INFO - global step: 20003, epoch_28, lr: 0.00053, 590/719: Train average loss: 0.133
+04/14/2022 18:39:40 PM - INFO - global step: 20013, epoch_28, lr: 0.00053, 600/719: Train average loss: 0.133
+04/14/2022 18:39:44 PM - INFO - global step: 20023, epoch_28, lr: 0.00053, 610/719: Train average loss: 0.133
+04/14/2022 18:39:48 PM - INFO - global step: 20033, epoch_28, lr: 0.00053, 620/719: Train average loss: 0.134
+04/14/2022 18:39:52 PM - INFO - global step: 20043, epoch_28, lr: 0.00053, 630/719: Train average loss: 0.135
+04/14/2022 18:39:56 PM - INFO - global step: 20053, epoch_28, lr: 0.00053, 640/719: Train average loss: 0.135
+04/14/2022 18:40:00 PM - INFO - global step: 20063, epoch_28, lr: 0.00053, 650/719: Train average loss: 0.134
+04/14/2022 18:40:04 PM - INFO - global step: 20073, epoch_28, lr: 0.00053, 660/719: Train average loss: 0.134
+04/14/2022 18:40:08 PM - INFO - global step: 20083, epoch_28, lr: 0.00053, 670/719: Train average loss: 0.134
+04/14/2022 18:40:12 PM - INFO - global step: 20093, epoch_28, lr: 0.00053, 680/719: Train average loss: 0.134
+04/14/2022 18:40:16 PM - INFO - global step: 20103, epoch_28, lr: 0.00053, 690/719: Train average loss: 0.134
+04/14/2022 18:40:20 PM - INFO - global step: 20113, epoch_28, lr: 0.00053, 700/719: Train average loss: 0.133
+04/14/2022 18:40:24 PM - INFO - global step: 20123, epoch_28, lr: 0.00053, 710/719: Train average loss: 0.134
+04/14/2022 18:40:27 PM - INFO - ==========================================================
+04/14/2022 18:40:27 PM - INFO - epoch_28: Train set(Aug) acc is: 0.945
+04/14/2022 18:40:42 PM - INFO - epoch_28: Valid set average loss is: 0.202
+04/14/2022 18:40:42 PM - INFO - epoch_28: Valid set acc is: 0.919
+04/14/2022 18:40:42 PM - INFO - ==========================================================
+04/14/2022 18:40:46 PM - INFO - global step: 20142, epoch_29, lr: 0.00053, 10/719: Train average loss: 0.128
+04/14/2022 18:40:49 PM - INFO - global step: 20152, epoch_29, lr: 0.00053, 20/719: Train average loss: 0.127
+04/14/2022 18:40:53 PM - INFO - global step: 20162, epoch_29, lr: 0.00053, 30/719: Train average loss: 0.131
+04/14/2022 18:40:57 PM - INFO - global step: 20172, epoch_29, lr: 0.00053, 40/719: Train average loss: 0.144
+04/14/2022 18:41:01 PM - INFO - global step: 20182, epoch_29, lr: 0.00053, 50/719: Train average loss: 0.148
+04/14/2022 18:41:05 PM - INFO - global step: 20192, epoch_29, lr: 0.00053, 60/719: Train average loss: 0.149
+04/14/2022 18:41:09 PM - INFO - global step: 20202, epoch_29, lr: 0.00053, 70/719: Train average loss: 0.141
+04/14/2022 18:41:13 PM - INFO - global step: 20212, epoch_29, lr: 0.00053, 80/719: Train average loss: 0.149
+04/14/2022 18:41:17 PM - INFO - global step: 20222, epoch_29, lr: 0.00053, 90/719: Train average loss: 0.152
+04/14/2022 18:41:21 PM - INFO - global step: 20232, epoch_29, lr: 0.00053, 100/719: Train average loss: 0.150
+04/14/2022 18:41:25 PM - INFO - global step: 20242, epoch_29, lr: 0.00053, 110/719: Train average loss: 0.149
+04/14/2022 18:41:29 PM - INFO - global step: 20252, epoch_29, lr: 0.00053, 120/719: Train average loss: 0.146
+04/14/2022 18:41:33 PM - INFO - global step: 20262, epoch_29, lr: 0.00053, 130/719: Train average loss: 0.142
+04/14/2022 18:41:37 PM - INFO - global step: 20272, epoch_29, lr: 0.00053, 140/719: Train average loss: 0.140
+04/14/2022 18:41:41 PM - INFO - global step: 20282, epoch_29, lr: 0.00053, 150/719: Train average loss: 0.141
+04/14/2022 18:41:45 PM - INFO - global step: 20292, epoch_29, lr: 0.00053, 160/719: Train average loss: 0.138
+04/14/2022 18:41:49 PM - INFO - global step: 20302, epoch_29, lr: 0.00053, 170/719: Train average loss: 0.139
+04/14/2022 18:41:53 PM - INFO - global step: 20312, epoch_29, lr: 0.00053, 180/719: Train average loss: 0.139
+04/14/2022 18:41:57 PM - INFO - global step: 20322, epoch_29, lr: 0.00053, 190/719: Train average loss: 0.139
+04/14/2022 18:42:02 PM - INFO - global step: 20332, epoch_29, lr: 0.00053, 200/719: Train average loss: 0.138
+04/14/2022 18:42:06 PM - INFO - global step: 20342, epoch_29, lr: 0.00053, 210/719: Train average loss: 0.138
+04/14/2022 18:42:10 PM - INFO - global step: 20352, epoch_29, lr: 0.00053, 220/719: Train average loss: 0.135
+04/14/2022 18:42:14 PM - INFO - global step: 20362, epoch_29, lr: 0.00053, 230/719: Train average loss: 0.136
+04/14/2022 18:42:18 PM - INFO - global step: 20372, epoch_29, lr: 0.00053, 240/719: Train average loss: 0.136
+04/14/2022 18:42:22 PM - INFO - global step: 20382, epoch_29, lr: 0.00053, 250/719: Train average loss: 0.136
+04/14/2022 18:42:26 PM - INFO - global step: 20392, epoch_29, lr: 0.00053, 260/719: Train average loss: 0.135
+04/14/2022 18:42:30 PM - INFO - global step: 20402, epoch_29, lr: 0.00053, 270/719: Train average loss: 0.134
+04/14/2022 18:42:34 PM - INFO - global step: 20412, epoch_29, lr: 0.00053, 280/719: Train average loss: 0.133
+04/14/2022 18:42:39 PM - INFO - global step: 20422, epoch_29, lr: 0.00053, 290/719: Train average loss: 0.133
+04/14/2022 18:42:43 PM - INFO - global step: 20432, epoch_29, lr: 0.00053, 300/719: Train average loss: 0.133
+04/14/2022 18:42:47 PM - INFO - global step: 20442, epoch_29, lr: 0.00053, 310/719: Train average loss: 0.133
+04/14/2022 18:42:51 PM - INFO - global step: 20452, epoch_29, lr: 0.00053, 320/719: Train average loss: 0.133
+04/14/2022 18:42:55 PM - INFO - global step: 20462, epoch_29, lr: 0.00053, 330/719: Train average loss: 0.133
+04/14/2022 18:42:59 PM - INFO - global step: 20472, epoch_29, lr: 0.00053, 340/719: Train average loss: 0.133
+04/14/2022 18:43:03 PM - INFO - global step: 20482, epoch_29, lr: 0.00053, 350/719: Train average loss: 0.134
+04/14/2022 18:43:07 PM - INFO - global step: 20492, epoch_29, lr: 0.00053, 360/719: Train average loss: 0.134
+04/14/2022 18:43:11 PM - INFO - global step: 20502, epoch_29, lr: 0.00053, 370/719: Train average loss: 0.134
+04/14/2022 18:43:15 PM - INFO - global step: 20512, epoch_29, lr: 0.00053, 380/719: Train average loss: 0.133
+04/14/2022 18:43:19 PM - INFO - global step: 20522, epoch_29, lr: 0.00053, 390/719: Train average loss: 0.133
+04/14/2022 18:43:23 PM - INFO - global step: 20532, epoch_29, lr: 0.00053, 400/719: Train average loss: 0.133
+04/14/2022 18:43:27 PM - INFO - global step: 20542, epoch_29, lr: 0.00053, 410/719: Train average loss: 0.133
+04/14/2022 18:43:31 PM - INFO - global step: 20552, epoch_29, lr: 0.00053, 420/719: Train average loss: 0.133
+04/14/2022 18:43:35 PM - INFO - global step: 20562, epoch_29, lr: 0.00053, 430/719: Train average loss: 0.133
+04/14/2022 18:43:39 PM - INFO - global step: 20572, epoch_29, lr: 0.00053, 440/719: Train average loss: 0.132
+04/14/2022 18:43:43 PM - INFO - global step: 20582, epoch_29, lr: 0.00053, 450/719: Train average loss: 0.132
+04/14/2022 18:43:47 PM - INFO - global step: 20592, epoch_29, lr: 0.00053, 460/719: Train average loss: 0.132
+04/14/2022 18:43:51 PM - INFO - global step: 20602, epoch_29, lr: 0.00053, 470/719: Train average loss: 0.132
+04/14/2022 18:43:55 PM - INFO - global step: 20612, epoch_29, lr: 0.00053, 480/719: Train average loss: 0.133
+04/14/2022 18:43:59 PM - INFO - global step: 20622, epoch_29, lr: 0.00053, 490/719: Train average loss: 0.132
+04/14/2022 18:44:03 PM - INFO - global step: 20632, epoch_29, lr: 0.00053, 500/719: Train average loss: 0.132
+04/14/2022 18:44:07 PM - INFO - global step: 20642, epoch_29, lr: 0.00053, 510/719: Train average loss: 0.132
+04/14/2022 18:44:11 PM - INFO - global step: 20652, epoch_29, lr: 0.00053, 520/719: Train average loss: 0.132
+04/14/2022 18:44:15 PM - INFO - global step: 20662, epoch_29, lr: 0.00053, 530/719: Train average loss: 0.132
+04/14/2022 18:44:19 PM - INFO - global step: 20672, epoch_29, lr: 0.00053, 540/719: Train average loss: 0.132
+04/14/2022 18:44:23 PM - INFO - global step: 20682, epoch_29, lr: 0.00053, 550/719: Train average loss: 0.132
+04/14/2022 18:44:27 PM - INFO - global step: 20692, epoch_29, lr: 0.00053, 560/719: Train average loss: 0.131
+04/14/2022 18:44:31 PM - INFO - global step: 20702, epoch_29, lr: 0.00053, 570/719: Train average loss: 0.133
+04/14/2022 18:44:35 PM - INFO - global step: 20712, epoch_29, lr: 0.00053, 580/719: Train average loss: 0.134
+04/14/2022 18:44:39 PM - INFO - global step: 20722, epoch_29, lr: 0.00053, 590/719: Train average loss: 0.133
+04/14/2022 18:44:44 PM - INFO - global step: 20732, epoch_29, lr: 0.00053, 600/719: Train average loss: 0.134
+04/14/2022 18:44:48 PM - INFO - global step: 20742, epoch_29, lr: 0.00053, 610/719: Train average loss: 0.133
+04/14/2022 18:44:52 PM - INFO - global step: 20752, epoch_29, lr: 0.00053, 620/719: Train average loss: 0.134
+04/14/2022 18:44:56 PM - INFO - global step: 20762, epoch_29, lr: 0.00053, 630/719: Train average loss: 0.134
+04/14/2022 18:45:00 PM - INFO - global step: 20772, epoch_29, lr: 0.00053, 640/719: Train average loss: 0.134
+04/14/2022 18:45:04 PM - INFO - global step: 20782, epoch_29, lr: 0.00053, 650/719: Train average loss: 0.134
+04/14/2022 18:45:08 PM - INFO - global step: 20792, epoch_29, lr: 0.00053, 660/719: Train average loss: 0.135
+04/14/2022 18:45:12 PM - INFO - global step: 20802, epoch_29, lr: 0.00053, 670/719: Train average loss: 0.135
+04/14/2022 18:45:17 PM - INFO - global step: 20812, epoch_29, lr: 0.00053, 680/719: Train average loss: 0.135
+04/14/2022 18:45:21 PM - INFO - global step: 20822, epoch_29, lr: 0.00053, 690/719: Train average loss: 0.135
+04/14/2022 18:45:25 PM - INFO - global step: 20832, epoch_29, lr: 0.00053, 700/719: Train average loss: 0.134
+04/14/2022 18:45:29 PM - INFO - global step: 20842, epoch_29, lr: 0.00053, 710/719: Train average loss: 0.135
+04/14/2022 18:45:32 PM - INFO - ==========================================================
+04/14/2022 18:45:32 PM - INFO - epoch_29: Train set(Aug) acc is: 0.944
+04/14/2022 18:45:46 PM - INFO - epoch_29: Valid set average loss is: 0.148
+04/14/2022 18:45:46 PM - INFO - epoch_29: Valid set acc is: 0.940
+04/14/2022 18:45:46 PM - INFO - ==========================================================
+04/14/2022 18:45:50 PM - INFO - global step: 20861, epoch_30, lr: 0.00053, 10/719: Train average loss: 0.095
+04/14/2022 18:45:55 PM - INFO - global step: 20871, epoch_30, lr: 0.00053, 20/719: Train average loss: 0.131
+04/14/2022 18:45:58 PM - INFO - global step: 20881, epoch_30, lr: 0.00053, 30/719: Train average loss: 0.119
+04/14/2022 18:46:03 PM - INFO - global step: 20891, epoch_30, lr: 0.00053, 40/719: Train average loss: 0.118
+04/14/2022 18:46:07 PM - INFO - global step: 20901, epoch_30, lr: 0.00053, 50/719: Train average loss: 0.121
+04/14/2022 18:46:11 PM - INFO - global step: 20911, epoch_30, lr: 0.00053, 60/719: Train average loss: 0.120
+04/14/2022 18:46:15 PM - INFO - global step: 20921, epoch_30, lr: 0.00053, 70/719: Train average loss: 0.129
+04/14/2022 18:46:19 PM - INFO - global step: 20931, epoch_30, lr: 0.00053, 80/719: Train average loss: 0.124
+04/14/2022 18:46:23 PM - INFO - global step: 20941, epoch_30, lr: 0.00053, 90/719: Train average loss: 0.127
+04/14/2022 18:46:27 PM - INFO - global step: 20951, epoch_30, lr: 0.00053, 100/719: Train average loss: 0.126
+04/14/2022 18:46:31 PM - INFO - global step: 20961, epoch_30, lr: 0.00053, 110/719: Train average loss: 0.124
+04/14/2022 18:46:35 PM - INFO - global step: 20971, epoch_30, lr: 0.00053, 120/719: Train average loss: 0.125
+04/14/2022 18:46:39 PM - INFO - global step: 20981, epoch_30, lr: 0.00053, 130/719: Train average loss: 0.124
+04/14/2022 18:46:43 PM - INFO - global step: 20991, epoch_30, lr: 0.00053, 140/719: Train average loss: 0.122
+04/14/2022 18:46:47 PM - INFO - global step: 21001, epoch_30, lr: 0.00048, 150/719: Train average loss: 0.124
+04/14/2022 18:46:51 PM - INFO - global step: 21011, epoch_30, lr: 0.00048, 160/719: Train average loss: 0.124
+04/14/2022 18:46:55 PM - INFO - global step: 21021, epoch_30, lr: 0.00048, 170/719: Train average loss: 0.124
+04/14/2022 18:46:59 PM - INFO - global step: 21031, epoch_30, lr: 0.00048, 180/719: Train average loss: 0.125
+04/14/2022 18:47:03 PM - INFO - global step: 21041, epoch_30, lr: 0.00048, 190/719: Train average loss: 0.123
+04/14/2022 18:47:07 PM - INFO - global step: 21051, epoch_30, lr: 0.00048, 200/719: Train average loss: 0.123
+04/14/2022 18:47:11 PM - INFO - global step: 21061, epoch_30, lr: 0.00048, 210/719: Train average loss: 0.122
+04/14/2022 18:47:15 PM - INFO - global step: 21071, epoch_30, lr: 0.00048, 220/719: Train average loss: 0.123
+04/14/2022 18:47:19 PM - INFO - global step: 21081, epoch_30, lr: 0.00048, 230/719: Train average loss: 0.124
+04/14/2022 18:47:23 PM - INFO - global step: 21091, epoch_30, lr: 0.00048, 240/719: Train average loss: 0.123
+04/14/2022 18:47:27 PM - INFO - global step: 21101, epoch_30, lr: 0.00048, 250/719: Train average loss: 0.124
+04/14/2022 18:47:31 PM - INFO - global step: 21111, epoch_30, lr: 0.00048, 260/719: Train average loss: 0.124
+04/14/2022 18:47:35 PM - INFO - global step: 21121, epoch_30, lr: 0.00048, 270/719: Train average loss: 0.126
+04/14/2022 18:47:39 PM - INFO - global step: 21131, epoch_30, lr: 0.00048, 280/719: Train average loss: 0.127
+04/14/2022 18:47:43 PM - INFO - global step: 21141, epoch_30, lr: 0.00048, 290/719: Train average loss: 0.127
+04/14/2022 18:47:47 PM - INFO - global step: 21151, epoch_30, lr: 0.00048, 300/719: Train average loss: 0.129
+04/14/2022 18:47:51 PM - INFO - global step: 21161, epoch_30, lr: 0.00048, 310/719: Train average loss: 0.130
+04/14/2022 18:47:55 PM - INFO - global step: 21171, epoch_30, lr: 0.00048, 320/719: Train average loss: 0.131
+04/14/2022 18:47:59 PM - INFO - global step: 21181, epoch_30, lr: 0.00048, 330/719: Train average loss: 0.130
+04/14/2022 18:48:03 PM - INFO - global step: 21191, epoch_30, lr: 0.00048, 340/719: Train average loss: 0.130
+04/14/2022 18:48:07 PM - INFO - global step: 21201, epoch_30, lr: 0.00048, 350/719: Train average loss: 0.130
+04/14/2022 18:48:11 PM - INFO - global step: 21211, epoch_30, lr: 0.00048, 360/719: Train average loss: 0.130
+04/14/2022 18:48:15 PM - INFO - global step: 21221, epoch_30, lr: 0.00048, 370/719: Train average loss: 0.130
+04/14/2022 18:48:19 PM - INFO - global step: 21231, epoch_30, lr: 0.00048, 380/719: Train average loss: 0.131
+04/14/2022 18:48:23 PM - INFO - global step: 21241, epoch_30, lr: 0.00048, 390/719: Train average loss: 0.130
+04/14/2022 18:48:27 PM - INFO - global step: 21251, epoch_30, lr: 0.00048, 400/719: Train average loss: 0.129
+04/14/2022 18:48:31 PM - INFO - global step: 21261, epoch_30, lr: 0.00048, 410/719: Train average loss: 0.129
+04/14/2022 18:48:35 PM - INFO - global step: 21271, epoch_30, lr: 0.00048, 420/719: Train average loss: 0.130
+04/14/2022 18:48:39 PM - INFO - global step: 21281, epoch_30, lr: 0.00048, 430/719: Train average loss: 0.130
+04/14/2022 18:48:43 PM - INFO - global step: 21291, epoch_30, lr: 0.00048, 440/719: Train average loss: 0.129
+04/14/2022 18:48:47 PM - INFO - global step: 21301, epoch_30, lr: 0.00048, 450/719: Train average loss: 0.130
+04/14/2022 18:48:51 PM - INFO - global step: 21311, epoch_30, lr: 0.00048, 460/719: Train average loss: 0.131
+04/14/2022 18:48:55 PM - INFO - global step: 21321, epoch_30, lr: 0.00048, 470/719: Train average loss: 0.132
+04/14/2022 18:48:59 PM - INFO - global step: 21331, epoch_30, lr: 0.00048, 480/719: Train average loss: 0.132
+04/14/2022 18:49:04 PM - INFO - global step: 21341, epoch_30, lr: 0.00048, 490/719: Train average loss: 0.131
+04/14/2022 18:49:08 PM - INFO - global step: 21351, epoch_30, lr: 0.00048, 500/719: Train average loss: 0.131
+04/14/2022 18:49:12 PM - INFO - global step: 21361, epoch_30, lr: 0.00048, 510/719: Train average loss: 0.130
+04/14/2022 18:49:16 PM - INFO - global step: 21371, epoch_30, lr: 0.00048, 520/719: Train average loss: 0.130
+04/14/2022 18:49:20 PM - INFO - global step: 21381, epoch_30, lr: 0.00048, 530/719: Train average loss: 0.130
+04/14/2022 18:49:24 PM - INFO - global step: 21391, epoch_30, lr: 0.00048, 540/719: Train average loss: 0.129
+04/14/2022 18:49:27 PM - INFO - global step: 21401, epoch_30, lr: 0.00048, 550/719: Train average loss: 0.129
+04/14/2022 18:49:32 PM - INFO - global step: 21411, epoch_30, lr: 0.00048, 560/719: Train average loss: 0.129
+04/14/2022 18:49:36 PM - INFO - global step: 21421, epoch_30, lr: 0.00048, 570/719: Train average loss: 0.130
+04/14/2022 18:49:40 PM - INFO - global step: 21431, epoch_30, lr: 0.00048, 580/719: Train average loss: 0.131
+04/14/2022 18:49:44 PM - INFO - global step: 21441, epoch_30, lr: 0.00048, 590/719: Train average loss: 0.131
+04/14/2022 18:49:48 PM - INFO - global step: 21451, epoch_30, lr: 0.00048, 600/719: Train average loss: 0.131
+04/14/2022 18:49:52 PM - INFO - global step: 21461, epoch_30, lr: 0.00048, 610/719: Train average loss: 0.131
+04/14/2022 18:49:56 PM - INFO - global step: 21471, epoch_30, lr: 0.00048, 620/719: Train average loss: 0.131
+04/14/2022 18:50:00 PM - INFO - global step: 21481, epoch_30, lr: 0.00048, 630/719: Train average loss: 0.131
+04/14/2022 18:50:04 PM - INFO - global step: 21491, epoch_30, lr: 0.00048, 640/719: Train average loss: 0.131
+04/14/2022 18:50:08 PM - INFO - global step: 21501, epoch_30, lr: 0.00048, 650/719: Train average loss: 0.130
+04/14/2022 18:50:12 PM - INFO - global step: 21511, epoch_30, lr: 0.00048, 660/719: Train average loss: 0.130
+04/14/2022 18:50:16 PM - INFO - global step: 21521, epoch_30, lr: 0.00048, 670/719: Train average loss: 0.130
+04/14/2022 18:50:20 PM - INFO - global step: 21531, epoch_30, lr: 0.00048, 680/719: Train average loss: 0.130
+04/14/2022 18:50:24 PM - INFO - global step: 21541, epoch_30, lr: 0.00048, 690/719: Train average loss: 0.130
+04/14/2022 18:50:28 PM - INFO - global step: 21551, epoch_30, lr: 0.00048, 700/719: Train average loss: 0.130
+04/14/2022 18:50:32 PM - INFO - global step: 21561, epoch_30, lr: 0.00048, 710/719: Train average loss: 0.131
+04/14/2022 18:50:36 PM - INFO - ==========================================================
+04/14/2022 18:50:36 PM - INFO - epoch_30: Train set(Aug) acc is: 0.948
+04/14/2022 18:50:50 PM - INFO - epoch_30: Valid set average loss is: 0.145
+04/14/2022 18:50:50 PM - INFO - epoch_30: Valid set acc is: 0.942
+04/14/2022 18:50:50 PM - INFO - ==========================================================
+04/14/2022 18:50:54 PM - INFO - global step: 21580, epoch_31, lr: 0.00048, 10/719: Train average loss: 0.112
+04/14/2022 18:50:58 PM - INFO - global step: 21590, epoch_31, lr: 0.00048, 20/719: Train average loss: 0.119
+04/14/2022 18:51:02 PM - INFO - global step: 21600, epoch_31, lr: 0.00048, 30/719: Train average loss: 0.127
+04/14/2022 18:51:06 PM - INFO - global step: 21610, epoch_31, lr: 0.00048, 40/719: Train average loss: 0.127
+04/14/2022 18:51:10 PM - INFO - global step: 21620, epoch_31, lr: 0.00048, 50/719: Train average loss: 0.123
+04/14/2022 18:51:14 PM - INFO - global step: 21630, epoch_31, lr: 0.00048, 60/719: Train average loss: 0.123
+04/14/2022 18:51:18 PM - INFO - global step: 21640, epoch_31, lr: 0.00048, 70/719: Train average loss: 0.124
+04/14/2022 18:51:22 PM - INFO - global step: 21650, epoch_31, lr: 0.00048, 80/719: Train average loss: 0.126
+04/14/2022 18:51:26 PM - INFO - global step: 21660, epoch_31, lr: 0.00048, 90/719: Train average loss: 0.129
+04/14/2022 18:51:30 PM - INFO - global step: 21670, epoch_31, lr: 0.00048, 100/719: Train average loss: 0.128
+04/14/2022 18:51:34 PM - INFO - global step: 21680, epoch_31, lr: 0.00048, 110/719: Train average loss: 0.126
+04/14/2022 18:51:38 PM - INFO - global step: 21690, epoch_31, lr: 0.00048, 120/719: Train average loss: 0.124
+04/14/2022 18:51:42 PM - INFO - global step: 21700, epoch_31, lr: 0.00048, 130/719: Train average loss: 0.124
+04/14/2022 18:51:46 PM - INFO - global step: 21710, epoch_31, lr: 0.00048, 140/719: Train average loss: 0.129
+04/14/2022 18:51:50 PM - INFO - global step: 21720, epoch_31, lr: 0.00048, 150/719: Train average loss: 0.125
+04/14/2022 18:51:54 PM - INFO - global step: 21730, epoch_31, lr: 0.00048, 160/719: Train average loss: 0.125
+04/14/2022 18:51:58 PM - INFO - global step: 21740, epoch_31, lr: 0.00048, 170/719: Train average loss: 0.124
+04/14/2022 18:52:03 PM - INFO - global step: 21750, epoch_31, lr: 0.00048, 180/719: Train average loss: 0.124
+04/14/2022 18:52:07 PM - INFO - global step: 21760, epoch_31, lr: 0.00048, 190/719: Train average loss: 0.123
+04/14/2022 18:52:11 PM - INFO - global step: 21770, epoch_31, lr: 0.00048, 200/719: Train average loss: 0.125
+04/14/2022 18:52:15 PM - INFO - global step: 21780, epoch_31, lr: 0.00048, 210/719: Train average loss: 0.124
+04/14/2022 18:52:19 PM - INFO - global step: 21790, epoch_31, lr: 0.00048, 220/719: Train average loss: 0.127
+04/14/2022 18:52:23 PM - INFO - global step: 21800, epoch_31, lr: 0.00048, 230/719: Train average loss: 0.127
+04/14/2022 18:52:27 PM - INFO - global step: 21810, epoch_31, lr: 0.00048, 240/719: Train average loss: 0.128
+04/14/2022 18:52:31 PM - INFO - global step: 21820, epoch_31, lr: 0.00048, 250/719: Train average loss: 0.128
+04/14/2022 18:52:35 PM - INFO - global step: 21830, epoch_31, lr: 0.00048, 260/719: Train average loss: 0.130
+04/14/2022 18:52:39 PM - INFO - global step: 21840, epoch_31, lr: 0.00048, 270/719: Train average loss: 0.131
+04/14/2022 18:52:43 PM - INFO - global step: 21850, epoch_31, lr: 0.00048, 280/719: Train average loss: 0.129
+04/14/2022 18:52:47 PM - INFO - global step: 21860, epoch_31, lr: 0.00048, 290/719: Train average loss: 0.128
+04/14/2022 18:52:51 PM - INFO - global step: 21870, epoch_31, lr: 0.00048, 300/719: Train average loss: 0.128
+04/14/2022 18:52:55 PM - INFO - global step: 21880, epoch_31, lr: 0.00048, 310/719: Train average loss: 0.127
+04/14/2022 18:53:00 PM - INFO - global step: 21890, epoch_31, lr: 0.00048, 320/719: Train average loss: 0.127
+04/14/2022 18:53:03 PM - INFO - global step: 21900, epoch_31, lr: 0.00048, 330/719: Train average loss: 0.127
+04/14/2022 18:53:08 PM - INFO - global step: 21910, epoch_31, lr: 0.00048, 340/719: Train average loss: 0.127
+04/14/2022 18:53:12 PM - INFO - global step: 21920, epoch_31, lr: 0.00048, 350/719: Train average loss: 0.128
+04/14/2022 18:53:16 PM - INFO - global step: 21930, epoch_31, lr: 0.00048, 360/719: Train average loss: 0.128
+04/14/2022 18:53:20 PM - INFO - global step: 21940, epoch_31, lr: 0.00048, 370/719: Train average loss: 0.129
+04/14/2022 18:53:24 PM - INFO - global step: 21950, epoch_31, lr: 0.00048, 380/719: Train average loss: 0.127
+04/14/2022 18:53:28 PM - INFO - global step: 21960, epoch_31, lr: 0.00048, 390/719: Train average loss: 0.127
+04/14/2022 18:53:32 PM - INFO - global step: 21970, epoch_31, lr: 0.00048, 400/719: Train average loss: 0.127
+04/14/2022 18:53:36 PM - INFO - global step: 21980, epoch_31, lr: 0.00048, 410/719: Train average loss: 0.126
+04/14/2022 18:53:40 PM - INFO - global step: 21990, epoch_31, lr: 0.00048, 420/719: Train average loss: 0.125
+04/14/2022 18:53:44 PM - INFO - global step: 22000, epoch_31, lr: 0.00048, 430/719: Train average loss: 0.125
+04/14/2022 18:53:51 PM - INFO - global step: 22010, epoch_31, lr: 0.00048, 440/719: Train average loss: 0.125
+04/14/2022 18:53:55 PM - INFO - global step: 22020, epoch_31, lr: 0.00048, 450/719: Train average loss: 0.124
+04/14/2022 18:53:59 PM - INFO - global step: 22030, epoch_31, lr: 0.00048, 460/719: Train average loss: 0.124
+04/14/2022 18:54:03 PM - INFO - global step: 22040, epoch_31, lr: 0.00048, 470/719: Train average loss: 0.125
+04/14/2022 18:54:11 PM - INFO - global step: 22050, epoch_31, lr: 0.00048, 480/719: Train average loss: 0.125
+04/14/2022 18:54:16 PM - INFO - global step: 22060, epoch_31, lr: 0.00048, 490/719: Train average loss: 0.125
+04/14/2022 18:54:22 PM - INFO - global step: 22070, epoch_31, lr: 0.00048, 500/719: Train average loss: 0.125
+04/14/2022 18:54:27 PM - INFO - global step: 22080, epoch_31, lr: 0.00048, 510/719: Train average loss: 0.125
+04/14/2022 18:54:34 PM - INFO - global step: 22090, epoch_31, lr: 0.00048, 520/719: Train average loss: 0.125
+04/14/2022 18:54:40 PM - INFO - global step: 22100, epoch_31, lr: 0.00048, 530/719: Train average loss: 0.125
+04/14/2022 18:54:46 PM - INFO - global step: 22110, epoch_31, lr: 0.00048, 540/719: Train average loss: 0.125
+04/14/2022 18:54:52 PM - INFO - global step: 22120, epoch_31, lr: 0.00048, 550/719: Train average loss: 0.125
+04/14/2022 18:54:57 PM - INFO - global step: 22130, epoch_31, lr: 0.00048, 560/719: Train average loss: 0.124
+04/14/2022 18:55:02 PM - INFO - global step: 22140, epoch_31, lr: 0.00048, 570/719: Train average loss: 0.124
+04/14/2022 18:55:07 PM - INFO - global step: 22150, epoch_31, lr: 0.00048, 580/719: Train average loss: 0.124
+04/14/2022 18:55:12 PM - INFO - global step: 22160, epoch_31, lr: 0.00048, 590/719: Train average loss: 0.124
+04/14/2022 18:55:17 PM - INFO - global step: 22170, epoch_31, lr: 0.00048, 600/719: Train average loss: 0.124
+04/14/2022 18:55:23 PM - INFO - global step: 22180, epoch_31, lr: 0.00048, 610/719: Train average loss: 0.123
+04/14/2022 18:55:28 PM - INFO - global step: 22190, epoch_31, lr: 0.00048, 620/719: Train average loss: 0.123
+04/14/2022 18:55:33 PM - INFO - global step: 22200, epoch_31, lr: 0.00048, 630/719: Train average loss: 0.123
+04/14/2022 18:55:38 PM - INFO - global step: 22210, epoch_31, lr: 0.00048, 640/719: Train average loss: 0.123
+04/14/2022 18:55:44 PM - INFO - global step: 22220, epoch_31, lr: 0.00048, 650/719: Train average loss: 0.123
+04/14/2022 18:55:50 PM - INFO - global step: 22230, epoch_31, lr: 0.00048, 660/719: Train average loss: 0.123
+04/14/2022 18:55:56 PM - INFO - global step: 22240, epoch_31, lr: 0.00048, 670/719: Train average loss: 0.123
+04/14/2022 18:56:01 PM - INFO - global step: 22250, epoch_31, lr: 0.00048, 680/719: Train average loss: 0.123
+04/14/2022 18:56:06 PM - INFO - global step: 22260, epoch_31, lr: 0.00048, 690/719: Train average loss: 0.123
+04/14/2022 18:56:11 PM - INFO - global step: 22270, epoch_31, lr: 0.00048, 700/719: Train average loss: 0.124
+04/14/2022 18:56:16 PM - INFO - global step: 22280, epoch_31, lr: 0.00048, 710/719: Train average loss: 0.124
+04/14/2022 18:56:21 PM - INFO - ==========================================================
+04/14/2022 18:56:21 PM - INFO - epoch_31: Train set(Aug) acc is: 0.949
+04/14/2022 18:56:42 PM - INFO - epoch_31: Valid set average loss is: 0.132
+04/14/2022 18:56:42 PM - INFO - epoch_31: Valid set acc is: 0.948
+04/14/2022 18:56:42 PM - INFO - ==========================================================
+04/14/2022 18:56:47 PM - INFO - global step: 22299, epoch_32, lr: 0.00048, 10/719: Train average loss: 0.149
+04/14/2022 18:56:52 PM - INFO - global step: 22309, epoch_32, lr: 0.00048, 20/719: Train average loss: 0.158
+04/14/2022 18:56:57 PM - INFO - global step: 22319, epoch_32, lr: 0.00048, 30/719: Train average loss: 0.141
+04/14/2022 18:57:01 PM - INFO - global step: 22329, epoch_32, lr: 0.00048, 40/719: Train average loss: 0.141
+04/14/2022 18:57:06 PM - INFO - global step: 22339, epoch_32, lr: 0.00048, 50/719: Train average loss: 0.134
+04/14/2022 18:57:11 PM - INFO - global step: 22349, epoch_32, lr: 0.00048, 60/719: Train average loss: 0.128
+04/14/2022 18:57:16 PM - INFO - global step: 22359, epoch_32, lr: 0.00048, 70/719: Train average loss: 0.131
+04/14/2022 18:57:20 PM - INFO - global step: 22369, epoch_32, lr: 0.00048, 80/719: Train average loss: 0.132
+04/14/2022 18:57:25 PM - INFO - global step: 22379, epoch_32, lr: 0.00048, 90/719: Train average loss: 0.132
+04/14/2022 18:57:30 PM - INFO - global step: 22389, epoch_32, lr: 0.00048, 100/719: Train average loss: 0.130
+04/14/2022 18:57:35 PM - INFO - global step: 22399, epoch_32, lr: 0.00048, 110/719: Train average loss: 0.128
+04/14/2022 18:57:40 PM - INFO - global step: 22409, epoch_32, lr: 0.00048, 120/719: Train average loss: 0.128
+04/14/2022 18:57:45 PM - INFO - global step: 22419, epoch_32, lr: 0.00048, 130/719: Train average loss: 0.128
+04/14/2022 18:57:50 PM - INFO - global step: 22429, epoch_32, lr: 0.00048, 140/719: Train average loss: 0.127
+04/14/2022 18:57:54 PM - INFO - global step: 22439, epoch_32, lr: 0.00048, 150/719: Train average loss: 0.125
+04/14/2022 18:57:59 PM - INFO - global step: 22449, epoch_32, lr: 0.00048, 160/719: Train average loss: 0.127
+04/14/2022 18:58:04 PM - INFO - global step: 22459, epoch_32, lr: 0.00048, 170/719: Train average loss: 0.126
+04/14/2022 18:58:09 PM - INFO - global step: 22469, epoch_32, lr: 0.00048, 180/719: Train average loss: 0.126
+04/14/2022 18:58:13 PM - INFO - global step: 22479, epoch_32, lr: 0.00048, 190/719: Train average loss: 0.125
+04/14/2022 18:58:18 PM - INFO - global step: 22489, epoch_32, lr: 0.00048, 200/719: Train average loss: 0.125
+04/14/2022 18:58:23 PM - INFO - global step: 22499, epoch_32, lr: 0.00048, 210/719: Train average loss: 0.123
+04/14/2022 18:58:28 PM - INFO - global step: 22509, epoch_32, lr: 0.00048, 220/719: Train average loss: 0.125
+04/14/2022 18:58:33 PM - INFO - global step: 22519, epoch_32, lr: 0.00048, 230/719: Train average loss: 0.127
+04/14/2022 18:58:38 PM - INFO - global step: 22529, epoch_32, lr: 0.00048, 240/719: Train average loss: 0.127
+04/14/2022 18:58:43 PM - INFO - global step: 22539, epoch_32, lr: 0.00048, 250/719: Train average loss: 0.127
+04/14/2022 18:58:47 PM - INFO - global step: 22549, epoch_32, lr: 0.00048, 260/719: Train average loss: 0.126
+04/14/2022 18:58:52 PM - INFO - global step: 22559, epoch_32, lr: 0.00048, 270/719: Train average loss: 0.125
+04/14/2022 18:58:58 PM - INFO - global step: 22569, epoch_32, lr: 0.00048, 280/719: Train average loss: 0.125
+04/14/2022 18:59:03 PM - INFO - global step: 22579, epoch_32, lr: 0.00048, 290/719: Train average loss: 0.125
+04/14/2022 18:59:08 PM - INFO - global step: 22589, epoch_32, lr: 0.00048, 300/719: Train average loss: 0.124
+04/14/2022 18:59:15 PM - INFO - global step: 22599, epoch_32, lr: 0.00048, 310/719: Train average loss: 0.124
+04/14/2022 18:59:20 PM - INFO - global step: 22609, epoch_32, lr: 0.00048, 320/719: Train average loss: 0.126
+04/14/2022 18:59:25 PM - INFO - global step: 22619, epoch_32, lr: 0.00048, 330/719: Train average loss: 0.128
+04/14/2022 18:59:30 PM - INFO - global step: 22629, epoch_32, lr: 0.00048, 340/719: Train average loss: 0.127
+04/14/2022 18:59:35 PM - INFO - global step: 22639, epoch_32, lr: 0.00048, 350/719: Train average loss: 0.127
+04/14/2022 18:59:40 PM - INFO - global step: 22649, epoch_32, lr: 0.00048, 360/719: Train average loss: 0.128
+04/14/2022 18:59:46 PM - INFO - global step: 22659, epoch_32, lr: 0.00048, 370/719: Train average loss: 0.127
+04/14/2022 18:59:51 PM - INFO - global step: 22669, epoch_32, lr: 0.00048, 380/719: Train average loss: 0.126
+04/14/2022 18:59:56 PM - INFO - global step: 22679, epoch_32, lr: 0.00048, 390/719: Train average loss: 0.126
+04/14/2022 19:00:01 PM - INFO - global step: 22689, epoch_32, lr: 0.00048, 400/719: Train average loss: 0.126
+04/14/2022 19:00:06 PM - INFO - global step: 22699, epoch_32, lr: 0.00048, 410/719: Train average loss: 0.126
+04/14/2022 19:00:11 PM - INFO - global step: 22709, epoch_32, lr: 0.00048, 420/719: Train average loss: 0.125
+04/14/2022 19:00:16 PM - INFO - global step: 22719, epoch_32, lr: 0.00048, 430/719: Train average loss: 0.125
+04/14/2022 19:00:21 PM - INFO - global step: 22729, epoch_32, lr: 0.00048, 440/719: Train average loss: 0.126
+04/14/2022 19:00:26 PM - INFO - global step: 22739, epoch_32, lr: 0.00048, 450/719: Train average loss: 0.125
+04/14/2022 19:00:31 PM - INFO - global step: 22749, epoch_32, lr: 0.00048, 460/719: Train average loss: 0.127
+04/14/2022 19:00:37 PM - INFO - global step: 22759, epoch_32, lr: 0.00048, 470/719: Train average loss: 0.127
+04/14/2022 19:00:42 PM - INFO - global step: 22769, epoch_32, lr: 0.00048, 480/719: Train average loss: 0.127
+04/14/2022 19:00:47 PM - INFO - global step: 22779, epoch_32, lr: 0.00048, 490/719: Train average loss: 0.126
+04/14/2022 19:00:52 PM - INFO - global step: 22789, epoch_32, lr: 0.00048, 500/719: Train average loss: 0.127
+04/14/2022 19:00:57 PM - INFO - global step: 22799, epoch_32, lr: 0.00048, 510/719: Train average loss: 0.127
+04/14/2022 19:01:02 PM - INFO - global step: 22809, epoch_32, lr: 0.00048, 520/719: Train average loss: 0.127
+04/14/2022 19:01:08 PM - INFO - global step: 22819, epoch_32, lr: 0.00048, 530/719: Train average loss: 0.127
+04/14/2022 19:01:13 PM - INFO - global step: 22829, epoch_32, lr: 0.00048, 540/719: Train average loss: 0.127
+04/14/2022 19:01:18 PM - INFO - global step: 22839, epoch_32, lr: 0.00048, 550/719: Train average loss: 0.127
+04/14/2022 19:01:23 PM - INFO - global step: 22849, epoch_32, lr: 0.00048, 560/719: Train average loss: 0.127
+04/14/2022 19:01:28 PM - INFO - global step: 22859, epoch_32, lr: 0.00048, 570/719: Train average loss: 0.127
+04/14/2022 19:01:33 PM - INFO - global step: 22869, epoch_32, lr: 0.00048, 580/719: Train average loss: 0.127
+04/14/2022 19:01:38 PM - INFO - global step: 22879, epoch_32, lr: 0.00048, 590/719: Train average loss: 0.127
+04/14/2022 19:01:43 PM - INFO - global step: 22889, epoch_32, lr: 0.00048, 600/719: Train average loss: 0.128
+04/14/2022 19:01:48 PM - INFO - global step: 22899, epoch_32, lr: 0.00048, 610/719: Train average loss: 0.129
+04/14/2022 19:01:53 PM - INFO - global step: 22909, epoch_32, lr: 0.00048, 620/719: Train average loss: 0.129
+04/14/2022 19:01:59 PM - INFO - global step: 22919, epoch_32, lr: 0.00048, 630/719: Train average loss: 0.129
+04/14/2022 19:02:04 PM - INFO - global step: 22929, epoch_32, lr: 0.00048, 640/719: Train average loss: 0.128
+04/14/2022 19:02:09 PM - INFO - global step: 22939, epoch_32, lr: 0.00048, 650/719: Train average loss: 0.128
+04/14/2022 19:02:14 PM - INFO - global step: 22949, epoch_32, lr: 0.00048, 660/719: Train average loss: 0.128
+04/14/2022 19:02:20 PM - INFO - global step: 22959, epoch_32, lr: 0.00048, 670/719: Train average loss: 0.127
+04/14/2022 19:02:26 PM - INFO - global step: 22969, epoch_32, lr: 0.00048, 680/719: Train average loss: 0.127
+04/14/2022 19:02:31 PM - INFO - global step: 22979, epoch_32, lr: 0.00048, 690/719: Train average loss: 0.128
+04/14/2022 19:02:36 PM - INFO - global step: 22989, epoch_32, lr: 0.00048, 700/719: Train average loss: 0.128
+04/14/2022 19:02:41 PM - INFO - global step: 22999, epoch_32, lr: 0.00048, 710/719: Train average loss: 0.128
+04/14/2022 19:02:46 PM - INFO - ==========================================================
+04/14/2022 19:02:46 PM - INFO - epoch_32: Train set(Aug) acc is: 0.948
+04/14/2022 19:03:07 PM - INFO - epoch_32: Valid set average loss is: 0.130
+04/14/2022 19:03:07 PM - INFO - epoch_32: Valid set acc is: 0.942
+04/14/2022 19:03:07 PM - INFO - ==========================================================
+04/14/2022 19:03:12 PM - INFO - global step: 23018, epoch_33, lr: 0.00048, 10/719: Train average loss: 0.163
+04/14/2022 19:03:16 PM - INFO - global step: 23028, epoch_33, lr: 0.00048, 20/719: Train average loss: 0.139
+04/14/2022 19:03:20 PM - INFO - global step: 23038, epoch_33, lr: 0.00048, 30/719: Train average loss: 0.121
+04/14/2022 19:03:25 PM - INFO - global step: 23048, epoch_33, lr: 0.00048, 40/719: Train average loss: 0.127
+04/14/2022 19:03:29 PM - INFO - global step: 23058, epoch_33, lr: 0.00048, 50/719: Train average loss: 0.124
+04/14/2022 19:03:34 PM - INFO - global step: 23068, epoch_33, lr: 0.00048, 60/719: Train average loss: 0.120
+04/14/2022 19:03:38 PM - INFO - global step: 23078, epoch_33, lr: 0.00048, 70/719: Train average loss: 0.118
+04/14/2022 19:03:42 PM - INFO - global step: 23088, epoch_33, lr: 0.00048, 80/719: Train average loss: 0.115
+04/14/2022 19:03:47 PM - INFO - global step: 23098, epoch_33, lr: 0.00048, 90/719: Train average loss: 0.116
+04/14/2022 19:03:51 PM - INFO - global step: 23108, epoch_33, lr: 0.00048, 100/719: Train average loss: 0.114
+04/14/2022 19:03:56 PM - INFO - global step: 23118, epoch_33, lr: 0.00048, 110/719: Train average loss: 0.113
+04/14/2022 19:04:00 PM - INFO - global step: 23128, epoch_33, lr: 0.00048, 120/719: Train average loss: 0.113
+04/14/2022 19:04:04 PM - INFO - global step: 23138, epoch_33, lr: 0.00048, 130/719: Train average loss: 0.116
+04/14/2022 19:04:09 PM - INFO - global step: 23148, epoch_33, lr: 0.00048, 140/719: Train average loss: 0.118
+04/14/2022 19:04:13 PM - INFO - global step: 23158, epoch_33, lr: 0.00048, 150/719: Train average loss: 0.118
+04/14/2022 19:04:18 PM - INFO - global step: 23168, epoch_33, lr: 0.00048, 160/719: Train average loss: 0.118
+04/14/2022 19:04:22 PM - INFO - global step: 23178, epoch_33, lr: 0.00048, 170/719: Train average loss: 0.117
+04/14/2022 19:04:27 PM - INFO - global step: 23188, epoch_33, lr: 0.00048, 180/719: Train average loss: 0.116
+04/14/2022 19:04:31 PM - INFO - global step: 23198, epoch_33, lr: 0.00048, 190/719: Train average loss: 0.116
+04/14/2022 19:04:35 PM - INFO - global step: 23208, epoch_33, lr: 0.00048, 200/719: Train average loss: 0.120
+04/14/2022 19:04:40 PM - INFO - global step: 23218, epoch_33, lr: 0.00048, 210/719: Train average loss: 0.119
+04/14/2022 19:04:44 PM - INFO - global step: 23228, epoch_33, lr: 0.00048, 220/719: Train average loss: 0.120
+04/14/2022 19:04:49 PM - INFO - global step: 23238, epoch_33, lr: 0.00048, 230/719: Train average loss: 0.120
+04/14/2022 19:04:53 PM - INFO - global step: 23248, epoch_33, lr: 0.00048, 240/719: Train average loss: 0.122
+04/14/2022 19:04:57 PM - INFO - global step: 23258, epoch_33, lr: 0.00048, 250/719: Train average loss: 0.122
+04/14/2022 19:05:02 PM - INFO - global step: 23268, epoch_33, lr: 0.00048, 260/719: Train average loss: 0.122
+04/14/2022 19:05:06 PM - INFO - global step: 23278, epoch_33, lr: 0.00048, 270/719: Train average loss: 0.121
+04/14/2022 19:05:12 PM - INFO - global step: 23288, epoch_33, lr: 0.00048, 280/719: Train average loss: 0.120
+04/14/2022 19:05:17 PM - INFO - global step: 23298, epoch_33, lr: 0.00048, 290/719: Train average loss: 0.120
+04/14/2022 19:05:22 PM - INFO - global step: 23308, epoch_33, lr: 0.00048, 300/719: Train average loss: 0.120
+04/14/2022 19:05:27 PM - INFO - global step: 23318, epoch_33, lr: 0.00048, 310/719: Train average loss: 0.119
+04/14/2022 19:05:31 PM - INFO - global step: 23328, epoch_33, lr: 0.00048, 320/719: Train average loss: 0.120
+04/14/2022 19:05:36 PM - INFO - global step: 23338, epoch_33, lr: 0.00048, 330/719: Train average loss: 0.121
+04/14/2022 19:05:41 PM - INFO - global step: 23348, epoch_33, lr: 0.00048, 340/719: Train average loss: 0.121
+04/14/2022 19:05:46 PM - INFO - global step: 23358, epoch_33, lr: 0.00048, 350/719: Train average loss: 0.121
+04/14/2022 19:05:51 PM - INFO - global step: 23368, epoch_33, lr: 0.00048, 360/719: Train average loss: 0.121
+04/14/2022 19:05:55 PM - INFO - global step: 23378, epoch_33, lr: 0.00048, 370/719: Train average loss: 0.121
+04/14/2022 19:06:01 PM - INFO - global step: 23388, epoch_33, lr: 0.00048, 380/719: Train average loss: 0.121
+04/14/2022 19:06:06 PM - INFO - global step: 23398, epoch_33, lr: 0.00048, 390/719: Train average loss: 0.121
+04/14/2022 19:06:11 PM - INFO - global step: 23408, epoch_33, lr: 0.00048, 400/719: Train average loss: 0.121
+04/14/2022 19:06:16 PM - INFO - global step: 23418, epoch_33, lr: 0.00048, 410/719: Train average loss: 0.121
+04/14/2022 19:06:21 PM - INFO - global step: 23428, epoch_33, lr: 0.00048, 420/719: Train average loss: 0.122
+04/14/2022 19:06:26 PM - INFO - global step: 23438, epoch_33, lr: 0.00048, 430/719: Train average loss: 0.121
+04/14/2022 19:06:31 PM - INFO - global step: 23448, epoch_33, lr: 0.00048, 440/719: Train average loss: 0.121
+04/14/2022 19:06:35 PM - INFO - global step: 23458, epoch_33, lr: 0.00048, 450/719: Train average loss: 0.121
+04/14/2022 19:06:40 PM - INFO - global step: 23468, epoch_33, lr: 0.00048, 460/719: Train average loss: 0.121
+04/14/2022 19:06:45 PM - INFO - global step: 23478, epoch_33, lr: 0.00048, 470/719: Train average loss: 0.121
+04/14/2022 19:06:50 PM - INFO - global step: 23488, epoch_33, lr: 0.00048, 480/719: Train average loss: 0.122
+04/14/2022 19:06:55 PM - INFO - global step: 23498, epoch_33, lr: 0.00048, 490/719: Train average loss: 0.122
+04/14/2022 19:06:59 PM - INFO - global step: 23508, epoch_33, lr: 0.00048, 500/719: Train average loss: 0.122
+04/14/2022 19:07:04 PM - INFO - global step: 23518, epoch_33, lr: 0.00048, 510/719: Train average loss: 0.121
+04/14/2022 19:07:09 PM - INFO - global step: 23528, epoch_33, lr: 0.00048, 520/719: Train average loss: 0.121
+04/14/2022 19:07:14 PM - INFO - global step: 23538, epoch_33, lr: 0.00048, 530/719: Train average loss: 0.121
+04/14/2022 19:07:19 PM - INFO - global step: 23548, epoch_33, lr: 0.00048, 540/719: Train average loss: 0.122
+04/14/2022 19:07:23 PM - INFO - global step: 23558, epoch_33, lr: 0.00048, 550/719: Train average loss: 0.121
+04/14/2022 19:07:28 PM - INFO - global step: 23568, epoch_33, lr: 0.00048, 560/719: Train average loss: 0.121
+04/14/2022 19:07:33 PM - INFO - global step: 23578, epoch_33, lr: 0.00048, 570/719: Train average loss: 0.121
+04/14/2022 19:07:38 PM - INFO - global step: 23588, epoch_33, lr: 0.00048, 580/719: Train average loss: 0.122
+04/14/2022 19:07:43 PM - INFO - global step: 23598, epoch_33, lr: 0.00048, 590/719: Train average loss: 0.121
+04/14/2022 19:07:47 PM - INFO - global step: 23608, epoch_33, lr: 0.00048, 600/719: Train average loss: 0.121
+04/14/2022 19:07:52 PM - INFO - global step: 23618, epoch_33, lr: 0.00048, 610/719: Train average loss: 0.121
+04/14/2022 19:07:57 PM - INFO - global step: 23628, epoch_33, lr: 0.00048, 620/719: Train average loss: 0.121
+04/14/2022 19:08:02 PM - INFO - global step: 23638, epoch_33, lr: 0.00048, 630/719: Train average loss: 0.121
+04/14/2022 19:08:07 PM - INFO - global step: 23648, epoch_33, lr: 0.00048, 640/719: Train average loss: 0.121
+04/14/2022 19:08:11 PM - INFO - global step: 23658, epoch_33, lr: 0.00048, 650/719: Train average loss: 0.121
+04/14/2022 19:08:16 PM - INFO - global step: 23668, epoch_33, lr: 0.00048, 660/719: Train average loss: 0.121
+04/14/2022 19:08:21 PM - INFO - global step: 23678, epoch_33, lr: 0.00048, 670/719: Train average loss: 0.121
+04/14/2022 19:08:26 PM - INFO - global step: 23688, epoch_33, lr: 0.00048, 680/719: Train average loss: 0.122
+04/14/2022 19:08:31 PM - INFO - global step: 23698, epoch_33, lr: 0.00048, 690/719: Train average loss: 0.122
+04/14/2022 19:08:36 PM - INFO - global step: 23708, epoch_33, lr: 0.00048, 700/719: Train average loss: 0.121
+04/14/2022 19:08:40 PM - INFO - global step: 23718, epoch_33, lr: 0.00048, 710/719: Train average loss: 0.122
+04/14/2022 19:08:45 PM - INFO - ==========================================================
+04/14/2022 19:08:45 PM - INFO - epoch_33: Train set(Aug) acc is: 0.949
+04/14/2022 19:09:00 PM - INFO - epoch_33: Valid set average loss is: 0.136
+04/14/2022 19:09:00 PM - INFO - epoch_33: Valid set acc is: 0.946
+04/14/2022 19:09:00 PM - INFO - ==========================================================
+04/14/2022 19:09:04 PM - INFO - global step: 23737, epoch_34, lr: 0.00048, 10/719: Train average loss: 0.107
+04/14/2022 19:09:08 PM - INFO - global step: 23747, epoch_34, lr: 0.00048, 20/719: Train average loss: 0.092
+04/14/2022 19:09:13 PM - INFO - global step: 23757, epoch_34, lr: 0.00048, 30/719: Train average loss: 0.089
+04/14/2022 19:09:17 PM - INFO - global step: 23767, epoch_34, lr: 0.00048, 40/719: Train average loss: 0.097
+04/14/2022 19:09:21 PM - INFO - global step: 23777, epoch_34, lr: 0.00048, 50/719: Train average loss: 0.112
+04/14/2022 19:09:25 PM - INFO - global step: 23787, epoch_34, lr: 0.00048, 60/719: Train average loss: 0.118
+04/14/2022 19:09:29 PM - INFO - global step: 23797, epoch_34, lr: 0.00048, 70/719: Train average loss: 0.114
+04/14/2022 19:09:33 PM - INFO - global step: 23807, epoch_34, lr: 0.00048, 80/719: Train average loss: 0.117
+04/14/2022 19:09:37 PM - INFO - global step: 23817, epoch_34, lr: 0.00048, 90/719: Train average loss: 0.117
+04/14/2022 19:09:41 PM - INFO - global step: 23827, epoch_34, lr: 0.00048, 100/719: Train average loss: 0.118
+04/14/2022 19:09:45 PM - INFO - global step: 23837, epoch_34, lr: 0.00048, 110/719: Train average loss: 0.115
+04/14/2022 19:09:50 PM - INFO - global step: 23847, epoch_34, lr: 0.00048, 120/719: Train average loss: 0.116
+04/14/2022 19:09:54 PM - INFO - global step: 23857, epoch_34, lr: 0.00048, 130/719: Train average loss: 0.114
+04/14/2022 19:09:58 PM - INFO - global step: 23867, epoch_34, lr: 0.00048, 140/719: Train average loss: 0.119
+04/14/2022 19:10:02 PM - INFO - global step: 23877, epoch_34, lr: 0.00048, 150/719: Train average loss: 0.122
+04/14/2022 19:10:06 PM - INFO - global step: 23887, epoch_34, lr: 0.00048, 160/719: Train average loss: 0.123
+04/14/2022 19:10:10 PM - INFO - global step: 23897, epoch_34, lr: 0.00048, 170/719: Train average loss: 0.122
+04/14/2022 19:10:14 PM - INFO - global step: 23907, epoch_34, lr: 0.00048, 180/719: Train average loss: 0.122
+04/14/2022 19:10:18 PM - INFO - global step: 23917, epoch_34, lr: 0.00048, 190/719: Train average loss: 0.123
+04/14/2022 19:10:22 PM - INFO - global step: 23927, epoch_34, lr: 0.00048, 200/719: Train average loss: 0.123
+04/14/2022 19:10:26 PM - INFO - global step: 23937, epoch_34, lr: 0.00048, 210/719: Train average loss: 0.123
+04/14/2022 19:10:31 PM - INFO - global step: 23947, epoch_34, lr: 0.00048, 220/719: Train average loss: 0.122
+04/14/2022 19:10:35 PM - INFO - global step: 23957, epoch_34, lr: 0.00048, 230/719: Train average loss: 0.121
+04/14/2022 19:10:39 PM - INFO - global step: 23967, epoch_34, lr: 0.00048, 240/719: Train average loss: 0.119
+04/14/2022 19:10:43 PM - INFO - global step: 23977, epoch_34, lr: 0.00048, 250/719: Train average loss: 0.121
+04/14/2022 19:10:47 PM - INFO - global step: 23987, epoch_34, lr: 0.00048, 260/719: Train average loss: 0.122
+04/14/2022 19:10:51 PM - INFO - global step: 23997, epoch_34, lr: 0.00048, 270/719: Train average loss: 0.121
+04/14/2022 19:10:55 PM - INFO - global step: 24007, epoch_34, lr: 0.00043, 280/719: Train average loss: 0.122
+04/14/2022 19:11:00 PM - INFO - global step: 24017, epoch_34, lr: 0.00043, 290/719: Train average loss: 0.122
+04/14/2022 19:11:04 PM - INFO - global step: 24027, epoch_34, lr: 0.00043, 300/719: Train average loss: 0.123
+04/14/2022 19:11:08 PM - INFO - global step: 24037, epoch_34, lr: 0.00043, 310/719: Train average loss: 0.122
+04/14/2022 19:11:12 PM - INFO - global step: 24047, epoch_34, lr: 0.00043, 320/719: Train average loss: 0.123
+04/14/2022 19:11:16 PM - INFO - global step: 24057, epoch_34, lr: 0.00043, 330/719: Train average loss: 0.123
+04/14/2022 19:11:20 PM - INFO - global step: 24067, epoch_34, lr: 0.00043, 340/719: Train average loss: 0.123
+04/14/2022 19:11:24 PM - INFO - global step: 24077, epoch_34, lr: 0.00043, 350/719: Train average loss: 0.124
+04/14/2022 19:11:28 PM - INFO - global step: 24087, epoch_34, lr: 0.00043, 360/719: Train average loss: 0.123
+04/14/2022 19:11:32 PM - INFO - global step: 24097, epoch_34, lr: 0.00043, 370/719: Train average loss: 0.123
+04/14/2022 19:11:36 PM - INFO - global step: 24107, epoch_34, lr: 0.00043, 380/719: Train average loss: 0.124
+04/14/2022 19:11:40 PM - INFO - global step: 24117, epoch_34, lr: 0.00043, 390/719: Train average loss: 0.124
+04/14/2022 19:11:44 PM - INFO - global step: 24127, epoch_34, lr: 0.00043, 400/719: Train average loss: 0.123
+04/14/2022 19:11:49 PM - INFO - global step: 24137, epoch_34, lr: 0.00043, 410/719: Train average loss: 0.123
+04/14/2022 19:11:54 PM - INFO - global step: 24147, epoch_34, lr: 0.00043, 420/719: Train average loss: 0.123
+04/14/2022 19:12:00 PM - INFO - global step: 24157, epoch_34, lr: 0.00043, 430/719: Train average loss: 0.122
+04/14/2022 19:12:07 PM - INFO - global step: 24167, epoch_34, lr: 0.00043, 440/719: Train average loss: 0.122
+04/14/2022 19:12:11 PM - INFO - global step: 24177, epoch_34, lr: 0.00043, 450/719: Train average loss: 0.123
+04/14/2022 19:12:16 PM - INFO - global step: 24187, epoch_34, lr: 0.00043, 460/719: Train average loss: 0.123
+04/14/2022 19:12:20 PM - INFO - global step: 24197, epoch_34, lr: 0.00043, 470/719: Train average loss: 0.123
+04/14/2022 19:12:25 PM - INFO - global step: 24207, epoch_34, lr: 0.00043, 480/719: Train average loss: 0.123
+04/14/2022 19:12:29 PM - INFO - global step: 24217, epoch_34, lr: 0.00043, 490/719: Train average loss: 0.123
+04/14/2022 19:12:33 PM - INFO - global step: 24227, epoch_34, lr: 0.00043, 500/719: Train average loss: 0.122
+04/14/2022 19:12:38 PM - INFO - global step: 24237, epoch_34, lr: 0.00043, 510/719: Train average loss: 0.122
+04/14/2022 19:12:42 PM - INFO - global step: 24247, epoch_34, lr: 0.00043, 520/719: Train average loss: 0.123
+04/14/2022 19:12:46 PM - INFO - global step: 24257, epoch_34, lr: 0.00043, 530/719: Train average loss: 0.123
+04/14/2022 19:12:51 PM - INFO - global step: 24267, epoch_34, lr: 0.00043, 540/719: Train average loss: 0.122
+04/14/2022 19:12:55 PM - INFO - global step: 24277, epoch_34, lr: 0.00043, 550/719: Train average loss: 0.122
+04/14/2022 19:12:59 PM - INFO - global step: 24287, epoch_34, lr: 0.00043, 560/719: Train average loss: 0.122
+04/14/2022 19:13:03 PM - INFO - global step: 24297, epoch_34, lr: 0.00043, 570/719: Train average loss: 0.121
+04/14/2022 19:13:08 PM - INFO - global step: 24307, epoch_34, lr: 0.00043, 580/719: Train average loss: 0.121
+04/14/2022 19:13:12 PM - INFO - global step: 24317, epoch_34, lr: 0.00043, 590/719: Train average loss: 0.120
+04/14/2022 19:13:16 PM - INFO - global step: 24327, epoch_34, lr: 0.00043, 600/719: Train average loss: 0.120
+04/14/2022 19:13:21 PM - INFO - global step: 24337, epoch_34, lr: 0.00043, 610/719: Train average loss: 0.120
+04/14/2022 19:13:25 PM - INFO - global step: 24347, epoch_34, lr: 0.00043, 620/719: Train average loss: 0.121
+04/14/2022 19:13:29 PM - INFO - global step: 24357, epoch_34, lr: 0.00043, 630/719: Train average loss: 0.121
+04/14/2022 19:13:34 PM - INFO - global step: 24367, epoch_34, lr: 0.00043, 640/719: Train average loss: 0.122
+04/14/2022 19:13:38 PM - INFO - global step: 24377, epoch_34, lr: 0.00043, 650/719: Train average loss: 0.122
+04/14/2022 19:13:42 PM - INFO - global step: 24387, epoch_34, lr: 0.00043, 660/719: Train average loss: 0.122
+04/14/2022 19:13:47 PM - INFO - global step: 24397, epoch_34, lr: 0.00043, 670/719: Train average loss: 0.122
+04/14/2022 19:13:51 PM - INFO - global step: 24407, epoch_34, lr: 0.00043, 680/719: Train average loss: 0.122
+04/14/2022 19:13:55 PM - INFO - global step: 24417, epoch_34, lr: 0.00043, 690/719: Train average loss: 0.122
+04/14/2022 19:14:00 PM - INFO - global step: 24427, epoch_34, lr: 0.00043, 700/719: Train average loss: 0.121
+04/14/2022 19:14:04 PM - INFO - global step: 24437, epoch_34, lr: 0.00043, 710/719: Train average loss: 0.120
+04/14/2022 19:14:08 PM - INFO - ==========================================================
+04/14/2022 19:14:08 PM - INFO - epoch_34: Train set(Aug) acc is: 0.952
+04/14/2022 19:14:22 PM - INFO - epoch_34: Valid set average loss is: 0.119
+04/14/2022 19:14:22 PM - INFO - epoch_34: Valid set acc is: 0.956
+04/14/2022 19:14:22 PM - INFO - ==========================================================
+04/14/2022 19:14:27 PM - INFO - global step: 24456, epoch_35, lr: 0.00043, 10/719: Train average loss: 0.122
+04/14/2022 19:14:31 PM - INFO - global step: 24466, epoch_35, lr: 0.00043, 20/719: Train average loss: 0.123
+04/14/2022 19:14:35 PM - INFO - global step: 24476, epoch_35, lr: 0.00043, 30/719: Train average loss: 0.127
+04/14/2022 19:14:39 PM - INFO - global step: 24486, epoch_35, lr: 0.00043, 40/719: Train average loss: 0.124
+04/14/2022 19:14:43 PM - INFO - global step: 24496, epoch_35, lr: 0.00043, 50/719: Train average loss: 0.123
+04/14/2022 19:14:47 PM - INFO - global step: 24506, epoch_35, lr: 0.00043, 60/719: Train average loss: 0.126
+04/14/2022 19:14:51 PM - INFO - global step: 24516, epoch_35, lr: 0.00043, 70/719: Train average loss: 0.123
+04/14/2022 19:14:55 PM - INFO - global step: 24526, epoch_35, lr: 0.00043, 80/719: Train average loss: 0.120
+04/14/2022 19:14:59 PM - INFO - global step: 24536, epoch_35, lr: 0.00043, 90/719: Train average loss: 0.122
+04/14/2022 19:15:03 PM - INFO - global step: 24546, epoch_35, lr: 0.00043, 100/719: Train average loss: 0.120
+04/14/2022 19:15:07 PM - INFO - global step: 24556, epoch_35, lr: 0.00043, 110/719: Train average loss: 0.123
+04/14/2022 19:15:11 PM - INFO - global step: 24566, epoch_35, lr: 0.00043, 120/719: Train average loss: 0.123
+04/14/2022 19:15:15 PM - INFO - global step: 24576, epoch_35, lr: 0.00043, 130/719: Train average loss: 0.121
+04/14/2022 19:15:20 PM - INFO - global step: 24586, epoch_35, lr: 0.00043, 140/719: Train average loss: 0.119
+04/14/2022 19:15:24 PM - INFO - global step: 24596, epoch_35, lr: 0.00043, 150/719: Train average loss: 0.117
+04/14/2022 19:15:28 PM - INFO - global step: 24606, epoch_35, lr: 0.00043, 160/719: Train average loss: 0.117
+04/14/2022 19:15:32 PM - INFO - global step: 24616, epoch_35, lr: 0.00043, 170/719: Train average loss: 0.116
+04/14/2022 19:15:36 PM - INFO - global step: 24626, epoch_35, lr: 0.00043, 180/719: Train average loss: 0.116
+04/14/2022 19:15:40 PM - INFO - global step: 24636, epoch_35, lr: 0.00043, 190/719: Train average loss: 0.114
+04/14/2022 19:15:44 PM - INFO - global step: 24646, epoch_35, lr: 0.00043, 200/719: Train average loss: 0.114
+04/14/2022 19:15:48 PM - INFO - global step: 24656, epoch_35, lr: 0.00043, 210/719: Train average loss: 0.114
+04/14/2022 19:15:55 PM - INFO - global step: 24666, epoch_35, lr: 0.00043, 220/719: Train average loss: 0.115
+04/14/2022 19:15:59 PM - INFO - global step: 24676, epoch_35, lr: 0.00043, 230/719: Train average loss: 0.114
+04/14/2022 19:16:03 PM - INFO - global step: 24686, epoch_35, lr: 0.00043, 240/719: Train average loss: 0.116
+04/14/2022 19:16:08 PM - INFO - global step: 24696, epoch_35, lr: 0.00043, 250/719: Train average loss: 0.114
+04/14/2022 19:16:12 PM - INFO - global step: 24706, epoch_35, lr: 0.00043, 260/719: Train average loss: 0.114
+04/14/2022 19:16:16 PM - INFO - global step: 24716, epoch_35, lr: 0.00043, 270/719: Train average loss: 0.117
+04/14/2022 19:16:20 PM - INFO - global step: 24726, epoch_35, lr: 0.00043, 280/719: Train average loss: 0.116
+04/14/2022 19:16:24 PM - INFO - global step: 24736, epoch_35, lr: 0.00043, 290/719: Train average loss: 0.118
+04/14/2022 19:16:28 PM - INFO - global step: 24746, epoch_35, lr: 0.00043, 300/719: Train average loss: 0.118
+04/14/2022 19:16:32 PM - INFO - global step: 24756, epoch_35, lr: 0.00043, 310/719: Train average loss: 0.118
+04/14/2022 19:16:36 PM - INFO - global step: 24766, epoch_35, lr: 0.00043, 320/719: Train average loss: 0.118
+04/14/2022 19:16:40 PM - INFO - global step: 24776, epoch_35, lr: 0.00043, 330/719: Train average loss: 0.118
+04/14/2022 19:16:44 PM - INFO - global step: 24786, epoch_35, lr: 0.00043, 340/719: Train average loss: 0.118
+04/14/2022 19:16:49 PM - INFO - global step: 24796, epoch_35, lr: 0.00043, 350/719: Train average loss: 0.118
+04/14/2022 19:16:53 PM - INFO - global step: 24806, epoch_35, lr: 0.00043, 360/719: Train average loss: 0.117
+04/14/2022 19:16:57 PM - INFO - global step: 24816, epoch_35, lr: 0.00043, 370/719: Train average loss: 0.116
+04/14/2022 19:17:01 PM - INFO - global step: 24826, epoch_35, lr: 0.00043, 380/719: Train average loss: 0.116
+04/14/2022 19:17:05 PM - INFO - global step: 24836, epoch_35, lr: 0.00043, 390/719: Train average loss: 0.117
+04/14/2022 19:17:09 PM - INFO - global step: 24846, epoch_35, lr: 0.00043, 400/719: Train average loss: 0.117
+04/14/2022 19:17:13 PM - INFO - global step: 24856, epoch_35, lr: 0.00043, 410/719: Train average loss: 0.118
+04/14/2022 19:17:17 PM - INFO - global step: 24866, epoch_35, lr: 0.00043, 420/719: Train average loss: 0.118
+04/14/2022 19:17:21 PM - INFO - global step: 24876, epoch_35, lr: 0.00043, 430/719: Train average loss: 0.118
+04/14/2022 19:17:26 PM - INFO - global step: 24886, epoch_35, lr: 0.00043, 440/719: Train average loss: 0.118
+04/14/2022 19:17:30 PM - INFO - global step: 24896, epoch_35, lr: 0.00043, 450/719: Train average loss: 0.117
+04/14/2022 19:17:34 PM - INFO - global step: 24906, epoch_35, lr: 0.00043, 460/719: Train average loss: 0.117
+04/14/2022 19:17:38 PM - INFO - global step: 24916, epoch_35, lr: 0.00043, 470/719: Train average loss: 0.117
+04/14/2022 19:17:42 PM - INFO - global step: 24926, epoch_35, lr: 0.00043, 480/719: Train average loss: 0.116
+04/14/2022 19:17:46 PM - INFO - global step: 24936, epoch_35, lr: 0.00043, 490/719: Train average loss: 0.116
+04/14/2022 19:17:50 PM - INFO - global step: 24946, epoch_35, lr: 0.00043, 500/719: Train average loss: 0.116
+04/14/2022 19:17:54 PM - INFO - global step: 24956, epoch_35, lr: 0.00043, 510/719: Train average loss: 0.116
+04/14/2022 19:17:58 PM - INFO - global step: 24966, epoch_35, lr: 0.00043, 520/719: Train average loss: 0.116
+04/14/2022 19:18:02 PM - INFO - global step: 24976, epoch_35, lr: 0.00043, 530/719: Train average loss: 0.116
+04/14/2022 19:18:06 PM - INFO - global step: 24986, epoch_35, lr: 0.00043, 540/719: Train average loss: 0.117
+04/14/2022 19:18:10 PM - INFO - global step: 24996, epoch_35, lr: 0.00043, 550/719: Train average loss: 0.117
+04/14/2022 19:18:14 PM - INFO - global step: 25006, epoch_35, lr: 0.00043, 560/719: Train average loss: 0.117
+04/14/2022 19:18:19 PM - INFO - global step: 25016, epoch_35, lr: 0.00043, 570/719: Train average loss: 0.117
+04/14/2022 19:18:23 PM - INFO - global step: 25026, epoch_35, lr: 0.00043, 580/719: Train average loss: 0.118
+04/14/2022 19:18:27 PM - INFO - global step: 25036, epoch_35, lr: 0.00043, 590/719: Train average loss: 0.117
+04/14/2022 19:18:31 PM - INFO - global step: 25046, epoch_35, lr: 0.00043, 600/719: Train average loss: 0.117
+04/14/2022 19:18:35 PM - INFO - global step: 25056, epoch_35, lr: 0.00043, 610/719: Train average loss: 0.117
+04/14/2022 19:18:39 PM - INFO - global step: 25066, epoch_35, lr: 0.00043, 620/719: Train average loss: 0.117
+04/14/2022 19:18:43 PM - INFO - global step: 25076, epoch_35, lr: 0.00043, 630/719: Train average loss: 0.118
+04/14/2022 19:18:47 PM - INFO - global step: 25086, epoch_35, lr: 0.00043, 640/719: Train average loss: 0.118
+04/14/2022 19:18:51 PM - INFO - global step: 25096, epoch_35, lr: 0.00043, 650/719: Train average loss: 0.118
+04/14/2022 19:18:56 PM - INFO - global step: 25106, epoch_35, lr: 0.00043, 660/719: Train average loss: 0.118
+04/14/2022 19:19:00 PM - INFO - global step: 25116, epoch_35, lr: 0.00043, 670/719: Train average loss: 0.118
+04/14/2022 19:19:04 PM - INFO - global step: 25126, epoch_35, lr: 0.00043, 680/719: Train average loss: 0.118
+04/14/2022 19:19:08 PM - INFO - global step: 25136, epoch_35, lr: 0.00043, 690/719: Train average loss: 0.118
+04/14/2022 19:19:12 PM - INFO - global step: 25146, epoch_35, lr: 0.00043, 700/719: Train average loss: 0.117
+04/14/2022 19:19:16 PM - INFO - global step: 25156, epoch_35, lr: 0.00043, 710/719: Train average loss: 0.116
+04/14/2022 19:19:20 PM - INFO - ==========================================================
+04/14/2022 19:19:20 PM - INFO - epoch_35: Train set(Aug) acc is: 0.953
+04/14/2022 19:19:34 PM - INFO - epoch_35: Valid set average loss is: 0.147
+04/14/2022 19:19:34 PM - INFO - epoch_35: Valid set acc is: 0.944
+04/14/2022 19:19:34 PM - INFO - ==========================================================
+04/14/2022 19:19:38 PM - INFO - global step: 25175, epoch_36, lr: 0.00043, 10/719: Train average loss: 0.120
+04/14/2022 19:19:42 PM - INFO - global step: 25185, epoch_36, lr: 0.00043, 20/719: Train average loss: 0.117
+04/14/2022 19:19:46 PM - INFO - global step: 25195, epoch_36, lr: 0.00043, 30/719: Train average loss: 0.132
+04/14/2022 19:19:50 PM - INFO - global step: 25205, epoch_36, lr: 0.00043, 40/719: Train average loss: 0.127
+04/14/2022 19:19:54 PM - INFO - global step: 25215, epoch_36, lr: 0.00043, 50/719: Train average loss: 0.125
+04/14/2022 19:19:58 PM - INFO - global step: 25225, epoch_36, lr: 0.00043, 60/719: Train average loss: 0.123
+04/14/2022 19:20:02 PM - INFO - global step: 25235, epoch_36, lr: 0.00043, 70/719: Train average loss: 0.120
+04/14/2022 19:20:06 PM - INFO - global step: 25245, epoch_36, lr: 0.00043, 80/719: Train average loss: 0.125
+04/14/2022 19:20:11 PM - INFO - global step: 25255, epoch_36, lr: 0.00043, 90/719: Train average loss: 0.121
+04/14/2022 19:20:15 PM - INFO - global step: 25265, epoch_36, lr: 0.00043, 100/719: Train average loss: 0.122
+04/14/2022 19:20:19 PM - INFO - global step: 25275, epoch_36, lr: 0.00043, 110/719: Train average loss: 0.120
+04/14/2022 19:20:23 PM - INFO - global step: 25285, epoch_36, lr: 0.00043, 120/719: Train average loss: 0.118
+04/14/2022 19:20:27 PM - INFO - global step: 25295, epoch_36, lr: 0.00043, 130/719: Train average loss: 0.119
+04/14/2022 19:20:31 PM - INFO - global step: 25305, epoch_36, lr: 0.00043, 140/719: Train average loss: 0.117
+04/14/2022 19:20:36 PM - INFO - global step: 25315, epoch_36, lr: 0.00043, 150/719: Train average loss: 0.116
+04/14/2022 19:20:40 PM - INFO - global step: 25325, epoch_36, lr: 0.00043, 160/719: Train average loss: 0.116
+04/14/2022 19:20:44 PM - INFO - global step: 25335, epoch_36, lr: 0.00043, 170/719: Train average loss: 0.117
+04/14/2022 19:20:48 PM - INFO - global step: 25345, epoch_36, lr: 0.00043, 180/719: Train average loss: 0.117
+04/14/2022 19:20:52 PM - INFO - global step: 25355, epoch_36, lr: 0.00043, 190/719: Train average loss: 0.116
+04/14/2022 19:20:56 PM - INFO - global step: 25365, epoch_36, lr: 0.00043, 200/719: Train average loss: 0.115
+04/14/2022 19:21:00 PM - INFO - global step: 25375, epoch_36, lr: 0.00043, 210/719: Train average loss: 0.116
+04/14/2022 19:21:04 PM - INFO - global step: 25385, epoch_36, lr: 0.00043, 220/719: Train average loss: 0.117
+04/14/2022 19:21:08 PM - INFO - global step: 25395, epoch_36, lr: 0.00043, 230/719: Train average loss: 0.117
+04/14/2022 19:21:12 PM - INFO - global step: 25405, epoch_36, lr: 0.00043, 240/719: Train average loss: 0.115
+04/14/2022 19:21:17 PM - INFO - global step: 25415, epoch_36, lr: 0.00043, 250/719: Train average loss: 0.115
+04/14/2022 19:21:21 PM - INFO - global step: 25425, epoch_36, lr: 0.00043, 260/719: Train average loss: 0.114
+04/14/2022 19:21:25 PM - INFO - global step: 25435, epoch_36, lr: 0.00043, 270/719: Train average loss: 0.114
+04/14/2022 19:21:29 PM - INFO - global step: 25445, epoch_36, lr: 0.00043, 280/719: Train average loss: 0.114
+04/14/2022 19:21:33 PM - INFO - global step: 25455, epoch_36, lr: 0.00043, 290/719: Train average loss: 0.114
+04/14/2022 19:21:37 PM - INFO - global step: 25465, epoch_36, lr: 0.00043, 300/719: Train average loss: 0.114
+04/14/2022 19:21:41 PM - INFO - global step: 25475, epoch_36, lr: 0.00043, 310/719: Train average loss: 0.113
+04/14/2022 19:21:45 PM - INFO - global step: 25485, epoch_36, lr: 0.00043, 320/719: Train average loss: 0.112
+04/14/2022 19:21:51 PM - INFO - global step: 25495, epoch_36, lr: 0.00043, 330/719: Train average loss: 0.112
+04/14/2022 19:21:57 PM - INFO - global step: 25505, epoch_36, lr: 0.00043, 340/719: Train average loss: 0.111
+04/14/2022 19:22:01 PM - INFO - global step: 25515, epoch_36, lr: 0.00043, 350/719: Train average loss: 0.112
+04/14/2022 19:22:05 PM - INFO - global step: 25525, epoch_36, lr: 0.00043, 360/719: Train average loss: 0.112
+04/14/2022 19:22:09 PM - INFO - global step: 25535, epoch_36, lr: 0.00043, 370/719: Train average loss: 0.112
+04/14/2022 19:22:13 PM - INFO - global step: 25545, epoch_36, lr: 0.00043, 380/719: Train average loss: 0.113
+04/14/2022 19:22:17 PM - INFO - global step: 25555, epoch_36, lr: 0.00043, 390/719: Train average loss: 0.113
+04/14/2022 19:22:22 PM - INFO - global step: 25565, epoch_36, lr: 0.00043, 400/719: Train average loss: 0.113
+04/14/2022 19:22:26 PM - INFO - global step: 25575, epoch_36, lr: 0.00043, 410/719: Train average loss: 0.113
+04/14/2022 19:22:30 PM - INFO - global step: 25585, epoch_36, lr: 0.00043, 420/719: Train average loss: 0.113
+04/14/2022 19:22:34 PM - INFO - global step: 25595, epoch_36, lr: 0.00043, 430/719: Train average loss: 0.114
+04/14/2022 19:22:39 PM - INFO - global step: 25605, epoch_36, lr: 0.00043, 440/719: Train average loss: 0.114
+04/14/2022 19:22:43 PM - INFO - global step: 25615, epoch_36, lr: 0.00043, 450/719: Train average loss: 0.114
+04/14/2022 19:22:47 PM - INFO - global step: 25625, epoch_36, lr: 0.00043, 460/719: Train average loss: 0.114
+04/14/2022 19:22:51 PM - INFO - global step: 25635, epoch_36, lr: 0.00043, 470/719: Train average loss: 0.113
+04/14/2022 19:22:55 PM - INFO - global step: 25645, epoch_36, lr: 0.00043, 480/719: Train average loss: 0.114
+04/14/2022 19:22:59 PM - INFO - global step: 25655, epoch_36, lr: 0.00043, 490/719: Train average loss: 0.115
+04/14/2022 19:23:03 PM - INFO - global step: 25665, epoch_36, lr: 0.00043, 500/719: Train average loss: 0.114
+04/14/2022 19:23:08 PM - INFO - global step: 25675, epoch_36, lr: 0.00043, 510/719: Train average loss: 0.114
+04/14/2022 19:23:12 PM - INFO - global step: 25685, epoch_36, lr: 0.00043, 520/719: Train average loss: 0.114
+04/14/2022 19:23:16 PM - INFO - global step: 25695, epoch_36, lr: 0.00043, 530/719: Train average loss: 0.114
+04/14/2022 19:23:20 PM - INFO - global step: 25705, epoch_36, lr: 0.00043, 540/719: Train average loss: 0.114
+04/14/2022 19:23:24 PM - INFO - global step: 25715, epoch_36, lr: 0.00043, 550/719: Train average loss: 0.114
+04/14/2022 19:23:28 PM - INFO - global step: 25725, epoch_36, lr: 0.00043, 560/719: Train average loss: 0.114
+04/14/2022 19:23:32 PM - INFO - global step: 25735, epoch_36, lr: 0.00043, 570/719: Train average loss: 0.114
+04/14/2022 19:23:37 PM - INFO - global step: 25745, epoch_36, lr: 0.00043, 580/719: Train average loss: 0.115
+04/14/2022 19:23:41 PM - INFO - global step: 25755, epoch_36, lr: 0.00043, 590/719: Train average loss: 0.115
+04/14/2022 19:23:45 PM - INFO - global step: 25765, epoch_36, lr: 0.00043, 600/719: Train average loss: 0.114
+04/14/2022 19:23:49 PM - INFO - global step: 25775, epoch_36, lr: 0.00043, 610/719: Train average loss: 0.114
+04/14/2022 19:23:53 PM - INFO - global step: 25785, epoch_36, lr: 0.00043, 620/719: Train average loss: 0.113
+04/14/2022 19:23:58 PM - INFO - global step: 25795, epoch_36, lr: 0.00043, 630/719: Train average loss: 0.114
+04/14/2022 19:24:02 PM - INFO - global step: 25805, epoch_36, lr: 0.00043, 640/719: Train average loss: 0.114
+04/14/2022 19:24:06 PM - INFO - global step: 25815, epoch_36, lr: 0.00043, 650/719: Train average loss: 0.114
+04/14/2022 19:24:10 PM - INFO - global step: 25825, epoch_36, lr: 0.00043, 660/719: Train average loss: 0.113
+04/14/2022 19:24:14 PM - INFO - global step: 25835, epoch_36, lr: 0.00043, 670/719: Train average loss: 0.114
+04/14/2022 19:24:18 PM - INFO - global step: 25845, epoch_36, lr: 0.00043, 680/719: Train average loss: 0.113
+04/14/2022 19:24:23 PM - INFO - global step: 25855, epoch_36, lr: 0.00043, 690/719: Train average loss: 0.114
+04/14/2022 19:24:27 PM - INFO - global step: 25865, epoch_36, lr: 0.00043, 700/719: Train average loss: 0.115
+04/14/2022 19:24:31 PM - INFO - global step: 25875, epoch_36, lr: 0.00043, 710/719: Train average loss: 0.114
+04/14/2022 19:24:35 PM - INFO - ==========================================================
+04/14/2022 19:24:35 PM - INFO - epoch_36: Train set(Aug) acc is: 0.953
+04/14/2022 19:24:49 PM - INFO - epoch_36: Valid set average loss is: 0.139
+04/14/2022 19:24:49 PM - INFO - epoch_36: Valid set acc is: 0.949
+04/14/2022 19:24:49 PM - INFO - ==========================================================
+04/14/2022 19:24:53 PM - INFO - global step: 25894, epoch_37, lr: 0.00043, 10/719: Train average loss: 0.116
+04/14/2022 19:24:57 PM - INFO - global step: 25904, epoch_37, lr: 0.00043, 20/719: Train average loss: 0.123
+04/14/2022 19:25:01 PM - INFO - global step: 25914, epoch_37, lr: 0.00043, 30/719: Train average loss: 0.117
+04/14/2022 19:25:05 PM - INFO - global step: 25924, epoch_37, lr: 0.00043, 40/719: Train average loss: 0.121
+04/14/2022 19:25:09 PM - INFO - global step: 25934, epoch_37, lr: 0.00043, 50/719: Train average loss: 0.117
+04/14/2022 19:25:13 PM - INFO - global step: 25944, epoch_37, lr: 0.00043, 60/719: Train average loss: 0.116
+04/14/2022 19:25:17 PM - INFO - global step: 25954, epoch_37, lr: 0.00043, 70/719: Train average loss: 0.120
+04/14/2022 19:25:21 PM - INFO - global step: 25964, epoch_37, lr: 0.00043, 80/719: Train average loss: 0.120
+04/14/2022 19:25:25 PM - INFO - global step: 25974, epoch_37, lr: 0.00043, 90/719: Train average loss: 0.118
+04/14/2022 19:25:29 PM - INFO - global step: 25984, epoch_37, lr: 0.00043, 100/719: Train average loss: 0.121
+04/14/2022 19:25:33 PM - INFO - global step: 25994, epoch_37, lr: 0.00043, 110/719: Train average loss: 0.117
+04/14/2022 19:25:38 PM - INFO - global step: 26004, epoch_37, lr: 0.00043, 120/719: Train average loss: 0.116
+04/14/2022 19:25:42 PM - INFO - global step: 26014, epoch_37, lr: 0.00043, 130/719: Train average loss: 0.115
+04/14/2022 19:25:46 PM - INFO - global step: 26024, epoch_37, lr: 0.00043, 140/719: Train average loss: 0.112
+04/14/2022 19:25:50 PM - INFO - global step: 26034, epoch_37, lr: 0.00043, 150/719: Train average loss: 0.112
+04/14/2022 19:25:54 PM - INFO - global step: 26044, epoch_37, lr: 0.00043, 160/719: Train average loss: 0.112
+04/14/2022 19:25:58 PM - INFO - global step: 26054, epoch_37, lr: 0.00043, 170/719: Train average loss: 0.112
+04/14/2022 19:26:02 PM - INFO - global step: 26064, epoch_37, lr: 0.00043, 180/719: Train average loss: 0.110
+04/14/2022 19:26:06 PM - INFO - global step: 26074, epoch_37, lr: 0.00043, 190/719: Train average loss: 0.111
+04/14/2022 19:26:10 PM - INFO - global step: 26084, epoch_37, lr: 0.00043, 200/719: Train average loss: 0.113
+04/14/2022 19:26:14 PM - INFO - global step: 26094, epoch_37, lr: 0.00043, 210/719: Train average loss: 0.113
+04/14/2022 19:26:18 PM - INFO - global step: 26104, epoch_37, lr: 0.00043, 220/719: Train average loss: 0.112
+04/14/2022 19:26:22 PM - INFO - global step: 26114, epoch_37, lr: 0.00043, 230/719: Train average loss: 0.111
+04/14/2022 19:26:26 PM - INFO - global step: 26124, epoch_37, lr: 0.00043, 240/719: Train average loss: 0.111
+04/14/2022 19:26:31 PM - INFO - global step: 26134, epoch_37, lr: 0.00043, 250/719: Train average loss: 0.111
+04/14/2022 19:26:35 PM - INFO - global step: 26144, epoch_37, lr: 0.00043, 260/719: Train average loss: 0.109
+04/14/2022 19:26:39 PM - INFO - global step: 26154, epoch_37, lr: 0.00043, 270/719: Train average loss: 0.108
+04/14/2022 19:26:43 PM - INFO - global step: 26164, epoch_37, lr: 0.00043, 280/719: Train average loss: 0.107
+04/14/2022 19:26:47 PM - INFO - global step: 26174, epoch_37, lr: 0.00043, 290/719: Train average loss: 0.107
+04/14/2022 19:26:51 PM - INFO - global step: 26184, epoch_37, lr: 0.00043, 300/719: Train average loss: 0.108
+04/14/2022 19:26:55 PM - INFO - global step: 26194, epoch_37, lr: 0.00043, 310/719: Train average loss: 0.107
+04/14/2022 19:26:59 PM - INFO - global step: 26204, epoch_37, lr: 0.00043, 320/719: Train average loss: 0.108
+04/14/2022 19:27:03 PM - INFO - global step: 26214, epoch_37, lr: 0.00043, 330/719: Train average loss: 0.109
+04/14/2022 19:27:07 PM - INFO - global step: 26224, epoch_37, lr: 0.00043, 340/719: Train average loss: 0.108
+04/14/2022 19:27:12 PM - INFO - global step: 26234, epoch_37, lr: 0.00043, 350/719: Train average loss: 0.109
+04/14/2022 19:27:16 PM - INFO - global step: 26244, epoch_37, lr: 0.00043, 360/719: Train average loss: 0.110
+04/14/2022 19:27:20 PM - INFO - global step: 26254, epoch_37, lr: 0.00043, 370/719: Train average loss: 0.110
+04/14/2022 19:27:24 PM - INFO - global step: 26264, epoch_37, lr: 0.00043, 380/719: Train average loss: 0.111
+04/14/2022 19:27:28 PM - INFO - global step: 26274, epoch_37, lr: 0.00043, 390/719: Train average loss: 0.111
+04/14/2022 19:27:32 PM - INFO - global step: 26284, epoch_37, lr: 0.00043, 400/719: Train average loss: 0.111
+04/14/2022 19:27:36 PM - INFO - global step: 26294, epoch_37, lr: 0.00043, 410/719: Train average loss: 0.113
+04/14/2022 19:27:40 PM - INFO - global step: 26304, epoch_37, lr: 0.00043, 420/719: Train average loss: 0.112
+04/14/2022 19:27:44 PM - INFO - global step: 26314, epoch_37, lr: 0.00043, 430/719: Train average loss: 0.113
+04/14/2022 19:27:48 PM - INFO - global step: 26324, epoch_37, lr: 0.00043, 440/719: Train average loss: 0.112
+04/14/2022 19:27:52 PM - INFO - global step: 26334, epoch_37, lr: 0.00043, 450/719: Train average loss: 0.112
+04/14/2022 19:27:56 PM - INFO - global step: 26344, epoch_37, lr: 0.00043, 460/719: Train average loss: 0.114
+04/14/2022 19:28:00 PM - INFO - global step: 26354, epoch_37, lr: 0.00043, 470/719: Train average loss: 0.114
+04/14/2022 19:28:05 PM - INFO - global step: 26364, epoch_37, lr: 0.00043, 480/719: Train average loss: 0.114
+04/14/2022 19:28:09 PM - INFO - global step: 26374, epoch_37, lr: 0.00043, 490/719: Train average loss: 0.114
+04/14/2022 19:28:13 PM - INFO - global step: 26384, epoch_37, lr: 0.00043, 500/719: Train average loss: 0.114
+04/14/2022 19:28:17 PM - INFO - global step: 26394, epoch_37, lr: 0.00043, 510/719: Train average loss: 0.114
+04/14/2022 19:28:21 PM - INFO - global step: 26404, epoch_37, lr: 0.00043, 520/719: Train average loss: 0.114
+04/14/2022 19:28:25 PM - INFO - global step: 26414, epoch_37, lr: 0.00043, 530/719: Train average loss: 0.114
+04/14/2022 19:28:29 PM - INFO - global step: 26424, epoch_37, lr: 0.00043, 540/719: Train average loss: 0.114
+04/14/2022 19:28:33 PM - INFO - global step: 26434, epoch_37, lr: 0.00043, 550/719: Train average loss: 0.115
+04/14/2022 19:28:37 PM - INFO - global step: 26444, epoch_37, lr: 0.00043, 560/719: Train average loss: 0.115
+04/14/2022 19:28:41 PM - INFO - global step: 26454, epoch_37, lr: 0.00043, 570/719: Train average loss: 0.115
+04/14/2022 19:28:45 PM - INFO - global step: 26464, epoch_37, lr: 0.00043, 580/719: Train average loss: 0.114
+04/14/2022 19:28:49 PM - INFO - global step: 26474, epoch_37, lr: 0.00043, 590/719: Train average loss: 0.114
+04/14/2022 19:28:54 PM - INFO - global step: 26484, epoch_37, lr: 0.00043, 600/719: Train average loss: 0.114
+04/14/2022 19:28:58 PM - INFO - global step: 26494, epoch_37, lr: 0.00043, 610/719: Train average loss: 0.114
+04/14/2022 19:29:02 PM - INFO - global step: 26504, epoch_37, lr: 0.00043, 620/719: Train average loss: 0.114
+04/14/2022 19:29:06 PM - INFO - global step: 26514, epoch_37, lr: 0.00043, 630/719: Train average loss: 0.115
+04/14/2022 19:29:10 PM - INFO - global step: 26524, epoch_37, lr: 0.00043, 640/719: Train average loss: 0.114
+04/14/2022 19:29:14 PM - INFO - global step: 26534, epoch_37, lr: 0.00043, 650/719: Train average loss: 0.114
+04/14/2022 19:29:18 PM - INFO - global step: 26544, epoch_37, lr: 0.00043, 660/719: Train average loss: 0.115
+04/14/2022 19:29:22 PM - INFO - global step: 26554, epoch_37, lr: 0.00043, 670/719: Train average loss: 0.114
+04/14/2022 19:29:26 PM - INFO - global step: 26564, epoch_37, lr: 0.00043, 680/719: Train average loss: 0.114
+04/14/2022 19:29:30 PM - INFO - global step: 26574, epoch_37, lr: 0.00043, 690/719: Train average loss: 0.114
+04/14/2022 19:29:34 PM - INFO - global step: 26584, epoch_37, lr: 0.00043, 700/719: Train average loss: 0.114
+04/14/2022 19:29:38 PM - INFO - global step: 26594, epoch_37, lr: 0.00043, 710/719: Train average loss: 0.114
+04/14/2022 19:29:42 PM - INFO - ==========================================================
+04/14/2022 19:29:42 PM - INFO - epoch_37: Train set(Aug) acc is: 0.953
+04/14/2022 19:29:56 PM - INFO - epoch_37: Valid set average loss is: 0.133
+04/14/2022 19:29:56 PM - INFO - epoch_37: Valid set acc is: 0.950
+04/14/2022 19:29:56 PM - INFO - ==========================================================
+04/14/2022 19:30:00 PM - INFO - global step: 26613, epoch_38, lr: 0.00043, 10/719: Train average loss: 0.082
+04/14/2022 19:30:04 PM - INFO - global step: 26623, epoch_38, lr: 0.00043, 20/719: Train average loss: 0.080
+04/14/2022 19:30:08 PM - INFO - global step: 26633, epoch_38, lr: 0.00043, 30/719: Train average loss: 0.092
+04/14/2022 19:30:12 PM - INFO - global step: 26643, epoch_38, lr: 0.00043, 40/719: Train average loss: 0.102
+04/14/2022 19:30:17 PM - INFO - global step: 26653, epoch_38, lr: 0.00043, 50/719: Train average loss: 0.108
+04/14/2022 19:30:21 PM - INFO - global step: 26663, epoch_38, lr: 0.00043, 60/719: Train average loss: 0.109
+04/14/2022 19:30:25 PM - INFO - global step: 26673, epoch_38, lr: 0.00043, 70/719: Train average loss: 0.109
+04/14/2022 19:30:29 PM - INFO - global step: 26683, epoch_38, lr: 0.00043, 80/719: Train average loss: 0.108
+04/14/2022 19:30:33 PM - INFO - global step: 26693, epoch_38, lr: 0.00043, 90/719: Train average loss: 0.109
+04/14/2022 19:30:37 PM - INFO - global step: 26703, epoch_38, lr: 0.00043, 100/719: Train average loss: 0.108
+04/14/2022 19:30:41 PM - INFO - global step: 26713, epoch_38, lr: 0.00043, 110/719: Train average loss: 0.111
+04/14/2022 19:30:45 PM - INFO - global step: 26723, epoch_38, lr: 0.00043, 120/719: Train average loss: 0.111
+04/14/2022 19:30:49 PM - INFO - global step: 26733, epoch_38, lr: 0.00043, 130/719: Train average loss: 0.109
+04/14/2022 19:30:53 PM - INFO - global step: 26743, epoch_38, lr: 0.00043, 140/719: Train average loss: 0.109
+04/14/2022 19:30:57 PM - INFO - global step: 26753, epoch_38, lr: 0.00043, 150/719: Train average loss: 0.108
+04/14/2022 19:31:01 PM - INFO - global step: 26763, epoch_38, lr: 0.00043, 160/719: Train average loss: 0.108
+04/14/2022 19:31:05 PM - INFO - global step: 26773, epoch_38, lr: 0.00043, 170/719: Train average loss: 0.109
+04/14/2022 19:31:10 PM - INFO - global step: 26783, epoch_38, lr: 0.00043, 180/719: Train average loss: 0.110
+04/14/2022 19:31:14 PM - INFO - global step: 26793, epoch_38, lr: 0.00043, 190/719: Train average loss: 0.109
+04/14/2022 19:31:52 PM - INFO - global step: 26803, epoch_38, lr: 0.00043, 200/719: Train average loss: 0.110
+04/14/2022 19:31:58 PM - INFO - global step: 26813, epoch_38, lr: 0.00043, 210/719: Train average loss: 0.109
+04/14/2022 19:32:03 PM - INFO - global step: 26823, epoch_38, lr: 0.00043, 220/719: Train average loss: 0.108
+04/14/2022 19:32:09 PM - INFO - global step: 26833, epoch_38, lr: 0.00043, 230/719: Train average loss: 0.108
+04/14/2022 19:32:16 PM - INFO - global step: 26843, epoch_38, lr: 0.00043, 240/719: Train average loss: 0.109
+04/14/2022 19:32:24 PM - INFO - global step: 26853, epoch_38, lr: 0.00043, 250/719: Train average loss: 0.108
+04/14/2022 19:32:30 PM - INFO - global step: 26863, epoch_38, lr: 0.00043, 260/719: Train average loss: 0.108
+04/14/2022 19:32:35 PM - INFO - global step: 26873, epoch_38, lr: 0.00043, 270/719: Train average loss: 0.107
+04/14/2022 19:32:40 PM - INFO - global step: 26883, epoch_38, lr: 0.00043, 280/719: Train average loss: 0.107
+04/14/2022 19:32:45 PM - INFO - global step: 26893, epoch_38, lr: 0.00043, 290/719: Train average loss: 0.108
+04/14/2022 19:32:51 PM - INFO - global step: 26903, epoch_38, lr: 0.00043, 300/719: Train average loss: 0.107
+04/14/2022 19:32:56 PM - INFO - global step: 26913, epoch_38, lr: 0.00043, 310/719: Train average loss: 0.108
+04/14/2022 19:33:01 PM - INFO - global step: 26923, epoch_38, lr: 0.00043, 320/719: Train average loss: 0.108
+04/14/2022 19:33:06 PM - INFO - global step: 26933, epoch_38, lr: 0.00043, 330/719: Train average loss: 0.109
+04/14/2022 19:33:11 PM - INFO - global step: 26943, epoch_38, lr: 0.00043, 340/719: Train average loss: 0.109
+04/14/2022 19:33:16 PM - INFO - global step: 26953, epoch_38, lr: 0.00043, 350/719: Train average loss: 0.108
+04/14/2022 19:33:22 PM - INFO - global step: 26963, epoch_38, lr: 0.00043, 360/719: Train average loss: 0.109
+04/14/2022 19:33:27 PM - INFO - global step: 26973, epoch_38, lr: 0.00043, 370/719: Train average loss: 0.111
+04/14/2022 19:33:32 PM - INFO - global step: 26983, epoch_38, lr: 0.00043, 380/719: Train average loss: 0.111
+04/14/2022 19:33:40 PM - INFO - global step: 26993, epoch_38, lr: 0.00043, 390/719: Train average loss: 0.111
+04/14/2022 19:33:46 PM - INFO - global step: 27003, epoch_38, lr: 0.00039, 400/719: Train average loss: 0.110
+04/14/2022 19:33:51 PM - INFO - global step: 27013, epoch_38, lr: 0.00039, 410/719: Train average loss: 0.110
+04/14/2022 19:33:56 PM - INFO - global step: 27023, epoch_38, lr: 0.00039, 420/719: Train average loss: 0.110
+04/14/2022 19:34:01 PM - INFO - global step: 27033, epoch_38, lr: 0.00039, 430/719: Train average loss: 0.110
+04/14/2022 19:34:07 PM - INFO - global step: 27043, epoch_38, lr: 0.00039, 440/719: Train average loss: 0.110
+04/14/2022 19:34:12 PM - INFO - global step: 27053, epoch_38, lr: 0.00039, 450/719: Train average loss: 0.109
+04/14/2022 19:34:17 PM - INFO - global step: 27063, epoch_38, lr: 0.00039, 460/719: Train average loss: 0.110
+04/14/2022 19:34:22 PM - INFO - global step: 27073, epoch_38, lr: 0.00039, 470/719: Train average loss: 0.110
+04/14/2022 19:34:27 PM - INFO - global step: 27083, epoch_38, lr: 0.00039, 480/719: Train average loss: 0.110
+04/14/2022 19:34:32 PM - INFO - global step: 27093, epoch_38, lr: 0.00039, 490/719: Train average loss: 0.110
+04/14/2022 19:34:37 PM - INFO - global step: 27103, epoch_38, lr: 0.00039, 500/719: Train average loss: 0.110
+04/14/2022 19:34:43 PM - INFO - global step: 27113, epoch_38, lr: 0.00039, 510/719: Train average loss: 0.110
+04/14/2022 19:34:48 PM - INFO - global step: 27123, epoch_38, lr: 0.00039, 520/719: Train average loss: 0.110
+04/14/2022 19:34:53 PM - INFO - global step: 27133, epoch_38, lr: 0.00039, 530/719: Train average loss: 0.110
+04/14/2022 19:34:58 PM - INFO - global step: 27143, epoch_38, lr: 0.00039, 540/719: Train average loss: 0.110
+04/14/2022 19:35:03 PM - INFO - global step: 27153, epoch_38, lr: 0.00039, 550/719: Train average loss: 0.110
+04/14/2022 19:35:08 PM - INFO - global step: 27163, epoch_38, lr: 0.00039, 560/719: Train average loss: 0.109
+04/14/2022 19:35:13 PM - INFO - global step: 27173, epoch_38, lr: 0.00039, 570/719: Train average loss: 0.110
+04/14/2022 19:35:19 PM - INFO - global step: 27183, epoch_38, lr: 0.00039, 580/719: Train average loss: 0.109
+04/14/2022 19:35:24 PM - INFO - global step: 27193, epoch_38, lr: 0.00039, 590/719: Train average loss: 0.109
+04/14/2022 19:35:29 PM - INFO - global step: 27203, epoch_38, lr: 0.00039, 600/719: Train average loss: 0.109
+04/14/2022 19:35:34 PM - INFO - global step: 27213, epoch_38, lr: 0.00039, 610/719: Train average loss: 0.109
+04/14/2022 19:35:39 PM - INFO - global step: 27223, epoch_38, lr: 0.00039, 620/719: Train average loss: 0.109
+04/14/2022 19:35:44 PM - INFO - global step: 27233, epoch_38, lr: 0.00039, 630/719: Train average loss: 0.109
+04/14/2022 19:35:49 PM - INFO - global step: 27243, epoch_38, lr: 0.00039, 640/719: Train average loss: 0.108
+04/14/2022 19:35:55 PM - INFO - global step: 27253, epoch_38, lr: 0.00039, 650/719: Train average loss: 0.109
+04/14/2022 19:36:00 PM - INFO - global step: 27263, epoch_38, lr: 0.00039, 660/719: Train average loss: 0.109
+04/14/2022 19:36:05 PM - INFO - global step: 27273, epoch_38, lr: 0.00039, 670/719: Train average loss: 0.110
+04/14/2022 19:36:11 PM - INFO - global step: 27283, epoch_38, lr: 0.00039, 680/719: Train average loss: 0.110
+04/14/2022 19:36:16 PM - INFO - global step: 27293, epoch_38, lr: 0.00039, 690/719: Train average loss: 0.111
+04/14/2022 19:36:21 PM - INFO - global step: 27303, epoch_38, lr: 0.00039, 700/719: Train average loss: 0.111
+04/14/2022 19:36:28 PM - INFO - global step: 27313, epoch_38, lr: 0.00039, 710/719: Train average loss: 0.110
+04/14/2022 19:36:33 PM - INFO - ==========================================================
+04/14/2022 19:36:33 PM - INFO - epoch_38: Train set(Aug) acc is: 0.956
+04/14/2022 19:36:51 PM - INFO - epoch_38: Valid set average loss is: 0.122
+04/14/2022 19:36:51 PM - INFO - epoch_38: Valid set acc is: 0.948
+04/14/2022 19:36:51 PM - INFO - ==========================================================
+04/14/2022 19:36:55 PM - INFO - global step: 27332, epoch_39, lr: 0.00039, 10/719: Train average loss: 0.104
+04/14/2022 19:37:02 PM - INFO - global step: 27342, epoch_39, lr: 0.00039, 20/719: Train average loss: 0.111
+04/14/2022 19:37:06 PM - INFO - global step: 27352, epoch_39, lr: 0.00039, 30/719: Train average loss: 0.099
+04/14/2022 19:37:10 PM - INFO - global step: 27362, epoch_39, lr: 0.00039, 40/719: Train average loss: 0.103
+04/14/2022 19:37:15 PM - INFO - global step: 27372, epoch_39, lr: 0.00039, 50/719: Train average loss: 0.106
+04/14/2022 19:37:19 PM - INFO - global step: 27382, epoch_39, lr: 0.00039, 60/719: Train average loss: 0.099
+04/14/2022 19:37:23 PM - INFO - global step: 27392, epoch_39, lr: 0.00039, 70/719: Train average loss: 0.104
+04/14/2022 19:37:27 PM - INFO - global step: 27402, epoch_39, lr: 0.00039, 80/719: Train average loss: 0.104
+04/14/2022 19:37:31 PM - INFO - global step: 27412, epoch_39, lr: 0.00039, 90/719: Train average loss: 0.105
+04/14/2022 19:37:35 PM - INFO - global step: 27422, epoch_39, lr: 0.00039, 100/719: Train average loss: 0.103
+04/14/2022 19:37:39 PM - INFO - global step: 27432, epoch_39, lr: 0.00039, 110/719: Train average loss: 0.103
+04/14/2022 19:37:43 PM - INFO - global step: 27442, epoch_39, lr: 0.00039, 120/719: Train average loss: 0.104
+04/14/2022 19:37:47 PM - INFO - global step: 27452, epoch_39, lr: 0.00039, 130/719: Train average loss: 0.104
+04/14/2022 19:37:51 PM - INFO - global step: 27462, epoch_39, lr: 0.00039, 140/719: Train average loss: 0.105
+04/14/2022 19:37:56 PM - INFO - global step: 27472, epoch_39, lr: 0.00039, 150/719: Train average loss: 0.106
+04/14/2022 19:38:00 PM - INFO - global step: 27482, epoch_39, lr: 0.00039, 160/719: Train average loss: 0.107
+04/14/2022 19:38:04 PM - INFO - global step: 27492, epoch_39, lr: 0.00039, 170/719: Train average loss: 0.108
+04/14/2022 19:38:08 PM - INFO - global step: 27502, epoch_39, lr: 0.00039, 180/719: Train average loss: 0.110
+04/14/2022 19:38:12 PM - INFO - global step: 27512, epoch_39, lr: 0.00039, 190/719: Train average loss: 0.110
+04/14/2022 19:38:16 PM - INFO - global step: 27522, epoch_39, lr: 0.00039, 200/719: Train average loss: 0.109
+04/14/2022 19:38:20 PM - INFO - global step: 27532, epoch_39, lr: 0.00039, 210/719: Train average loss: 0.109
+04/14/2022 19:38:24 PM - INFO - global step: 27542, epoch_39, lr: 0.00039, 220/719: Train average loss: 0.108
+04/14/2022 19:38:28 PM - INFO - global step: 27552, epoch_39, lr: 0.00039, 230/719: Train average loss: 0.108
+04/14/2022 19:38:32 PM - INFO - global step: 27562, epoch_39, lr: 0.00039, 240/719: Train average loss: 0.109
+04/14/2022 19:38:36 PM - INFO - global step: 27572, epoch_39, lr: 0.00039, 250/719: Train average loss: 0.110
+04/14/2022 19:38:40 PM - INFO - global step: 27582, epoch_39, lr: 0.00039, 260/719: Train average loss: 0.110
+04/14/2022 19:38:44 PM - INFO - global step: 27592, epoch_39, lr: 0.00039, 270/719: Train average loss: 0.109
+04/14/2022 19:38:48 PM - INFO - global step: 27602, epoch_39, lr: 0.00039, 280/719: Train average loss: 0.109
+04/14/2022 19:38:52 PM - INFO - global step: 27612, epoch_39, lr: 0.00039, 290/719: Train average loss: 0.109
+04/14/2022 19:38:56 PM - INFO - global step: 27622, epoch_39, lr: 0.00039, 300/719: Train average loss: 0.109
+04/14/2022 19:39:01 PM - INFO - global step: 27632, epoch_39, lr: 0.00039, 310/719: Train average loss: 0.109
+04/14/2022 19:39:05 PM - INFO - global step: 27642, epoch_39, lr: 0.00039, 320/719: Train average loss: 0.108
+04/14/2022 19:39:09 PM - INFO - global step: 27652, epoch_39, lr: 0.00039, 330/719: Train average loss: 0.109
+04/14/2022 19:39:13 PM - INFO - global step: 27662, epoch_39, lr: 0.00039, 340/719: Train average loss: 0.108
+04/14/2022 19:39:17 PM - INFO - global step: 27672, epoch_39, lr: 0.00039, 350/719: Train average loss: 0.108
+04/14/2022 19:39:21 PM - INFO - global step: 27682, epoch_39, lr: 0.00039, 360/719: Train average loss: 0.109
+04/14/2022 19:39:25 PM - INFO - global step: 27692, epoch_39, lr: 0.00039, 370/719: Train average loss: 0.109
+04/14/2022 19:39:29 PM - INFO - global step: 27702, epoch_39, lr: 0.00039, 380/719: Train average loss: 0.110
+04/14/2022 19:39:33 PM - INFO - global step: 27712, epoch_39, lr: 0.00039, 390/719: Train average loss: 0.109
+04/14/2022 19:39:37 PM - INFO - global step: 27722, epoch_39, lr: 0.00039, 400/719: Train average loss: 0.109
+04/14/2022 19:39:41 PM - INFO - global step: 27732, epoch_39, lr: 0.00039, 410/719: Train average loss: 0.109
+04/14/2022 19:39:45 PM - INFO - global step: 27742, epoch_39, lr: 0.00039, 420/719: Train average loss: 0.110
+04/14/2022 19:39:49 PM - INFO - global step: 27752, epoch_39, lr: 0.00039, 430/719: Train average loss: 0.109
+04/14/2022 19:39:53 PM - INFO - global step: 27762, epoch_39, lr: 0.00039, 440/719: Train average loss: 0.109
+04/14/2022 19:39:57 PM - INFO - global step: 27772, epoch_39, lr: 0.00039, 450/719: Train average loss: 0.109
+04/14/2022 19:40:02 PM - INFO - global step: 27782, epoch_39, lr: 0.00039, 460/719: Train average loss: 0.109
+04/14/2022 19:40:06 PM - INFO - global step: 27792, epoch_39, lr: 0.00039, 470/719: Train average loss: 0.108
+04/14/2022 19:40:10 PM - INFO - global step: 27802, epoch_39, lr: 0.00039, 480/719: Train average loss: 0.108
+04/14/2022 19:40:14 PM - INFO - global step: 27812, epoch_39, lr: 0.00039, 490/719: Train average loss: 0.108
+04/14/2022 19:40:18 PM - INFO - global step: 27822, epoch_39, lr: 0.00039, 500/719: Train average loss: 0.107
+04/14/2022 19:40:22 PM - INFO - global step: 27832, epoch_39, lr: 0.00039, 510/719: Train average loss: 0.107
+04/14/2022 19:40:26 PM - INFO - global step: 27842, epoch_39, lr: 0.00039, 520/719: Train average loss: 0.107
+04/14/2022 19:40:30 PM - INFO - global step: 27852, epoch_39, lr: 0.00039, 530/719: Train average loss: 0.106
+04/14/2022 19:40:34 PM - INFO - global step: 27862, epoch_39, lr: 0.00039, 540/719: Train average loss: 0.106
+04/14/2022 19:40:38 PM - INFO - global step: 27872, epoch_39, lr: 0.00039, 550/719: Train average loss: 0.106
+04/14/2022 19:40:42 PM - INFO - global step: 27882, epoch_39, lr: 0.00039, 560/719: Train average loss: 0.106
+04/14/2022 19:40:46 PM - INFO - global step: 27892, epoch_39, lr: 0.00039, 570/719: Train average loss: 0.106
+04/14/2022 19:40:50 PM - INFO - global step: 27902, epoch_39, lr: 0.00039, 580/719: Train average loss: 0.106
+04/14/2022 19:40:54 PM - INFO - global step: 27912, epoch_39, lr: 0.00039, 590/719: Train average loss: 0.107
+04/14/2022 19:40:58 PM - INFO - global step: 27922, epoch_39, lr: 0.00039, 600/719: Train average loss: 0.107
+04/14/2022 19:41:02 PM - INFO - global step: 27932, epoch_39, lr: 0.00039, 610/719: Train average loss: 0.107
+04/14/2022 19:41:06 PM - INFO - global step: 27942, epoch_39, lr: 0.00039, 620/719: Train average loss: 0.107
+04/14/2022 19:41:11 PM - INFO - global step: 27952, epoch_39, lr: 0.00039, 630/719: Train average loss: 0.107
+04/14/2022 19:41:15 PM - INFO - global step: 27962, epoch_39, lr: 0.00039, 640/719: Train average loss: 0.108
+04/14/2022 19:41:19 PM - INFO - global step: 27972, epoch_39, lr: 0.00039, 650/719: Train average loss: 0.107
+04/14/2022 19:41:23 PM - INFO - global step: 27982, epoch_39, lr: 0.00039, 660/719: Train average loss: 0.107
+04/14/2022 19:41:27 PM - INFO - global step: 27992, epoch_39, lr: 0.00039, 670/719: Train average loss: 0.108
+04/14/2022 19:41:31 PM - INFO - global step: 28002, epoch_39, lr: 0.00039, 680/719: Train average loss: 0.108
+04/14/2022 19:41:35 PM - INFO - global step: 28012, epoch_39, lr: 0.00039, 690/719: Train average loss: 0.107
+04/14/2022 19:41:39 PM - INFO - global step: 28022, epoch_39, lr: 0.00039, 700/719: Train average loss: 0.107
+04/14/2022 19:41:43 PM - INFO - global step: 28032, epoch_39, lr: 0.00039, 710/719: Train average loss: 0.107
+04/14/2022 19:41:47 PM - INFO - ==========================================================
+04/14/2022 19:41:47 PM - INFO - epoch_39: Train set(Aug) acc is: 0.956
+04/14/2022 19:42:01 PM - INFO - epoch_39: Valid set average loss is: 0.134
+04/14/2022 19:42:01 PM - INFO - epoch_39: Valid set acc is: 0.949
+04/14/2022 19:42:01 PM - INFO - ==========================================================
+04/14/2022 19:42:05 PM - INFO - global step: 28051, epoch_40, lr: 0.00039, 10/719: Train average loss: 0.142
+04/14/2022 19:42:09 PM - INFO - global step: 28061, epoch_40, lr: 0.00039, 20/719: Train average loss: 0.113
+04/14/2022 19:42:13 PM - INFO - global step: 28071, epoch_40, lr: 0.00039, 30/719: Train average loss: 0.110
+04/14/2022 19:42:17 PM - INFO - global step: 28081, epoch_40, lr: 0.00039, 40/719: Train average loss: 0.121
+04/14/2022 19:42:21 PM - INFO - global step: 28091, epoch_40, lr: 0.00039, 50/719: Train average loss: 0.118
+04/14/2022 19:42:25 PM - INFO - global step: 28101, epoch_40, lr: 0.00039, 60/719: Train average loss: 0.120
+04/14/2022 19:42:29 PM - INFO - global step: 28111, epoch_40, lr: 0.00039, 70/719: Train average loss: 0.120
+04/14/2022 19:42:33 PM - INFO - global step: 28121, epoch_40, lr: 0.00039, 80/719: Train average loss: 0.118
+04/14/2022 19:42:37 PM - INFO - global step: 28131, epoch_40, lr: 0.00039, 90/719: Train average loss: 0.113
+04/14/2022 19:42:41 PM - INFO - global step: 28141, epoch_40, lr: 0.00039, 100/719: Train average loss: 0.111
+04/14/2022 19:42:45 PM - INFO - global step: 28151, epoch_40, lr: 0.00039, 110/719: Train average loss: 0.109
+04/14/2022 19:42:49 PM - INFO - global step: 28161, epoch_40, lr: 0.00039, 120/719: Train average loss: 0.110
+04/14/2022 19:42:53 PM - INFO - global step: 28171, epoch_40, lr: 0.00039, 130/719: Train average loss: 0.111
+04/14/2022 19:42:57 PM - INFO - global step: 28181, epoch_40, lr: 0.00039, 140/719: Train average loss: 0.111
+04/14/2022 19:43:01 PM - INFO - global step: 28191, epoch_40, lr: 0.00039, 150/719: Train average loss: 0.115
+04/14/2022 19:43:05 PM - INFO - global step: 28201, epoch_40, lr: 0.00039, 160/719: Train average loss: 0.113
+04/14/2022 19:43:09 PM - INFO - global step: 28211, epoch_40, lr: 0.00039, 170/719: Train average loss: 0.111
+04/14/2022 19:43:13 PM - INFO - global step: 28221, epoch_40, lr: 0.00039, 180/719: Train average loss: 0.111
+04/14/2022 19:43:17 PM - INFO - global step: 28231, epoch_40, lr: 0.00039, 190/719: Train average loss: 0.109
+04/14/2022 19:43:20 PM - INFO - global step: 28241, epoch_40, lr: 0.00039, 200/719: Train average loss: 0.109
+04/14/2022 19:43:24 PM - INFO - global step: 28251, epoch_40, lr: 0.00039, 210/719: Train average loss: 0.110
+04/14/2022 19:43:28 PM - INFO - global step: 28261, epoch_40, lr: 0.00039, 220/719: Train average loss: 0.111
+04/14/2022 19:43:32 PM - INFO - global step: 28271, epoch_40, lr: 0.00039, 230/719: Train average loss: 0.113
+04/14/2022 19:43:36 PM - INFO - global step: 28281, epoch_40, lr: 0.00039, 240/719: Train average loss: 0.113
+04/14/2022 19:43:40 PM - INFO - global step: 28291, epoch_40, lr: 0.00039, 250/719: Train average loss: 0.114
+04/14/2022 19:43:44 PM - INFO - global step: 28301, epoch_40, lr: 0.00039, 260/719: Train average loss: 0.113
+04/14/2022 19:43:48 PM - INFO - global step: 28311, epoch_40, lr: 0.00039, 270/719: Train average loss: 0.112
+04/14/2022 19:43:52 PM - INFO - global step: 28321, epoch_40, lr: 0.00039, 280/719: Train average loss: 0.112
+04/14/2022 19:43:56 PM - INFO - global step: 28331, epoch_40, lr: 0.00039, 290/719: Train average loss: 0.111
+04/14/2022 19:44:00 PM - INFO - global step: 28341, epoch_40, lr: 0.00039, 300/719: Train average loss: 0.110
+04/14/2022 19:44:04 PM - INFO - global step: 28351, epoch_40, lr: 0.00039, 310/719: Train average loss: 0.110
+04/14/2022 19:44:08 PM - INFO - global step: 28361, epoch_40, lr: 0.00039, 320/719: Train average loss: 0.111
+04/14/2022 19:44:12 PM - INFO - global step: 28371, epoch_40, lr: 0.00039, 330/719: Train average loss: 0.110
+04/14/2022 19:44:16 PM - INFO - global step: 28381, epoch_40, lr: 0.00039, 340/719: Train average loss: 0.109
+04/14/2022 19:44:20 PM - INFO - global step: 28391, epoch_40, lr: 0.00039, 350/719: Train average loss: 0.109
+04/14/2022 19:44:24 PM - INFO - global step: 28401, epoch_40, lr: 0.00039, 360/719: Train average loss: 0.109
+04/14/2022 19:44:28 PM - INFO - global step: 28411, epoch_40, lr: 0.00039, 370/719: Train average loss: 0.109
+04/14/2022 19:44:32 PM - INFO - global step: 28421, epoch_40, lr: 0.00039, 380/719: Train average loss: 0.110
+04/14/2022 19:44:36 PM - INFO - global step: 28431, epoch_40, lr: 0.00039, 390/719: Train average loss: 0.109
+04/14/2022 19:44:40 PM - INFO - global step: 28441, epoch_40, lr: 0.00039, 400/719: Train average loss: 0.108
+04/14/2022 19:44:44 PM - INFO - global step: 28451, epoch_40, lr: 0.00039, 410/719: Train average loss: 0.108
+04/14/2022 19:44:48 PM - INFO - global step: 28461, epoch_40, lr: 0.00039, 420/719: Train average loss: 0.108
+04/14/2022 19:44:52 PM - INFO - global step: 28471, epoch_40, lr: 0.00039, 430/719: Train average loss: 0.109
+04/14/2022 19:44:56 PM - INFO - global step: 28481, epoch_40, lr: 0.00039, 440/719: Train average loss: 0.108
+04/14/2022 19:45:00 PM - INFO - global step: 28491, epoch_40, lr: 0.00039, 450/719: Train average loss: 0.108
+04/14/2022 19:45:04 PM - INFO - global step: 28501, epoch_40, lr: 0.00039, 460/719: Train average loss: 0.108
+04/14/2022 19:45:08 PM - INFO - global step: 28511, epoch_40, lr: 0.00039, 470/719: Train average loss: 0.108
+04/14/2022 19:45:12 PM - INFO - global step: 28521, epoch_40, lr: 0.00039, 480/719: Train average loss: 0.109
+04/14/2022 19:45:16 PM - INFO - global step: 28531, epoch_40, lr: 0.00039, 490/719: Train average loss: 0.108
+04/14/2022 19:45:20 PM - INFO - global step: 28541, epoch_40, lr: 0.00039, 500/719: Train average loss: 0.109
+04/14/2022 19:45:24 PM - INFO - global step: 28551, epoch_40, lr: 0.00039, 510/719: Train average loss: 0.108
+04/14/2022 19:45:28 PM - INFO - global step: 28561, epoch_40, lr: 0.00039, 520/719: Train average loss: 0.108
+04/14/2022 19:45:32 PM - INFO - global step: 28571, epoch_40, lr: 0.00039, 530/719: Train average loss: 0.107
+04/14/2022 19:45:36 PM - INFO - global step: 28581, epoch_40, lr: 0.00039, 540/719: Train average loss: 0.107
+04/14/2022 19:45:40 PM - INFO - global step: 28591, epoch_40, lr: 0.00039, 550/719: Train average loss: 0.107
+04/14/2022 19:45:44 PM - INFO - global step: 28601, epoch_40, lr: 0.00039, 560/719: Train average loss: 0.108
+04/14/2022 19:45:48 PM - INFO - global step: 28611, epoch_40, lr: 0.00039, 570/719: Train average loss: 0.109
+04/14/2022 19:45:52 PM - INFO - global step: 28621, epoch_40, lr: 0.00039, 580/719: Train average loss: 0.108
+04/14/2022 19:45:56 PM - INFO - global step: 28631, epoch_40, lr: 0.00039, 590/719: Train average loss: 0.108
+04/14/2022 19:46:00 PM - INFO - global step: 28641, epoch_40, lr: 0.00039, 600/719: Train average loss: 0.108
+04/14/2022 19:46:04 PM - INFO - global step: 28651, epoch_40, lr: 0.00039, 610/719: Train average loss: 0.108
+04/14/2022 19:46:08 PM - INFO - global step: 28661, epoch_40, lr: 0.00039, 620/719: Train average loss: 0.108
+04/14/2022 19:46:12 PM - INFO - global step: 28671, epoch_40, lr: 0.00039, 630/719: Train average loss: 0.108
+04/14/2022 19:46:16 PM - INFO - global step: 28681, epoch_40, lr: 0.00039, 640/719: Train average loss: 0.108
+04/14/2022 19:46:20 PM - INFO - global step: 28691, epoch_40, lr: 0.00039, 650/719: Train average loss: 0.108
+04/14/2022 19:46:24 PM - INFO - global step: 28701, epoch_40, lr: 0.00039, 660/719: Train average loss: 0.108
+04/14/2022 19:46:28 PM - INFO - global step: 28711, epoch_40, lr: 0.00039, 670/719: Train average loss: 0.108
+04/14/2022 19:46:32 PM - INFO - global step: 28721, epoch_40, lr: 0.00039, 680/719: Train average loss: 0.108
+04/14/2022 19:46:36 PM - INFO - global step: 28731, epoch_40, lr: 0.00039, 690/719: Train average loss: 0.108
+04/14/2022 19:46:40 PM - INFO - global step: 28741, epoch_40, lr: 0.00039, 700/719: Train average loss: 0.107
+04/14/2022 19:46:44 PM - INFO - global step: 28751, epoch_40, lr: 0.00039, 710/719: Train average loss: 0.108
+04/14/2022 19:46:48 PM - INFO - ==========================================================
+04/14/2022 19:46:48 PM - INFO - epoch_40: Train set(Aug) acc is: 0.956
+04/14/2022 19:47:01 PM - INFO - epoch_40: Valid set average loss is: 0.136
+04/14/2022 19:47:01 PM - INFO - epoch_40: Valid set acc is: 0.950
+04/14/2022 19:47:01 PM - INFO - ==========================================================
+04/14/2022 19:47:05 PM - INFO - global step: 28770, epoch_41, lr: 0.00039, 10/719: Train average loss: 0.140
+04/14/2022 19:47:09 PM - INFO - global step: 28780, epoch_41, lr: 0.00039, 20/719: Train average loss: 0.125
+04/14/2022 19:47:13 PM - INFO - global step: 28790, epoch_41, lr: 0.00039, 30/719: Train average loss: 0.111
+04/14/2022 19:47:17 PM - INFO - global step: 28800, epoch_41, lr: 0.00039, 40/719: Train average loss: 0.115
+04/14/2022 19:47:21 PM - INFO - global step: 28810, epoch_41, lr: 0.00039, 50/719: Train average loss: 0.108
+04/14/2022 19:47:25 PM - INFO - global step: 28820, epoch_41, lr: 0.00039, 60/719: Train average loss: 0.106
+04/14/2022 19:47:29 PM - INFO - global step: 28830, epoch_41, lr: 0.00039, 70/719: Train average loss: 0.110
+04/14/2022 19:47:33 PM - INFO - global step: 28840, epoch_41, lr: 0.00039, 80/719: Train average loss: 0.109
+04/14/2022 19:47:37 PM - INFO - global step: 28850, epoch_41, lr: 0.00039, 90/719: Train average loss: 0.110
+04/14/2022 19:47:41 PM - INFO - global step: 28860, epoch_41, lr: 0.00039, 100/719: Train average loss: 0.107
+04/14/2022 19:47:45 PM - INFO - global step: 28870, epoch_41, lr: 0.00039, 110/719: Train average loss: 0.106
+04/14/2022 19:47:49 PM - INFO - global step: 28880, epoch_41, lr: 0.00039, 120/719: Train average loss: 0.101
+04/14/2022 19:47:53 PM - INFO - global step: 28890, epoch_41, lr: 0.00039, 130/719: Train average loss: 0.100
+04/14/2022 19:47:57 PM - INFO - global step: 28900, epoch_41, lr: 0.00039, 140/719: Train average loss: 0.101
+04/14/2022 19:48:01 PM - INFO - global step: 28910, epoch_41, lr: 0.00039, 150/719: Train average loss: 0.101
+04/14/2022 19:48:05 PM - INFO - global step: 28920, epoch_41, lr: 0.00039, 160/719: Train average loss: 0.102
+04/14/2022 19:48:09 PM - INFO - global step: 28930, epoch_41, lr: 0.00039, 170/719: Train average loss: 0.100
+04/14/2022 19:48:13 PM - INFO - global step: 28940, epoch_41, lr: 0.00039, 180/719: Train average loss: 0.100
+04/14/2022 19:48:17 PM - INFO - global step: 28950, epoch_41, lr: 0.00039, 190/719: Train average loss: 0.101
+04/14/2022 19:48:21 PM - INFO - global step: 28960, epoch_41, lr: 0.00039, 200/719: Train average loss: 0.101
+04/14/2022 19:48:25 PM - INFO - global step: 28970, epoch_41, lr: 0.00039, 210/719: Train average loss: 0.102
+04/14/2022 19:48:29 PM - INFO - global step: 28980, epoch_41, lr: 0.00039, 220/719: Train average loss: 0.102
+04/14/2022 19:48:33 PM - INFO - global step: 28990, epoch_41, lr: 0.00039, 230/719: Train average loss: 0.101
+04/14/2022 19:48:37 PM - INFO - global step: 29000, epoch_41, lr: 0.00039, 240/719: Train average loss: 0.103
+04/14/2022 19:48:41 PM - INFO - global step: 29010, epoch_41, lr: 0.00039, 250/719: Train average loss: 0.104
+04/14/2022 19:48:45 PM - INFO - global step: 29020, epoch_41, lr: 0.00039, 260/719: Train average loss: 0.104
+04/14/2022 19:48:49 PM - INFO - global step: 29030, epoch_41, lr: 0.00039, 270/719: Train average loss: 0.104
+04/14/2022 19:48:53 PM - INFO - global step: 29040, epoch_41, lr: 0.00039, 280/719: Train average loss: 0.104
+04/14/2022 19:48:57 PM - INFO - global step: 29050, epoch_41, lr: 0.00039, 290/719: Train average loss: 0.105
+04/14/2022 19:49:01 PM - INFO - global step: 29060, epoch_41, lr: 0.00039, 300/719: Train average loss: 0.104
+04/14/2022 19:49:05 PM - INFO - global step: 29070, epoch_41, lr: 0.00039, 310/719: Train average loss: 0.104
+04/14/2022 19:49:09 PM - INFO - global step: 29080, epoch_41, lr: 0.00039, 320/719: Train average loss: 0.103
+04/14/2022 19:49:13 PM - INFO - global step: 29090, epoch_41, lr: 0.00039, 330/719: Train average loss: 0.104
+04/14/2022 19:49:17 PM - INFO - global step: 29100, epoch_41, lr: 0.00039, 340/719: Train average loss: 0.104
+04/14/2022 19:49:21 PM - INFO - global step: 29110, epoch_41, lr: 0.00039, 350/719: Train average loss: 0.104
+04/14/2022 19:49:25 PM - INFO - global step: 29120, epoch_41, lr: 0.00039, 360/719: Train average loss: 0.105
+04/14/2022 19:49:29 PM - INFO - global step: 29130, epoch_41, lr: 0.00039, 370/719: Train average loss: 0.105
+04/14/2022 19:49:33 PM - INFO - global step: 29140, epoch_41, lr: 0.00039, 380/719: Train average loss: 0.104
+04/14/2022 19:49:37 PM - INFO - global step: 29150, epoch_41, lr: 0.00039, 390/719: Train average loss: 0.105
+04/14/2022 19:49:41 PM - INFO - global step: 29160, epoch_41, lr: 0.00039, 400/719: Train average loss: 0.104
+04/14/2022 19:49:45 PM - INFO - global step: 29170, epoch_41, lr: 0.00039, 410/719: Train average loss: 0.106
+04/14/2022 19:49:49 PM - INFO - global step: 29180, epoch_41, lr: 0.00039, 420/719: Train average loss: 0.106
+04/14/2022 19:49:53 PM - INFO - global step: 29190, epoch_41, lr: 0.00039, 430/719: Train average loss: 0.106
+04/14/2022 19:49:57 PM - INFO - global step: 29200, epoch_41, lr: 0.00039, 440/719: Train average loss: 0.106
+04/14/2022 19:50:01 PM - INFO - global step: 29210, epoch_41, lr: 0.00039, 450/719: Train average loss: 0.106
+04/14/2022 19:50:05 PM - INFO - global step: 29220, epoch_41, lr: 0.00039, 460/719: Train average loss: 0.107
+04/14/2022 19:50:09 PM - INFO - global step: 29230, epoch_41, lr: 0.00039, 470/719: Train average loss: 0.107
+04/14/2022 19:50:13 PM - INFO - global step: 29240, epoch_41, lr: 0.00039, 480/719: Train average loss: 0.107
+04/14/2022 19:50:17 PM - INFO - global step: 29250, epoch_41, lr: 0.00039, 490/719: Train average loss: 0.107
+04/14/2022 19:50:21 PM - INFO - global step: 29260, epoch_41, lr: 0.00039, 500/719: Train average loss: 0.107
+04/14/2022 19:50:25 PM - INFO - global step: 29270, epoch_41, lr: 0.00039, 510/719: Train average loss: 0.106
+04/14/2022 19:50:29 PM - INFO - global step: 29280, epoch_41, lr: 0.00039, 520/719: Train average loss: 0.106
+04/14/2022 19:50:33 PM - INFO - global step: 29290, epoch_41, lr: 0.00039, 530/719: Train average loss: 0.106
+04/14/2022 19:50:37 PM - INFO - global step: 29300, epoch_41, lr: 0.00039, 540/719: Train average loss: 0.106
+04/14/2022 19:50:41 PM - INFO - global step: 29310, epoch_41, lr: 0.00039, 550/719: Train average loss: 0.105
+04/14/2022 19:50:45 PM - INFO - global step: 29320, epoch_41, lr: 0.00039, 560/719: Train average loss: 0.105
+04/14/2022 19:50:49 PM - INFO - global step: 29330, epoch_41, lr: 0.00039, 570/719: Train average loss: 0.104
+04/14/2022 19:50:53 PM - INFO - global step: 29340, epoch_41, lr: 0.00039, 580/719: Train average loss: 0.104
+04/14/2022 19:50:57 PM - INFO - global step: 29350, epoch_41, lr: 0.00039, 590/719: Train average loss: 0.104
+04/14/2022 19:51:01 PM - INFO - global step: 29360, epoch_41, lr: 0.00039, 600/719: Train average loss: 0.104
+04/14/2022 19:51:05 PM - INFO - global step: 29370, epoch_41, lr: 0.00039, 610/719: Train average loss: 0.104
+04/14/2022 19:51:09 PM - INFO - global step: 29380, epoch_41, lr: 0.00039, 620/719: Train average loss: 0.105
+04/14/2022 19:51:13 PM - INFO - global step: 29390, epoch_41, lr: 0.00039, 630/719: Train average loss: 0.105
+04/14/2022 19:51:17 PM - INFO - global step: 29400, epoch_41, lr: 0.00039, 640/719: Train average loss: 0.105
+04/14/2022 19:51:21 PM - INFO - global step: 29410, epoch_41, lr: 0.00039, 650/719: Train average loss: 0.105
+04/14/2022 19:51:24 PM - INFO - global step: 29420, epoch_41, lr: 0.00039, 660/719: Train average loss: 0.105
+04/14/2022 19:51:28 PM - INFO - global step: 29430, epoch_41, lr: 0.00039, 670/719: Train average loss: 0.105
+04/14/2022 19:51:32 PM - INFO - global step: 29440, epoch_41, lr: 0.00039, 680/719: Train average loss: 0.104
+04/14/2022 19:51:36 PM - INFO - global step: 29450, epoch_41, lr: 0.00039, 690/719: Train average loss: 0.105
+04/14/2022 19:51:40 PM - INFO - global step: 29460, epoch_41, lr: 0.00039, 700/719: Train average loss: 0.105
+04/14/2022 19:51:44 PM - INFO - global step: 29470, epoch_41, lr: 0.00039, 710/719: Train average loss: 0.105
+04/14/2022 19:51:48 PM - INFO - ==========================================================
+04/14/2022 19:51:48 PM - INFO - epoch_41: Train set(Aug) acc is: 0.959
+04/14/2022 19:52:02 PM - INFO - epoch_41: Valid set average loss is: 0.152
+04/14/2022 19:52:02 PM - INFO - epoch_41: Valid set acc is: 0.945
+04/14/2022 19:52:02 PM - INFO - ==========================================================
+04/14/2022 19:52:06 PM - INFO - global step: 29489, epoch_42, lr: 0.00039, 10/719: Train average loss: 0.106
+04/14/2022 19:52:10 PM - INFO - global step: 29499, epoch_42, lr: 0.00039, 20/719: Train average loss: 0.098
+04/14/2022 19:52:14 PM - INFO - global step: 29509, epoch_42, lr: 0.00039, 30/719: Train average loss: 0.088
+04/14/2022 19:52:18 PM - INFO - global step: 29519, epoch_42, lr: 0.00039, 40/719: Train average loss: 0.098
+04/14/2022 19:52:22 PM - INFO - global step: 29529, epoch_42, lr: 0.00039, 50/719: Train average loss: 0.101
+04/14/2022 19:52:26 PM - INFO - global step: 29539, epoch_42, lr: 0.00039, 60/719: Train average loss: 0.101
+04/14/2022 19:52:30 PM - INFO - global step: 29549, epoch_42, lr: 0.00039, 70/719: Train average loss: 0.098
+04/14/2022 19:52:34 PM - INFO - global step: 29559, epoch_42, lr: 0.00039, 80/719: Train average loss: 0.098
+04/14/2022 19:52:37 PM - INFO - global step: 29569, epoch_42, lr: 0.00039, 90/719: Train average loss: 0.095
+04/14/2022 19:52:41 PM - INFO - global step: 29579, epoch_42, lr: 0.00039, 100/719: Train average loss: 0.094
+04/14/2022 19:52:45 PM - INFO - global step: 29589, epoch_42, lr: 0.00039, 110/719: Train average loss: 0.096
+04/14/2022 19:52:49 PM - INFO - global step: 29599, epoch_42, lr: 0.00039, 120/719: Train average loss: 0.099
+04/14/2022 19:52:53 PM - INFO - global step: 29609, epoch_42, lr: 0.00039, 130/719: Train average loss: 0.101
+04/14/2022 19:52:57 PM - INFO - global step: 29619, epoch_42, lr: 0.00039, 140/719: Train average loss: 0.102
+04/14/2022 19:53:01 PM - INFO - global step: 29629, epoch_42, lr: 0.00039, 150/719: Train average loss: 0.102
+04/14/2022 19:53:05 PM - INFO - global step: 29639, epoch_42, lr: 0.00039, 160/719: Train average loss: 0.104
+04/14/2022 19:53:09 PM - INFO - global step: 29649, epoch_42, lr: 0.00039, 170/719: Train average loss: 0.103
+04/14/2022 19:53:13 PM - INFO - global step: 29659, epoch_42, lr: 0.00039, 180/719: Train average loss: 0.103
+04/14/2022 19:53:17 PM - INFO - global step: 29669, epoch_42, lr: 0.00039, 190/719: Train average loss: 0.102
+04/14/2022 19:53:21 PM - INFO - global step: 29679, epoch_42, lr: 0.00039, 200/719: Train average loss: 0.101
+04/14/2022 19:53:25 PM - INFO - global step: 29689, epoch_42, lr: 0.00039, 210/719: Train average loss: 0.101
+04/14/2022 19:53:29 PM - INFO - global step: 29699, epoch_42, lr: 0.00039, 220/719: Train average loss: 0.100
+04/14/2022 19:53:33 PM - INFO - global step: 29709, epoch_42, lr: 0.00039, 230/719: Train average loss: 0.100
+04/14/2022 19:53:37 PM - INFO - global step: 29719, epoch_42, lr: 0.00039, 240/719: Train average loss: 0.101
+04/14/2022 19:53:41 PM - INFO - global step: 29729, epoch_42, lr: 0.00039, 250/719: Train average loss: 0.103
+04/14/2022 19:53:45 PM - INFO - global step: 29739, epoch_42, lr: 0.00039, 260/719: Train average loss: 0.103
+04/14/2022 19:53:49 PM - INFO - global step: 29749, epoch_42, lr: 0.00039, 270/719: Train average loss: 0.102
+04/14/2022 19:53:53 PM - INFO - global step: 29759, epoch_42, lr: 0.00039, 280/719: Train average loss: 0.102
+04/14/2022 19:53:57 PM - INFO - global step: 29769, epoch_42, lr: 0.00039, 290/719: Train average loss: 0.102
+04/14/2022 19:54:01 PM - INFO - global step: 29779, epoch_42, lr: 0.00039, 300/719: Train average loss: 0.101
+04/14/2022 19:54:05 PM - INFO - global step: 29789, epoch_42, lr: 0.00039, 310/719: Train average loss: 0.101
+04/14/2022 19:54:09 PM - INFO - global step: 29799, epoch_42, lr: 0.00039, 320/719: Train average loss: 0.100
+04/14/2022 19:54:13 PM - INFO - global step: 29809, epoch_42, lr: 0.00039, 330/719: Train average loss: 0.101
+04/14/2022 19:54:17 PM - INFO - global step: 29819, epoch_42, lr: 0.00039, 340/719: Train average loss: 0.102
+04/14/2022 19:54:21 PM - INFO - global step: 29829, epoch_42, lr: 0.00039, 350/719: Train average loss: 0.101
+04/14/2022 19:54:25 PM - INFO - global step: 29839, epoch_42, lr: 0.00039, 360/719: Train average loss: 0.101
+04/14/2022 19:54:30 PM - INFO - global step: 29849, epoch_42, lr: 0.00039, 370/719: Train average loss: 0.101
+04/14/2022 19:54:34 PM - INFO - global step: 29859, epoch_42, lr: 0.00039, 380/719: Train average loss: 0.101
+04/14/2022 19:54:37 PM - INFO - global step: 29869, epoch_42, lr: 0.00039, 390/719: Train average loss: 0.101
+04/14/2022 19:54:41 PM - INFO - global step: 29879, epoch_42, lr: 0.00039, 400/719: Train average loss: 0.102
+04/14/2022 19:54:45 PM - INFO - global step: 29889, epoch_42, lr: 0.00039, 410/719: Train average loss: 0.102
+04/14/2022 19:54:49 PM - INFO - global step: 29899, epoch_42, lr: 0.00039, 420/719: Train average loss: 0.102
+04/14/2022 19:54:53 PM - INFO - global step: 29909, epoch_42, lr: 0.00039, 430/719: Train average loss: 0.102
+04/14/2022 19:54:57 PM - INFO - global step: 29919, epoch_42, lr: 0.00039, 440/719: Train average loss: 0.102
+04/14/2022 19:55:01 PM - INFO - global step: 29929, epoch_42, lr: 0.00039, 450/719: Train average loss: 0.102
+04/14/2022 19:55:05 PM - INFO - global step: 29939, epoch_42, lr: 0.00039, 460/719: Train average loss: 0.102
+04/14/2022 19:55:10 PM - INFO - global step: 29949, epoch_42, lr: 0.00039, 470/719: Train average loss: 0.103
+04/14/2022 19:55:13 PM - INFO - global step: 29959, epoch_42, lr: 0.00039, 480/719: Train average loss: 0.103
+04/14/2022 19:55:18 PM - INFO - global step: 29969, epoch_42, lr: 0.00039, 490/719: Train average loss: 0.104
+04/14/2022 19:55:22 PM - INFO - global step: 29979, epoch_42, lr: 0.00039, 500/719: Train average loss: 0.104
+04/14/2022 19:55:26 PM - INFO - global step: 29989, epoch_42, lr: 0.00039, 510/719: Train average loss: 0.105
+04/14/2022 19:55:29 PM - INFO - global step: 29999, epoch_42, lr: 0.00039, 520/719: Train average loss: 0.104
+04/14/2022 19:55:33 PM - INFO - global step: 30009, epoch_42, lr: 0.00035, 530/719: Train average loss: 0.104
+04/14/2022 19:55:37 PM - INFO - global step: 30019, epoch_42, lr: 0.00035, 540/719: Train average loss: 0.104
+04/14/2022 19:55:41 PM - INFO - global step: 30029, epoch_42, lr: 0.00035, 550/719: Train average loss: 0.104
+04/14/2022 19:55:45 PM - INFO - global step: 30039, epoch_42, lr: 0.00035, 560/719: Train average loss: 0.104
+04/14/2022 19:55:49 PM - INFO - global step: 30049, epoch_42, lr: 0.00035, 570/719: Train average loss: 0.104
+04/14/2022 19:55:53 PM - INFO - global step: 30059, epoch_42, lr: 0.00035, 580/719: Train average loss: 0.105
+04/14/2022 19:55:57 PM - INFO - global step: 30069, epoch_42, lr: 0.00035, 590/719: Train average loss: 0.106
+04/14/2022 19:56:01 PM - INFO - global step: 30079, epoch_42, lr: 0.00035, 600/719: Train average loss: 0.105
+04/14/2022 19:56:05 PM - INFO - global step: 30089, epoch_42, lr: 0.00035, 610/719: Train average loss: 0.106
+04/14/2022 19:56:09 PM - INFO - global step: 30099, epoch_42, lr: 0.00035, 620/719: Train average loss: 0.106
+04/14/2022 19:56:13 PM - INFO - global step: 30109, epoch_42, lr: 0.00035, 630/719: Train average loss: 0.106
+04/14/2022 19:56:17 PM - INFO - global step: 30119, epoch_42, lr: 0.00035, 640/719: Train average loss: 0.106
+04/14/2022 19:56:21 PM - INFO - global step: 30129, epoch_42, lr: 0.00035, 650/719: Train average loss: 0.106
+04/14/2022 19:56:25 PM - INFO - global step: 30139, epoch_42, lr: 0.00035, 660/719: Train average loss: 0.106
+04/14/2022 19:56:29 PM - INFO - global step: 30149, epoch_42, lr: 0.00035, 670/719: Train average loss: 0.106
+04/14/2022 19:56:33 PM - INFO - global step: 30159, epoch_42, lr: 0.00035, 680/719: Train average loss: 0.106
+04/14/2022 19:56:37 PM - INFO - global step: 30169, epoch_42, lr: 0.00035, 690/719: Train average loss: 0.107
+04/14/2022 19:56:41 PM - INFO - global step: 30179, epoch_42, lr: 0.00035, 700/719: Train average loss: 0.107
+04/14/2022 19:56:45 PM - INFO - global step: 30189, epoch_42, lr: 0.00035, 710/719: Train average loss: 0.106
+04/14/2022 19:56:49 PM - INFO - ==========================================================
+04/14/2022 19:56:49 PM - INFO - epoch_42: Train set(Aug) acc is: 0.958
+04/14/2022 19:57:02 PM - INFO - epoch_42: Valid set average loss is: 0.127
+04/14/2022 19:57:02 PM - INFO - epoch_42: Valid set acc is: 0.952
+04/14/2022 19:57:02 PM - INFO - ==========================================================
+04/14/2022 19:57:06 PM - INFO - global step: 30208, epoch_43, lr: 0.00035, 10/719: Train average loss: 0.088
+04/14/2022 19:57:10 PM - INFO - global step: 30218, epoch_43, lr: 0.00035, 20/719: Train average loss: 0.072
+04/14/2022 19:57:14 PM - INFO - global step: 30228, epoch_43, lr: 0.00035, 30/719: Train average loss: 0.076
+04/14/2022 19:57:18 PM - INFO - global step: 30238, epoch_43, lr: 0.00035, 40/719: Train average loss: 0.072
+04/14/2022 19:57:22 PM - INFO - global step: 30248, epoch_43, lr: 0.00035, 50/719: Train average loss: 0.073
+04/14/2022 19:57:26 PM - INFO - global step: 30258, epoch_43, lr: 0.00035, 60/719: Train average loss: 0.076
+04/14/2022 19:57:30 PM - INFO - global step: 30268, epoch_43, lr: 0.00035, 70/719: Train average loss: 0.083
+04/14/2022 19:57:34 PM - INFO - global step: 30278, epoch_43, lr: 0.00035, 80/719: Train average loss: 0.084
+04/14/2022 19:57:38 PM - INFO - global step: 30288, epoch_43, lr: 0.00035, 90/719: Train average loss: 0.083
+04/14/2022 19:57:42 PM - INFO - global step: 30298, epoch_43, lr: 0.00035, 100/719: Train average loss: 0.086
+04/14/2022 19:57:46 PM - INFO - global step: 30308, epoch_43, lr: 0.00035, 110/719: Train average loss: 0.090
+04/14/2022 19:57:50 PM - INFO - global step: 30318, epoch_43, lr: 0.00035, 120/719: Train average loss: 0.090
+04/14/2022 19:57:54 PM - INFO - global step: 30328, epoch_43, lr: 0.00035, 130/719: Train average loss: 0.091
+04/14/2022 19:57:58 PM - INFO - global step: 30338, epoch_43, lr: 0.00035, 140/719: Train average loss: 0.092
+04/14/2022 19:58:02 PM - INFO - global step: 30348, epoch_43, lr: 0.00035, 150/719: Train average loss: 0.090
+04/14/2022 19:58:06 PM - INFO - global step: 30358, epoch_43, lr: 0.00035, 160/719: Train average loss: 0.090
+04/14/2022 19:58:10 PM - INFO - global step: 30368, epoch_43, lr: 0.00035, 170/719: Train average loss: 0.089
+04/14/2022 19:58:14 PM - INFO - global step: 30378, epoch_43, lr: 0.00035, 180/719: Train average loss: 0.090
+04/14/2022 19:58:18 PM - INFO - global step: 30388, epoch_43, lr: 0.00035, 190/719: Train average loss: 0.091
+04/14/2022 19:58:22 PM - INFO - global step: 30398, epoch_43, lr: 0.00035, 200/719: Train average loss: 0.090
+04/14/2022 19:58:26 PM - INFO - global step: 30408, epoch_43, lr: 0.00035, 210/719: Train average loss: 0.090
+04/14/2022 19:58:30 PM - INFO - global step: 30418, epoch_43, lr: 0.00035, 220/719: Train average loss: 0.091
+04/14/2022 19:58:34 PM - INFO - global step: 30428, epoch_43, lr: 0.00035, 230/719: Train average loss: 0.091
+04/14/2022 19:58:38 PM - INFO - global step: 30438, epoch_43, lr: 0.00035, 240/719: Train average loss: 0.093
+04/14/2022 19:58:42 PM - INFO - global step: 30448, epoch_43, lr: 0.00035, 250/719: Train average loss: 0.094
+04/14/2022 19:58:46 PM - INFO - global step: 30458, epoch_43, lr: 0.00035, 260/719: Train average loss: 0.094
+04/14/2022 19:58:50 PM - INFO - global step: 30468, epoch_43, lr: 0.00035, 270/719: Train average loss: 0.094
+04/14/2022 19:58:54 PM - INFO - global step: 30478, epoch_43, lr: 0.00035, 280/719: Train average loss: 0.094
+04/14/2022 19:58:58 PM - INFO - global step: 30488, epoch_43, lr: 0.00035, 290/719: Train average loss: 0.095
+04/14/2022 19:59:02 PM - INFO - global step: 30498, epoch_43, lr: 0.00035, 300/719: Train average loss: 0.096
+04/14/2022 19:59:06 PM - INFO - global step: 30508, epoch_43, lr: 0.00035, 310/719: Train average loss: 0.097
+04/14/2022 19:59:10 PM - INFO - global step: 30518, epoch_43, lr: 0.00035, 320/719: Train average loss: 0.097
+04/14/2022 19:59:14 PM - INFO - global step: 30528, epoch_43, lr: 0.00035, 330/719: Train average loss: 0.097
+04/14/2022 19:59:18 PM - INFO - global step: 30538, epoch_43, lr: 0.00035, 340/719: Train average loss: 0.097
+04/14/2022 19:59:22 PM - INFO - global step: 30548, epoch_43, lr: 0.00035, 350/719: Train average loss: 0.097
+04/14/2022 19:59:26 PM - INFO - global step: 30558, epoch_43, lr: 0.00035, 360/719: Train average loss: 0.097
+04/14/2022 19:59:30 PM - INFO - global step: 30568, epoch_43, lr: 0.00035, 370/719: Train average loss: 0.098
+04/14/2022 19:59:34 PM - INFO - global step: 30578, epoch_43, lr: 0.00035, 380/719: Train average loss: 0.099
+04/14/2022 19:59:38 PM - INFO - global step: 30588, epoch_43, lr: 0.00035, 390/719: Train average loss: 0.098
+04/14/2022 19:59:42 PM - INFO - global step: 30598, epoch_43, lr: 0.00035, 400/719: Train average loss: 0.101
+04/14/2022 19:59:46 PM - INFO - global step: 30608, epoch_43, lr: 0.00035, 410/719: Train average loss: 0.101
+04/14/2022 19:59:50 PM - INFO - global step: 30618, epoch_43, lr: 0.00035, 420/719: Train average loss: 0.100
+04/14/2022 19:59:54 PM - INFO - global step: 30628, epoch_43, lr: 0.00035, 430/719: Train average loss: 0.100
+04/14/2022 19:59:57 PM - INFO - global step: 30638, epoch_43, lr: 0.00035, 440/719: Train average loss: 0.100
+04/14/2022 20:00:01 PM - INFO - global step: 30648, epoch_43, lr: 0.00035, 450/719: Train average loss: 0.101
+04/14/2022 20:00:05 PM - INFO - global step: 30658, epoch_43, lr: 0.00035, 460/719: Train average loss: 0.101
+04/14/2022 20:00:09 PM - INFO - global step: 30668, epoch_43, lr: 0.00035, 470/719: Train average loss: 0.101
+04/14/2022 20:00:13 PM - INFO - global step: 30678, epoch_43, lr: 0.00035, 480/719: Train average loss: 0.102
+04/14/2022 20:00:17 PM - INFO - global step: 30688, epoch_43, lr: 0.00035, 490/719: Train average loss: 0.101
+04/14/2022 20:00:21 PM - INFO - global step: 30698, epoch_43, lr: 0.00035, 500/719: Train average loss: 0.102
+04/14/2022 20:00:25 PM - INFO - global step: 30708, epoch_43, lr: 0.00035, 510/719: Train average loss: 0.102
+04/14/2022 20:00:29 PM - INFO - global step: 30718, epoch_43, lr: 0.00035, 520/719: Train average loss: 0.102
+04/14/2022 20:00:33 PM - INFO - global step: 30728, epoch_43, lr: 0.00035, 530/719: Train average loss: 0.102
+04/14/2022 20:00:37 PM - INFO - global step: 30738, epoch_43, lr: 0.00035, 540/719: Train average loss: 0.103
+04/14/2022 20:00:41 PM - INFO - global step: 30748, epoch_43, lr: 0.00035, 550/719: Train average loss: 0.103
+04/14/2022 20:00:45 PM - INFO - global step: 30758, epoch_43, lr: 0.00035, 560/719: Train average loss: 0.103
+04/14/2022 20:00:49 PM - INFO - global step: 30768, epoch_43, lr: 0.00035, 570/719: Train average loss: 0.103
+04/14/2022 20:00:53 PM - INFO - global step: 30778, epoch_43, lr: 0.00035, 580/719: Train average loss: 0.103
+04/14/2022 20:00:57 PM - INFO - global step: 30788, epoch_43, lr: 0.00035, 590/719: Train average loss: 0.102
+04/14/2022 20:01:01 PM - INFO - global step: 30798, epoch_43, lr: 0.00035, 600/719: Train average loss: 0.102
+04/14/2022 20:01:05 PM - INFO - global step: 30808, epoch_43, lr: 0.00035, 610/719: Train average loss: 0.102
+04/14/2022 20:01:09 PM - INFO - global step: 30818, epoch_43, lr: 0.00035, 620/719: Train average loss: 0.102
+04/14/2022 20:01:13 PM - INFO - global step: 30828, epoch_43, lr: 0.00035, 630/719: Train average loss: 0.102
+04/14/2022 20:01:17 PM - INFO - global step: 30838, epoch_43, lr: 0.00035, 640/719: Train average loss: 0.102
+04/14/2022 20:01:21 PM - INFO - global step: 30848, epoch_43, lr: 0.00035, 650/719: Train average loss: 0.103
+04/14/2022 20:01:25 PM - INFO - global step: 30858, epoch_43, lr: 0.00035, 660/719: Train average loss: 0.102
+04/14/2022 20:01:29 PM - INFO - global step: 30868, epoch_43, lr: 0.00035, 670/719: Train average loss: 0.102
+04/14/2022 20:01:33 PM - INFO - global step: 30878, epoch_43, lr: 0.00035, 680/719: Train average loss: 0.102
+04/14/2022 20:01:37 PM - INFO - global step: 30888, epoch_43, lr: 0.00035, 690/719: Train average loss: 0.102
+04/14/2022 20:01:41 PM - INFO - global step: 30898, epoch_43, lr: 0.00035, 700/719: Train average loss: 0.101
+04/14/2022 20:01:45 PM - INFO - global step: 30908, epoch_43, lr: 0.00035, 710/719: Train average loss: 0.101
+04/14/2022 20:01:49 PM - INFO - ==========================================================
+04/14/2022 20:01:49 PM - INFO - epoch_43: Train set(Aug) acc is: 0.959
+04/14/2022 20:02:03 PM - INFO - epoch_43: Valid set average loss is: 0.139
+04/14/2022 20:02:03 PM - INFO - epoch_43: Valid set acc is: 0.948
+04/14/2022 20:02:03 PM - INFO - ==========================================================
+04/14/2022 20:02:07 PM - INFO - global step: 30927, epoch_44, lr: 0.00035, 10/719: Train average loss: 0.088
+04/14/2022 20:02:11 PM - INFO - global step: 30937, epoch_44, lr: 0.00035, 20/719: Train average loss: 0.083
+04/14/2022 20:02:15 PM - INFO - global step: 30947, epoch_44, lr: 0.00035, 30/719: Train average loss: 0.076
+04/14/2022 20:02:19 PM - INFO - global step: 30957, epoch_44, lr: 0.00035, 40/719: Train average loss: 0.082
+04/14/2022 20:02:23 PM - INFO - global step: 30967, epoch_44, lr: 0.00035, 50/719: Train average loss: 0.089
+04/14/2022 20:02:27 PM - INFO - global step: 30977, epoch_44, lr: 0.00035, 60/719: Train average loss: 0.093
+04/14/2022 20:02:31 PM - INFO - global step: 30987, epoch_44, lr: 0.00035, 70/719: Train average loss: 0.091
+04/14/2022 20:02:35 PM - INFO - global step: 30997, epoch_44, lr: 0.00035, 80/719: Train average loss: 0.094
+04/14/2022 20:02:39 PM - INFO - global step: 31007, epoch_44, lr: 0.00035, 90/719: Train average loss: 0.095
+04/14/2022 20:02:43 PM - INFO - global step: 31017, epoch_44, lr: 0.00035, 100/719: Train average loss: 0.093
+04/14/2022 20:02:46 PM - INFO - global step: 31027, epoch_44, lr: 0.00035, 110/719: Train average loss: 0.093
+04/14/2022 20:02:50 PM - INFO - global step: 31037, epoch_44, lr: 0.00035, 120/719: Train average loss: 0.093
+04/14/2022 20:02:54 PM - INFO - global step: 31047, epoch_44, lr: 0.00035, 130/719: Train average loss: 0.095
+04/14/2022 20:02:58 PM - INFO - global step: 31057, epoch_44, lr: 0.00035, 140/719: Train average loss: 0.097
+04/14/2022 20:03:02 PM - INFO - global step: 31067, epoch_44, lr: 0.00035, 150/719: Train average loss: 0.097
+04/14/2022 20:03:06 PM - INFO - global step: 31077, epoch_44, lr: 0.00035, 160/719: Train average loss: 0.096
+04/14/2022 20:03:10 PM - INFO - global step: 31087, epoch_44, lr: 0.00035, 170/719: Train average loss: 0.097
+04/14/2022 20:03:14 PM - INFO - global step: 31097, epoch_44, lr: 0.00035, 180/719: Train average loss: 0.099
+04/14/2022 20:03:18 PM - INFO - global step: 31107, epoch_44, lr: 0.00035, 190/719: Train average loss: 0.097
+04/14/2022 20:03:22 PM - INFO - global step: 31117, epoch_44, lr: 0.00035, 200/719: Train average loss: 0.097
+04/14/2022 20:03:26 PM - INFO - global step: 31127, epoch_44, lr: 0.00035, 210/719: Train average loss: 0.097
+04/14/2022 20:03:30 PM - INFO - global step: 31137, epoch_44, lr: 0.00035, 220/719: Train average loss: 0.096
+04/14/2022 20:03:34 PM - INFO - global step: 31147, epoch_44, lr: 0.00035, 230/719: Train average loss: 0.097
+04/14/2022 20:03:38 PM - INFO - global step: 31157, epoch_44, lr: 0.00035, 240/719: Train average loss: 0.099
+04/14/2022 20:03:42 PM - INFO - global step: 31167, epoch_44, lr: 0.00035, 250/719: Train average loss: 0.099
+04/14/2022 20:03:46 PM - INFO - global step: 31177, epoch_44, lr: 0.00035, 260/719: Train average loss: 0.099
+04/14/2022 20:03:50 PM - INFO - global step: 31187, epoch_44, lr: 0.00035, 270/719: Train average loss: 0.099
+04/14/2022 20:03:54 PM - INFO - global step: 31197, epoch_44, lr: 0.00035, 280/719: Train average loss: 0.100
+04/14/2022 20:03:58 PM - INFO - global step: 31207, epoch_44, lr: 0.00035, 290/719: Train average loss: 0.100
+04/14/2022 20:04:02 PM - INFO - global step: 31217, epoch_44, lr: 0.00035, 300/719: Train average loss: 0.100
+04/14/2022 20:04:06 PM - INFO - global step: 31227, epoch_44, lr: 0.00035, 310/719: Train average loss: 0.100
+04/14/2022 20:04:10 PM - INFO - global step: 31237, epoch_44, lr: 0.00035, 320/719: Train average loss: 0.100
+04/14/2022 20:04:14 PM - INFO - global step: 31247, epoch_44, lr: 0.00035, 330/719: Train average loss: 0.100
+04/14/2022 20:04:18 PM - INFO - global step: 31257, epoch_44, lr: 0.00035, 340/719: Train average loss: 0.099
+04/14/2022 20:04:22 PM - INFO - global step: 31267, epoch_44, lr: 0.00035, 350/719: Train average loss: 0.099
+04/14/2022 20:04:26 PM - INFO - global step: 31277, epoch_44, lr: 0.00035, 360/719: Train average loss: 0.098
+04/14/2022 20:04:30 PM - INFO - global step: 31287, epoch_44, lr: 0.00035, 370/719: Train average loss: 0.097
+04/14/2022 20:04:34 PM - INFO - global step: 31297, epoch_44, lr: 0.00035, 380/719: Train average loss: 0.097
+04/14/2022 20:04:38 PM - INFO - global step: 31307, epoch_44, lr: 0.00035, 390/719: Train average loss: 0.097
+04/14/2022 20:04:42 PM - INFO - global step: 31317, epoch_44, lr: 0.00035, 400/719: Train average loss: 0.097
+04/14/2022 20:04:46 PM - INFO - global step: 31327, epoch_44, lr: 0.00035, 410/719: Train average loss: 0.098
+04/14/2022 20:04:50 PM - INFO - global step: 31337, epoch_44, lr: 0.00035, 420/719: Train average loss: 0.097
+04/14/2022 20:04:54 PM - INFO - global step: 31347, epoch_44, lr: 0.00035, 430/719: Train average loss: 0.097
+04/14/2022 20:04:58 PM - INFO - global step: 31357, epoch_44, lr: 0.00035, 440/719: Train average loss: 0.098
+04/14/2022 20:05:02 PM - INFO - global step: 31367, epoch_44, lr: 0.00035, 450/719: Train average loss: 0.098
+04/14/2022 20:05:06 PM - INFO - global step: 31377, epoch_44, lr: 0.00035, 460/719: Train average loss: 0.098
+04/14/2022 20:05:10 PM - INFO - global step: 31387, epoch_44, lr: 0.00035, 470/719: Train average loss: 0.098
+04/14/2022 20:05:14 PM - INFO - global step: 31397, epoch_44, lr: 0.00035, 480/719: Train average loss: 0.097
+04/14/2022 20:05:18 PM - INFO - global step: 31407, epoch_44, lr: 0.00035, 490/719: Train average loss: 0.097
+04/14/2022 20:05:22 PM - INFO - global step: 31417, epoch_44, lr: 0.00035, 500/719: Train average loss: 0.098
+04/14/2022 20:05:26 PM - INFO - global step: 31427, epoch_44, lr: 0.00035, 510/719: Train average loss: 0.097
+04/14/2022 20:05:30 PM - INFO - global step: 31437, epoch_44, lr: 0.00035, 520/719: Train average loss: 0.097
+04/14/2022 20:05:34 PM - INFO - global step: 31447, epoch_44, lr: 0.00035, 530/719: Train average loss: 0.097
+04/14/2022 20:05:38 PM - INFO - global step: 31457, epoch_44, lr: 0.00035, 540/719: Train average loss: 0.098
+04/14/2022 20:05:42 PM - INFO - global step: 31467, epoch_44, lr: 0.00035, 550/719: Train average loss: 0.099
+04/14/2022 20:05:46 PM - INFO - global step: 31477, epoch_44, lr: 0.00035, 560/719: Train average loss: 0.099
+04/14/2022 20:05:50 PM - INFO - global step: 31487, epoch_44, lr: 0.00035, 570/719: Train average loss: 0.100
+04/14/2022 20:05:54 PM - INFO - global step: 31497, epoch_44, lr: 0.00035, 580/719: Train average loss: 0.100
+04/14/2022 20:05:58 PM - INFO - global step: 31507, epoch_44, lr: 0.00035, 590/719: Train average loss: 0.101
+04/14/2022 20:06:02 PM - INFO - global step: 31517, epoch_44, lr: 0.00035, 600/719: Train average loss: 0.101
+04/14/2022 20:06:06 PM - INFO - global step: 31527, epoch_44, lr: 0.00035, 610/719: Train average loss: 0.101
+04/14/2022 20:06:10 PM - INFO - global step: 31537, epoch_44, lr: 0.00035, 620/719: Train average loss: 0.101
+04/14/2022 20:06:14 PM - INFO - global step: 31547, epoch_44, lr: 0.00035, 630/719: Train average loss: 0.101
+04/14/2022 20:06:18 PM - INFO - global step: 31557, epoch_44, lr: 0.00035, 640/719: Train average loss: 0.101
+04/14/2022 20:06:22 PM - INFO - global step: 31567, epoch_44, lr: 0.00035, 650/719: Train average loss: 0.102
+04/14/2022 20:06:26 PM - INFO - global step: 31577, epoch_44, lr: 0.00035, 660/719: Train average loss: 0.102
+04/14/2022 20:06:30 PM - INFO - global step: 31587, epoch_44, lr: 0.00035, 670/719: Train average loss: 0.102
+04/14/2022 20:06:34 PM - INFO - global step: 31597, epoch_44, lr: 0.00035, 680/719: Train average loss: 0.102
+04/14/2022 20:06:37 PM - INFO - global step: 31607, epoch_44, lr: 0.00035, 690/719: Train average loss: 0.102
+04/14/2022 20:06:41 PM - INFO - global step: 31617, epoch_44, lr: 0.00035, 700/719: Train average loss: 0.102
+04/14/2022 20:06:45 PM - INFO - global step: 31627, epoch_44, lr: 0.00035, 710/719: Train average loss: 0.102
+04/14/2022 20:06:49 PM - INFO - ==========================================================
+04/14/2022 20:06:49 PM - INFO - epoch_44: Train set(Aug) acc is: 0.958
+04/14/2022 20:07:03 PM - INFO - epoch_44: Valid set average loss is: 0.125
+04/14/2022 20:07:03 PM - INFO - epoch_44: Valid set acc is: 0.957
+04/14/2022 20:07:03 PM - INFO - ==========================================================
+04/14/2022 20:07:07 PM - INFO - global step: 31646, epoch_45, lr: 0.00035, 10/719: Train average loss: 0.128
+04/14/2022 20:07:11 PM - INFO - global step: 31656, epoch_45, lr: 0.00035, 20/719: Train average loss: 0.123
+04/14/2022 20:07:15 PM - INFO - global step: 31666, epoch_45, lr: 0.00035, 30/719: Train average loss: 0.117
+04/14/2022 20:07:19 PM - INFO - global step: 31676, epoch_45, lr: 0.00035, 40/719: Train average loss: 0.114
+04/14/2022 20:07:23 PM - INFO - global step: 31686, epoch_45, lr: 0.00035, 50/719: Train average loss: 0.120
+04/14/2022 20:07:27 PM - INFO - global step: 31696, epoch_45, lr: 0.00035, 60/719: Train average loss: 0.121
+04/14/2022 20:07:31 PM - INFO - global step: 31706, epoch_45, lr: 0.00035, 70/719: Train average loss: 0.122
+04/14/2022 20:07:35 PM - INFO - global step: 31716, epoch_45, lr: 0.00035, 80/719: Train average loss: 0.115
+04/14/2022 20:07:39 PM - INFO - global step: 31726, epoch_45, lr: 0.00035, 90/719: Train average loss: 0.114
+04/14/2022 20:07:43 PM - INFO - global step: 31736, epoch_45, lr: 0.00035, 100/719: Train average loss: 0.110
+04/14/2022 20:07:47 PM - INFO - global step: 31746, epoch_45, lr: 0.00035, 110/719: Train average loss: 0.107
+04/14/2022 20:07:51 PM - INFO - global step: 31756, epoch_45, lr: 0.00035, 120/719: Train average loss: 0.109
+04/14/2022 20:07:55 PM - INFO - global step: 31766, epoch_45, lr: 0.00035, 130/719: Train average loss: 0.106
+04/14/2022 20:07:59 PM - INFO - global step: 31776, epoch_45, lr: 0.00035, 140/719: Train average loss: 0.106
+04/14/2022 20:08:03 PM - INFO - global step: 31786, epoch_45, lr: 0.00035, 150/719: Train average loss: 0.105
+04/14/2022 20:08:07 PM - INFO - global step: 31796, epoch_45, lr: 0.00035, 160/719: Train average loss: 0.105
+04/14/2022 20:08:11 PM - INFO - global step: 31806, epoch_45, lr: 0.00035, 170/719: Train average loss: 0.104
+04/14/2022 20:08:15 PM - INFO - global step: 31816, epoch_45, lr: 0.00035, 180/719: Train average loss: 0.104
+04/14/2022 20:08:19 PM - INFO - global step: 31826, epoch_45, lr: 0.00035, 190/719: Train average loss: 0.107
+04/14/2022 20:08:23 PM - INFO - global step: 31836, epoch_45, lr: 0.00035, 200/719: Train average loss: 0.106
+04/14/2022 20:08:27 PM - INFO - global step: 31846, epoch_45, lr: 0.00035, 210/719: Train average loss: 0.105
+04/14/2022 20:08:31 PM - INFO - global step: 31856, epoch_45, lr: 0.00035, 220/719: Train average loss: 0.105
+04/14/2022 20:08:35 PM - INFO - global step: 31866, epoch_45, lr: 0.00035, 230/719: Train average loss: 0.104
+04/14/2022 20:08:39 PM - INFO - global step: 31876, epoch_45, lr: 0.00035, 240/719: Train average loss: 0.104
+04/14/2022 20:08:43 PM - INFO - global step: 31886, epoch_45, lr: 0.00035, 250/719: Train average loss: 0.103
+04/14/2022 20:08:47 PM - INFO - global step: 31896, epoch_45, lr: 0.00035, 260/719: Train average loss: 0.104
+04/14/2022 20:08:51 PM - INFO - global step: 31906, epoch_45, lr: 0.00035, 270/719: Train average loss: 0.104
+04/14/2022 20:08:55 PM - INFO - global step: 31916, epoch_45, lr: 0.00035, 280/719: Train average loss: 0.103
+04/14/2022 20:08:59 PM - INFO - global step: 31926, epoch_45, lr: 0.00035, 290/719: Train average loss: 0.102
+04/14/2022 20:09:03 PM - INFO - global step: 31936, epoch_45, lr: 0.00035, 300/719: Train average loss: 0.100
+04/14/2022 20:09:07 PM - INFO - global step: 31946, epoch_45, lr: 0.00035, 310/719: Train average loss: 0.099
+04/14/2022 20:09:11 PM - INFO - global step: 31956, epoch_45, lr: 0.00035, 320/719: Train average loss: 0.099
+04/14/2022 20:09:15 PM - INFO - global step: 31966, epoch_45, lr: 0.00035, 330/719: Train average loss: 0.100
+04/14/2022 20:09:19 PM - INFO - global step: 31976, epoch_45, lr: 0.00035, 340/719: Train average loss: 0.099
+04/14/2022 20:09:23 PM - INFO - global step: 31986, epoch_45, lr: 0.00035, 350/719: Train average loss: 0.098
+04/14/2022 20:09:27 PM - INFO - global step: 31996, epoch_45, lr: 0.00035, 360/719: Train average loss: 0.099
+04/14/2022 20:09:31 PM - INFO - global step: 32006, epoch_45, lr: 0.00035, 370/719: Train average loss: 0.099
+04/14/2022 20:09:35 PM - INFO - global step: 32016, epoch_45, lr: 0.00035, 380/719: Train average loss: 0.099
+04/14/2022 20:09:39 PM - INFO - global step: 32026, epoch_45, lr: 0.00035, 390/719: Train average loss: 0.099
+04/14/2022 20:09:43 PM - INFO - global step: 32036, epoch_45, lr: 0.00035, 400/719: Train average loss: 0.099
+04/14/2022 20:09:47 PM - INFO - global step: 32046, epoch_45, lr: 0.00035, 410/719: Train average loss: 0.100
+04/14/2022 20:09:51 PM - INFO - global step: 32056, epoch_45, lr: 0.00035, 420/719: Train average loss: 0.100
+04/14/2022 20:09:55 PM - INFO - global step: 32066, epoch_45, lr: 0.00035, 430/719: Train average loss: 0.101
+04/14/2022 20:09:59 PM - INFO - global step: 32076, epoch_45, lr: 0.00035, 440/719: Train average loss: 0.101
+04/14/2022 20:10:03 PM - INFO - global step: 32086, epoch_45, lr: 0.00035, 450/719: Train average loss: 0.101
+04/14/2022 20:10:07 PM - INFO - global step: 32096, epoch_45, lr: 0.00035, 460/719: Train average loss: 0.100
+04/14/2022 20:10:11 PM - INFO - global step: 32106, epoch_45, lr: 0.00035, 470/719: Train average loss: 0.101
+04/14/2022 20:10:15 PM - INFO - global step: 32116, epoch_45, lr: 0.00035, 480/719: Train average loss: 0.101
+04/14/2022 20:10:18 PM - INFO - global step: 32126, epoch_45, lr: 0.00035, 490/719: Train average loss: 0.101
+04/14/2022 20:10:22 PM - INFO - global step: 32136, epoch_45, lr: 0.00035, 500/719: Train average loss: 0.101
+04/14/2022 20:10:26 PM - INFO - global step: 32146, epoch_45, lr: 0.00035, 510/719: Train average loss: 0.101
+04/14/2022 20:10:30 PM - INFO - global step: 32156, epoch_45, lr: 0.00035, 520/719: Train average loss: 0.102
+04/14/2022 20:10:34 PM - INFO - global step: 32166, epoch_45, lr: 0.00035, 530/719: Train average loss: 0.101
+04/14/2022 20:10:38 PM - INFO - global step: 32176, epoch_45, lr: 0.00035, 540/719: Train average loss: 0.101
+04/14/2022 20:10:42 PM - INFO - global step: 32186, epoch_45, lr: 0.00035, 550/719: Train average loss: 0.101
+04/14/2022 20:10:46 PM - INFO - global step: 32196, epoch_45, lr: 0.00035, 560/719: Train average loss: 0.102
+04/14/2022 20:10:50 PM - INFO - global step: 32206, epoch_45, lr: 0.00035, 570/719: Train average loss: 0.102
+04/14/2022 20:10:54 PM - INFO - global step: 32216, epoch_45, lr: 0.00035, 580/719: Train average loss: 0.102
+04/14/2022 20:10:58 PM - INFO - global step: 32226, epoch_45, lr: 0.00035, 590/719: Train average loss: 0.102
+04/14/2022 20:11:02 PM - INFO - global step: 32236, epoch_45, lr: 0.00035, 600/719: Train average loss: 0.102
+04/14/2022 20:11:06 PM - INFO - global step: 32246, epoch_45, lr: 0.00035, 610/719: Train average loss: 0.102
+04/14/2022 20:11:10 PM - INFO - global step: 32256, epoch_45, lr: 0.00035, 620/719: Train average loss: 0.101
+04/14/2022 20:11:14 PM - INFO - global step: 32266, epoch_45, lr: 0.00035, 630/719: Train average loss: 0.101
+04/14/2022 20:11:18 PM - INFO - global step: 32276, epoch_45, lr: 0.00035, 640/719: Train average loss: 0.101
+04/14/2022 20:11:22 PM - INFO - global step: 32286, epoch_45, lr: 0.00035, 650/719: Train average loss: 0.101
+04/14/2022 20:11:26 PM - INFO - global step: 32296, epoch_45, lr: 0.00035, 660/719: Train average loss: 0.100
+04/14/2022 20:11:30 PM - INFO - global step: 32306, epoch_45, lr: 0.00035, 670/719: Train average loss: 0.100
+04/14/2022 20:11:34 PM - INFO - global step: 32316, epoch_45, lr: 0.00035, 680/719: Train average loss: 0.100
+04/14/2022 20:11:38 PM - INFO - global step: 32326, epoch_45, lr: 0.00035, 690/719: Train average loss: 0.100
+04/14/2022 20:11:42 PM - INFO - global step: 32336, epoch_45, lr: 0.00035, 700/719: Train average loss: 0.100
+04/14/2022 20:11:46 PM - INFO - global step: 32346, epoch_45, lr: 0.00035, 710/719: Train average loss: 0.100
+04/14/2022 20:11:50 PM - INFO - ==========================================================
+04/14/2022 20:11:50 PM - INFO - epoch_45: Train set(Aug) acc is: 0.960
+04/14/2022 20:12:03 PM - INFO - epoch_45: Valid set average loss is: 0.124
+04/14/2022 20:12:03 PM - INFO - epoch_45: Valid set acc is: 0.956
+04/14/2022 20:12:03 PM - INFO - ==========================================================
+04/14/2022 20:12:07 PM - INFO - global step: 32365, epoch_46, lr: 0.00035, 10/719: Train average loss: 0.089
+04/14/2022 20:12:11 PM - INFO - global step: 32375, epoch_46, lr: 0.00035, 20/719: Train average loss: 0.098
+04/14/2022 20:12:15 PM - INFO - global step: 32385, epoch_46, lr: 0.00035, 30/719: Train average loss: 0.104
+04/14/2022 20:12:19 PM - INFO - global step: 32395, epoch_46, lr: 0.00035, 40/719: Train average loss: 0.096
+04/14/2022 20:12:23 PM - INFO - global step: 32405, epoch_46, lr: 0.00035, 50/719: Train average loss: 0.090
+04/14/2022 20:12:27 PM - INFO - global step: 32415, epoch_46, lr: 0.00035, 60/719: Train average loss: 0.084
+04/14/2022 20:12:31 PM - INFO - global step: 32425, epoch_46, lr: 0.00035, 70/719: Train average loss: 0.094
+04/14/2022 20:12:35 PM - INFO - global step: 32435, epoch_46, lr: 0.00035, 80/719: Train average loss: 0.095
+04/14/2022 20:12:39 PM - INFO - global step: 32445, epoch_46, lr: 0.00035, 90/719: Train average loss: 0.094
+04/14/2022 20:12:43 PM - INFO - global step: 32455, epoch_46, lr: 0.00035, 100/719: Train average loss: 0.092
+04/14/2022 20:12:47 PM - INFO - global step: 32465, epoch_46, lr: 0.00035, 110/719: Train average loss: 0.091
+04/14/2022 20:12:51 PM - INFO - global step: 32475, epoch_46, lr: 0.00035, 120/719: Train average loss: 0.092
+04/14/2022 20:12:55 PM - INFO - global step: 32485, epoch_46, lr: 0.00035, 130/719: Train average loss: 0.093
+04/14/2022 20:12:59 PM - INFO - global step: 32495, epoch_46, lr: 0.00035, 140/719: Train average loss: 0.091
+04/14/2022 20:13:03 PM - INFO - global step: 32505, epoch_46, lr: 0.00035, 150/719: Train average loss: 0.090
+04/14/2022 20:13:07 PM - INFO - global step: 32515, epoch_46, lr: 0.00035, 160/719: Train average loss: 0.090
+04/14/2022 20:13:11 PM - INFO - global step: 32525, epoch_46, lr: 0.00035, 170/719: Train average loss: 0.091
+04/14/2022 20:13:15 PM - INFO - global step: 32535, epoch_46, lr: 0.00035, 180/719: Train average loss: 0.091
+04/14/2022 20:13:19 PM - INFO - global step: 32545, epoch_46, lr: 0.00035, 190/719: Train average loss: 0.093
+04/14/2022 20:13:23 PM - INFO - global step: 32555, epoch_46, lr: 0.00035, 200/719: Train average loss: 0.094
+04/14/2022 20:13:27 PM - INFO - global step: 32565, epoch_46, lr: 0.00035, 210/719: Train average loss: 0.095
+04/14/2022 20:13:31 PM - INFO - global step: 32575, epoch_46, lr: 0.00035, 220/719: Train average loss: 0.095
+04/14/2022 20:13:35 PM - INFO - global step: 32585, epoch_46, lr: 0.00035, 230/719: Train average loss: 0.095
+04/14/2022 20:13:39 PM - INFO - global step: 32595, epoch_46, lr: 0.00035, 240/719: Train average loss: 0.094
+04/14/2022 20:13:43 PM - INFO - global step: 32605, epoch_46, lr: 0.00035, 250/719: Train average loss: 0.093
+04/14/2022 20:13:47 PM - INFO - global step: 32615, epoch_46, lr: 0.00035, 260/719: Train average loss: 0.095
+04/14/2022 20:13:51 PM - INFO - global step: 32625, epoch_46, lr: 0.00035, 270/719: Train average loss: 0.095
+04/14/2022 20:13:55 PM - INFO - global step: 32635, epoch_46, lr: 0.00035, 280/719: Train average loss: 0.095
+04/14/2022 20:13:59 PM - INFO - global step: 32645, epoch_46, lr: 0.00035, 290/719: Train average loss: 0.095
+04/14/2022 20:14:03 PM - INFO - global step: 32655, epoch_46, lr: 0.00035, 300/719: Train average loss: 0.095
+04/14/2022 20:14:07 PM - INFO - global step: 32665, epoch_46, lr: 0.00035, 310/719: Train average loss: 0.097
+04/14/2022 20:14:11 PM - INFO - global step: 32675, epoch_46, lr: 0.00035, 320/719: Train average loss: 0.096
+04/14/2022 20:14:15 PM - INFO - global step: 32685, epoch_46, lr: 0.00035, 330/719: Train average loss: 0.096
+04/14/2022 20:14:19 PM - INFO - global step: 32695, epoch_46, lr: 0.00035, 340/719: Train average loss: 0.097
+04/14/2022 20:14:23 PM - INFO - global step: 32705, epoch_46, lr: 0.00035, 350/719: Train average loss: 0.096
+04/14/2022 20:14:27 PM - INFO - global step: 32715, epoch_46, lr: 0.00035, 360/719: Train average loss: 0.096
+04/14/2022 20:14:31 PM - INFO - global step: 32725, epoch_46, lr: 0.00035, 370/719: Train average loss: 0.097
+04/14/2022 20:14:35 PM - INFO - global step: 32735, epoch_46, lr: 0.00035, 380/719: Train average loss: 0.097
+04/14/2022 20:14:39 PM - INFO - global step: 32745, epoch_46, lr: 0.00035, 390/719: Train average loss: 0.097
+04/14/2022 20:14:43 PM - INFO - global step: 32755, epoch_46, lr: 0.00035, 400/719: Train average loss: 0.097
+04/14/2022 20:14:47 PM - INFO - global step: 32765, epoch_46, lr: 0.00035, 410/719: Train average loss: 0.098
+04/14/2022 20:14:51 PM - INFO - global step: 32775, epoch_46, lr: 0.00035, 420/719: Train average loss: 0.098
+04/14/2022 20:14:55 PM - INFO - global step: 32785, epoch_46, lr: 0.00035, 430/719: Train average loss: 0.098
+04/14/2022 20:14:59 PM - INFO - global step: 32795, epoch_46, lr: 0.00035, 440/719: Train average loss: 0.098
+04/14/2022 20:15:03 PM - INFO - global step: 32805, epoch_46, lr: 0.00035, 450/719: Train average loss: 0.097
+04/14/2022 20:15:07 PM - INFO - global step: 32815, epoch_46, lr: 0.00035, 460/719: Train average loss: 0.098
+04/14/2022 20:15:11 PM - INFO - global step: 32825, epoch_46, lr: 0.00035, 470/719: Train average loss: 0.099
+04/14/2022 20:15:15 PM - INFO - global step: 32835, epoch_46, lr: 0.00035, 480/719: Train average loss: 0.099
+04/14/2022 20:15:19 PM - INFO - global step: 32845, epoch_46, lr: 0.00035, 490/719: Train average loss: 0.099
+04/14/2022 20:15:23 PM - INFO - global step: 32855, epoch_46, lr: 0.00035, 500/719: Train average loss: 0.098
+04/14/2022 20:15:27 PM - INFO - global step: 32865, epoch_46, lr: 0.00035, 510/719: Train average loss: 0.098
+04/14/2022 20:15:31 PM - INFO - global step: 32875, epoch_46, lr: 0.00035, 520/719: Train average loss: 0.099
+04/14/2022 20:15:35 PM - INFO - global step: 32885, epoch_46, lr: 0.00035, 530/719: Train average loss: 0.099
+04/14/2022 20:15:39 PM - INFO - global step: 32895, epoch_46, lr: 0.00035, 540/719: Train average loss: 0.099
+04/14/2022 20:15:43 PM - INFO - global step: 32905, epoch_46, lr: 0.00035, 550/719: Train average loss: 0.098
+04/14/2022 20:15:47 PM - INFO - global step: 32915, epoch_46, lr: 0.00035, 560/719: Train average loss: 0.098
+04/14/2022 20:15:50 PM - INFO - global step: 32925, epoch_46, lr: 0.00035, 570/719: Train average loss: 0.098
+04/14/2022 20:15:54 PM - INFO - global step: 32935, epoch_46, lr: 0.00035, 580/719: Train average loss: 0.098
+04/14/2022 20:15:58 PM - INFO - global step: 32945, epoch_46, lr: 0.00035, 590/719: Train average loss: 0.098
+04/14/2022 20:16:03 PM - INFO - global step: 32955, epoch_46, lr: 0.00035, 600/719: Train average loss: 0.097
+04/14/2022 20:16:06 PM - INFO - global step: 32965, epoch_46, lr: 0.00035, 610/719: Train average loss: 0.097
+04/14/2022 20:16:10 PM - INFO - global step: 32975, epoch_46, lr: 0.00035, 620/719: Train average loss: 0.097
+04/14/2022 20:16:14 PM - INFO - global step: 32985, epoch_46, lr: 0.00035, 630/719: Train average loss: 0.097
+04/14/2022 20:16:18 PM - INFO - global step: 32995, epoch_46, lr: 0.00035, 640/719: Train average loss: 0.097
+04/14/2022 20:16:22 PM - INFO - global step: 33005, epoch_46, lr: 0.00031, 650/719: Train average loss: 0.097
+04/14/2022 20:16:26 PM - INFO - global step: 33015, epoch_46, lr: 0.00031, 660/719: Train average loss: 0.097
+04/14/2022 20:16:30 PM - INFO - global step: 33025, epoch_46, lr: 0.00031, 670/719: Train average loss: 0.097
+04/14/2022 20:16:34 PM - INFO - global step: 33035, epoch_46, lr: 0.00031, 680/719: Train average loss: 0.097
+04/14/2022 20:16:38 PM - INFO - global step: 33045, epoch_46, lr: 0.00031, 690/719: Train average loss: 0.097
+04/14/2022 20:16:42 PM - INFO - global step: 33055, epoch_46, lr: 0.00031, 700/719: Train average loss: 0.097
+04/14/2022 20:16:46 PM - INFO - global step: 33065, epoch_46, lr: 0.00031, 710/719: Train average loss: 0.097
+04/14/2022 20:16:50 PM - INFO - ==========================================================
+04/14/2022 20:16:50 PM - INFO - epoch_46: Train set(Aug) acc is: 0.961
+04/14/2022 20:17:04 PM - INFO - epoch_46: Valid set average loss is: 0.127
+04/14/2022 20:17:04 PM - INFO - epoch_46: Valid set acc is: 0.958
+04/14/2022 20:17:04 PM - INFO - ==========================================================
+04/14/2022 20:17:08 PM - INFO - global step: 33084, epoch_47, lr: 0.00031, 10/719: Train average loss: 0.081
+04/14/2022 20:17:12 PM - INFO - global step: 33094, epoch_47, lr: 0.00031, 20/719: Train average loss: 0.103
+04/14/2022 20:17:16 PM - INFO - global step: 33104, epoch_47, lr: 0.00031, 30/719: Train average loss: 0.094
+04/14/2022 20:17:20 PM - INFO - global step: 33114, epoch_47, lr: 0.00031, 40/719: Train average loss: 0.096
+04/14/2022 20:17:24 PM - INFO - global step: 33124, epoch_47, lr: 0.00031, 50/719: Train average loss: 0.099
+04/14/2022 20:17:28 PM - INFO - global step: 33134, epoch_47, lr: 0.00031, 60/719: Train average loss: 0.099
+04/14/2022 20:17:32 PM - INFO - global step: 33144, epoch_47, lr: 0.00031, 70/719: Train average loss: 0.103
+04/14/2022 20:17:36 PM - INFO - global step: 33154, epoch_47, lr: 0.00031, 80/719: Train average loss: 0.103
+04/14/2022 20:17:40 PM - INFO - global step: 33164, epoch_47, lr: 0.00031, 90/719: Train average loss: 0.103
+04/14/2022 20:17:44 PM - INFO - global step: 33174, epoch_47, lr: 0.00031, 100/719: Train average loss: 0.106
+04/14/2022 20:17:48 PM - INFO - global step: 33184, epoch_47, lr: 0.00031, 110/719: Train average loss: 0.104
+04/14/2022 20:17:52 PM - INFO - global step: 33194, epoch_47, lr: 0.00031, 120/719: Train average loss: 0.103
+04/14/2022 20:17:55 PM - INFO - global step: 33204, epoch_47, lr: 0.00031, 130/719: Train average loss: 0.110
+04/14/2022 20:18:00 PM - INFO - global step: 33214, epoch_47, lr: 0.00031, 140/719: Train average loss: 0.109
+04/14/2022 20:18:04 PM - INFO - global step: 33224, epoch_47, lr: 0.00031, 150/719: Train average loss: 0.107
+04/14/2022 20:18:07 PM - INFO - global step: 33234, epoch_47, lr: 0.00031, 160/719: Train average loss: 0.106
+04/14/2022 20:18:12 PM - INFO - global step: 33244, epoch_47, lr: 0.00031, 170/719: Train average loss: 0.105
+04/14/2022 20:18:15 PM - INFO - global step: 33254, epoch_47, lr: 0.00031, 180/719: Train average loss: 0.103
+04/14/2022 20:18:19 PM - INFO - global step: 33264, epoch_47, lr: 0.00031, 190/719: Train average loss: 0.103
+04/14/2022 20:18:23 PM - INFO - global step: 33274, epoch_47, lr: 0.00031, 200/719: Train average loss: 0.101
+04/14/2022 20:18:27 PM - INFO - global step: 33284, epoch_47, lr: 0.00031, 210/719: Train average loss: 0.101
+04/14/2022 20:18:31 PM - INFO - global step: 33294, epoch_47, lr: 0.00031, 220/719: Train average loss: 0.101
+04/14/2022 20:18:35 PM - INFO - global step: 33304, epoch_47, lr: 0.00031, 230/719: Train average loss: 0.102
+04/14/2022 20:18:39 PM - INFO - global step: 33314, epoch_47, lr: 0.00031, 240/719: Train average loss: 0.101
+04/14/2022 20:18:43 PM - INFO - global step: 33324, epoch_47, lr: 0.00031, 250/719: Train average loss: 0.101
+04/14/2022 20:18:47 PM - INFO - global step: 33334, epoch_47, lr: 0.00031, 260/719: Train average loss: 0.101
+04/14/2022 20:18:51 PM - INFO - global step: 33344, epoch_47, lr: 0.00031, 270/719: Train average loss: 0.100
+04/14/2022 20:18:55 PM - INFO - global step: 33354, epoch_47, lr: 0.00031, 280/719: Train average loss: 0.100
+04/14/2022 20:18:59 PM - INFO - global step: 33364, epoch_47, lr: 0.00031, 290/719: Train average loss: 0.099
+04/14/2022 20:19:03 PM - INFO - global step: 33374, epoch_47, lr: 0.00031, 300/719: Train average loss: 0.100
+04/14/2022 20:19:07 PM - INFO - global step: 33384, epoch_47, lr: 0.00031, 310/719: Train average loss: 0.102
+04/14/2022 20:19:11 PM - INFO - global step: 33394, epoch_47, lr: 0.00031, 320/719: Train average loss: 0.102
+04/14/2022 20:19:15 PM - INFO - global step: 33404, epoch_47, lr: 0.00031, 330/719: Train average loss: 0.102
+04/14/2022 20:19:19 PM - INFO - global step: 33414, epoch_47, lr: 0.00031, 340/719: Train average loss: 0.101
+04/14/2022 20:19:23 PM - INFO - global step: 33424, epoch_47, lr: 0.00031, 350/719: Train average loss: 0.101
+04/14/2022 20:19:27 PM - INFO - global step: 33434, epoch_47, lr: 0.00031, 360/719: Train average loss: 0.101
+04/14/2022 20:19:31 PM - INFO - global step: 33444, epoch_47, lr: 0.00031, 370/719: Train average loss: 0.100
+04/14/2022 20:19:35 PM - INFO - global step: 33454, epoch_47, lr: 0.00031, 380/719: Train average loss: 0.100
+04/14/2022 20:19:39 PM - INFO - global step: 33464, epoch_47, lr: 0.00031, 390/719: Train average loss: 0.100
+04/14/2022 20:19:43 PM - INFO - global step: 33474, epoch_47, lr: 0.00031, 400/719: Train average loss: 0.100
+04/14/2022 20:19:47 PM - INFO - global step: 33484, epoch_47, lr: 0.00031, 410/719: Train average loss: 0.099
+04/14/2022 20:19:51 PM - INFO - global step: 33494, epoch_47, lr: 0.00031, 420/719: Train average loss: 0.099
+04/14/2022 20:19:55 PM - INFO - global step: 33504, epoch_47, lr: 0.00031, 430/719: Train average loss: 0.099
+04/14/2022 20:19:59 PM - INFO - global step: 33514, epoch_47, lr: 0.00031, 440/719: Train average loss: 0.100
+04/14/2022 20:20:03 PM - INFO - global step: 33524, epoch_47, lr: 0.00031, 450/719: Train average loss: 0.100
+04/14/2022 20:20:07 PM - INFO - global step: 33534, epoch_47, lr: 0.00031, 460/719: Train average loss: 0.100
+04/14/2022 20:20:11 PM - INFO - global step: 33544, epoch_47, lr: 0.00031, 470/719: Train average loss: 0.100
+04/14/2022 20:20:15 PM - INFO - global step: 33554, epoch_47, lr: 0.00031, 480/719: Train average loss: 0.100
+04/14/2022 20:20:19 PM - INFO - global step: 33564, epoch_47, lr: 0.00031, 490/719: Train average loss: 0.100
+04/14/2022 20:20:23 PM - INFO - global step: 33574, epoch_47, lr: 0.00031, 500/719: Train average loss: 0.100
+04/14/2022 20:20:27 PM - INFO - global step: 33584, epoch_47, lr: 0.00031, 510/719: Train average loss: 0.100
+04/14/2022 20:20:31 PM - INFO - global step: 33594, epoch_47, lr: 0.00031, 520/719: Train average loss: 0.099
+04/14/2022 20:20:35 PM - INFO - global step: 33604, epoch_47, lr: 0.00031, 530/719: Train average loss: 0.099
+04/14/2022 20:20:39 PM - INFO - global step: 33614, epoch_47, lr: 0.00031, 540/719: Train average loss: 0.098
+04/14/2022 20:20:43 PM - INFO - global step: 33624, epoch_47, lr: 0.00031, 550/719: Train average loss: 0.098
+04/14/2022 20:20:47 PM - INFO - global step: 33634, epoch_47, lr: 0.00031, 560/719: Train average loss: 0.098
+04/14/2022 20:20:51 PM - INFO - global step: 33644, epoch_47, lr: 0.00031, 570/719: Train average loss: 0.097
+04/14/2022 20:20:55 PM - INFO - global step: 33654, epoch_47, lr: 0.00031, 580/719: Train average loss: 0.098
+04/14/2022 20:20:59 PM - INFO - global step: 33664, epoch_47, lr: 0.00031, 590/719: Train average loss: 0.097
+04/14/2022 20:21:03 PM - INFO - global step: 33674, epoch_47, lr: 0.00031, 600/719: Train average loss: 0.097
+04/14/2022 20:21:07 PM - INFO - global step: 33684, epoch_47, lr: 0.00031, 610/719: Train average loss: 0.097
+04/14/2022 20:21:11 PM - INFO - global step: 33694, epoch_47, lr: 0.00031, 620/719: Train average loss: 0.097
+04/14/2022 20:21:15 PM - INFO - global step: 33704, epoch_47, lr: 0.00031, 630/719: Train average loss: 0.097
+04/14/2022 20:21:19 PM - INFO - global step: 33714, epoch_47, lr: 0.00031, 640/719: Train average loss: 0.097
+04/14/2022 20:21:23 PM - INFO - global step: 33724, epoch_47, lr: 0.00031, 650/719: Train average loss: 0.097
+04/14/2022 20:21:27 PM - INFO - global step: 33734, epoch_47, lr: 0.00031, 660/719: Train average loss: 0.097
+04/14/2022 20:21:31 PM - INFO - global step: 33744, epoch_47, lr: 0.00031, 670/719: Train average loss: 0.097
+04/14/2022 20:21:35 PM - INFO - global step: 33754, epoch_47, lr: 0.00031, 680/719: Train average loss: 0.097
+04/14/2022 20:21:39 PM - INFO - global step: 33764, epoch_47, lr: 0.00031, 690/719: Train average loss: 0.097
+04/14/2022 20:21:43 PM - INFO - global step: 33774, epoch_47, lr: 0.00031, 700/719: Train average loss: 0.096
+04/14/2022 20:21:47 PM - INFO - global step: 33784, epoch_47, lr: 0.00031, 710/719: Train average loss: 0.096
+04/14/2022 20:21:50 PM - INFO - ==========================================================
+04/14/2022 20:21:50 PM - INFO - epoch_47: Train set(Aug) acc is: 0.961
+04/14/2022 20:22:04 PM - INFO - epoch_47: Valid set average loss is: 0.121
+04/14/2022 20:22:04 PM - INFO - epoch_47: Valid set acc is: 0.950
+04/14/2022 20:22:04 PM - INFO - ==========================================================
+04/14/2022 20:22:08 PM - INFO - global step: 33803, epoch_48, lr: 0.00031, 10/719: Train average loss: 0.052
+04/14/2022 20:22:12 PM - INFO - global step: 33813, epoch_48, lr: 0.00031, 20/719: Train average loss: 0.083
+04/14/2022 20:22:16 PM - INFO - global step: 33823, epoch_48, lr: 0.00031, 30/719: Train average loss: 0.077
+04/14/2022 20:22:20 PM - INFO - global step: 33833, epoch_48, lr: 0.00031, 40/719: Train average loss: 0.077
+04/14/2022 20:22:24 PM - INFO - global step: 33843, epoch_48, lr: 0.00031, 50/719: Train average loss: 0.079
+04/14/2022 20:22:28 PM - INFO - global step: 33853, epoch_48, lr: 0.00031, 60/719: Train average loss: 0.078
+04/14/2022 20:22:32 PM - INFO - global step: 33863, epoch_48, lr: 0.00031, 70/719: Train average loss: 0.075
+04/14/2022 20:22:36 PM - INFO - global step: 33873, epoch_48, lr: 0.00031, 80/719: Train average loss: 0.076
+04/14/2022 20:22:40 PM - INFO - global step: 33883, epoch_48, lr: 0.00031, 90/719: Train average loss: 0.078
+04/14/2022 20:22:44 PM - INFO - global step: 33893, epoch_48, lr: 0.00031, 100/719: Train average loss: 0.078
+04/14/2022 20:22:48 PM - INFO - global step: 33903, epoch_48, lr: 0.00031, 110/719: Train average loss: 0.077
+04/14/2022 20:22:52 PM - INFO - global step: 33913, epoch_48, lr: 0.00031, 120/719: Train average loss: 0.082
+04/14/2022 20:22:56 PM - INFO - global step: 33923, epoch_48, lr: 0.00031, 130/719: Train average loss: 0.083
+04/14/2022 20:23:00 PM - INFO - global step: 33933, epoch_48, lr: 0.00031, 140/719: Train average loss: 0.084
+04/14/2022 20:23:04 PM - INFO - global step: 33943, epoch_48, lr: 0.00031, 150/719: Train average loss: 0.086
+04/14/2022 20:23:08 PM - INFO - global step: 33953, epoch_48, lr: 0.00031, 160/719: Train average loss: 0.087
+04/14/2022 20:23:12 PM - INFO - global step: 33963, epoch_48, lr: 0.00031, 170/719: Train average loss: 0.086
+04/14/2022 20:23:16 PM - INFO - global step: 33973, epoch_48, lr: 0.00031, 180/719: Train average loss: 0.088
+04/14/2022 20:23:20 PM - INFO - global step: 33983, epoch_48, lr: 0.00031, 190/719: Train average loss: 0.088
+04/14/2022 20:23:24 PM - INFO - global step: 33993, epoch_48, lr: 0.00031, 200/719: Train average loss: 0.089
+04/14/2022 20:23:28 PM - INFO - global step: 34003, epoch_48, lr: 0.00031, 210/719: Train average loss: 0.090
+04/14/2022 20:23:32 PM - INFO - global step: 34013, epoch_48, lr: 0.00031, 220/719: Train average loss: 0.090
+04/14/2022 20:23:36 PM - INFO - global step: 34023, epoch_48, lr: 0.00031, 230/719: Train average loss: 0.091

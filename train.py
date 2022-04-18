@@ -3,7 +3,10 @@ os.environ['CUDA_VISIBLE_DEVICES']='0'
 import tensorflow as tf
 import numpy as np
 from model.FCN import FCN
+from model.Deeplabv3 import Deeplabv3
+from model.Deeplabv3p import Deeplabv3p
 from dataset import Dataset
+
 from config import TRAIN, TRAIN_SET, VAL_SET
 from utils.utils import compute_miou
 import logging
@@ -15,9 +18,11 @@ def train(trainset, valset):
     # logfile settings.
     LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
     DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
-
-    filename = './' + str(datetime.date.today()) + '_train_' + TRAIN.MODEL_TYPE + str(
-        TRAIN.DS_FEATURE) + 's_' + TRAIN.BACKBONE_TYPE + '.log'
+    if TRAIN.MODEL_TYPE == 'FCN':
+        filename = './' + str(datetime.date.today()) + '_train_' + TRAIN.MODEL_TYPE + str(
+            TRAIN.DS_FEATURE) + 's_' + TRAIN.BACKBONE_TYPE + '_' + str(TRAIN.NUM_CLASSES) +'c.log'
+    else:
+        filename = './' + str(datetime.date.today()) + '_train_' + TRAIN.MODEL_TYPE + '_' + TRAIN.BACKBONE_TYPE + '_' + str(TRAIN.NUM_CLASSES) + 'c.log'
     logging.basicConfig(filename=filename, filemode='w', level=logging.DEBUG, format=LOG_FORMAT, datefmt=DATE_FORMAT)
     logging.info('Train configuration:')
     for key, value in TRAIN.items():
@@ -38,7 +43,11 @@ def train(trainset, valset):
             # forward
             if TRAIN.MODEL_TYPE == "FCN":
                 logits = FCN(input=x1, num_classes=TRAIN.NUM_CLASSES, backbone_type=TRAIN.BACKBONE_TYPE, is_training=x3, input_size=224, ds_feature=TRAIN.DS_FEATURE)
-                squeeze = tf.squeeze(logits)
+            if TRAIN.MODEL_TYPE == "Deeplabv3":
+                logits = Deeplabv3(input=x1, num_classes=TRAIN.NUM_CLASSES, backbone_type=TRAIN.BACKBONE_TYPE, is_training=x3, input_size=224)
+            if TRAIN.MODEL_TYPE == "Deeplabv3p":
+                logits = Deeplabv3p(input=x1, num_classes=TRAIN.NUM_CLASSES, backbone_type=TRAIN.BACKBONE_TYPE, is_training=x3, input_size=224)
+            squeeze = tf.squeeze(logits)
 
             # define loss
             with tf.name_scope("loss"):
@@ -56,7 +65,8 @@ def train(trainset, valset):
 
             # define optimizer
             with tf.name_scope('optimizer'):
-                optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate)
+                #optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate)
+                optimizer = tf.train.MomentumOptimizer(learning_rate=learning_rate, momentum=0.9)
 
             # compute_gradients
             with tf.name_scope('compute_gradients'):
@@ -105,7 +115,7 @@ def train(trainset, valset):
                     logging.info('=> Restoring backbone weights from: %s ... ' % TRAIN.PRETRAINED_BACKBONE)
                     backbone_loader.restore(sess, TRAIN.PRETRAINED_BACKBONE)
                 except:
-                    logging.info('=> %s does not exist !!!' % TRAIN.RESUME_CKPT)
+                    logging.info('=> %s does not exist !!!' % TRAIN.PRETRAINED_BACKBONE)
                     logging.info('=> Now it starts to train from scratch ...')
             else:
                 logging.info('=> Now it starts to train from scratch ...')
@@ -141,7 +151,10 @@ def train(trainset, valset):
                 train_miou = np.mean(train_epoch_miou)
                 logging.info("epoch_%d: Train set(Aug) miou is: %.3f" % (epoch, train_miou))
                 if epoch % TRAIN.SAVE_EPOCH == 0:
-                    saver.save(sess, TRAIN.SAVE_DIR + TRAIN.MODEL_TYPE+str(TRAIN.DS_FEATURE)+'s_'+TRAIN.BACKBONE_TYPE + ".ckpt", global_step=global_step)
+                    if TRAIN.MODEL_TYPE == 'FCN':
+                        saver.save(sess, TRAIN.SAVE_DIR + TRAIN.MODEL_TYPE+str(TRAIN.DS_FEATURE)+'s_'+TRAIN.BACKBONE_TYPE +'_' + str(TRAIN.NUM_CLASSES) + "c.ckpt", global_step=global_step)
+                    else:
+                        saver.save(sess, TRAIN.SAVE_DIR + TRAIN.MODEL_TYPE + '_' + TRAIN.BACKBONE_TYPE + '_' + str(TRAIN.NUM_CLASSES) + "c.ckpt", global_step=global_step)
 
                 if epoch % TRAIN.VALID_EPOCH == 0:
                     valid_epoch_miou = []

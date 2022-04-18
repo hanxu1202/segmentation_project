@@ -200,6 +200,7 @@ def upsampling_layer(name,
                                                 size=(input_size*upsample_rate,input_size*upsample_rate))
             return tf.identity(bilinear, name='output')
 
+
 def SEmodule(x,
              name,
              pool_size,
@@ -266,6 +267,7 @@ def v3Bottleneck(name,
         else:
             return tf.identity(proj_conv, name='output')
 
+
 def v3ASPP_module(name,
            x,
            input_size,
@@ -295,6 +297,45 @@ def v3ASPP_module(name,
                           strides=[1,1], padding=padding, nl=nl, use_bn=True, use_bias=False, activation=True, is_training=is_training)
 
         return tf.identity(conv_out, name='output')
+
+
+def v2Bottleneck(name,
+                 x,
+                 input_channels,
+                 expand_channels,
+                 output_channels,
+                 dwconv_ksize,
+                 is_ds,
+                 nl='relu6',
+                 rate=[1, 1],
+                 padding='SAME',
+                 is_training=True):
+    with tf.variable_scope(name):
+        expand_conv = conv2d(name='expand_conv',x=x,filter_shape=1, input_channels=input_channels,
+                            output_channels=expand_channels, strides=(1,1), nl=nl, use_bn=False, use_bias=True,
+                            activation=True, is_training=is_training)
+        if is_ds:
+            dw_conv = depthwise_conv2d(name='dw_conv', x=expand_conv, channels=expand_channels,
+                                       filter_shape=dwconv_ksize, strides=(1,2,2,1), nl=nl, padding=padding,
+                                       use_bn=True, use_bias=False, is_training=is_training)
+        elif rate != [1, 1]:
+            dw_conv = depthwise_conv2d(name='dw_conv_dilation', x=expand_conv, channels=expand_channels,
+                                       filter_shape=dwconv_ksize, rate=rate, strides=(1,1,1,1), nl=nl, padding=padding,
+                                       use_bn=True, use_bias=False, is_training=is_training)
+        else:
+            dw_conv = depthwise_conv2d(name='dw_conv', x=expand_conv, channels=expand_channels,
+                                       filter_shape=dwconv_ksize, strides=(1,1,1,1), nl=nl, padding=padding,
+                                       use_bn=True, use_bias=False, is_training=is_training)
+
+        proj_conv = conv2d(name='proj_conv', x=dw_conv, filter_shape=1, input_channels=expand_channels,
+                           output_channels=output_channels, strides=(1,1), nl=nl, padding=padding,
+                           use_bn=False, use_bias=True, activation=False, is_training=is_training)
+
+        if input_channels == output_channels and not is_ds:
+            short_cut = tf.add(proj_conv, x, name="short_cut")
+            return tf.identity(short_cut, name='output')
+        else:
+            return tf.identity(proj_conv, name='output')
 
 
 

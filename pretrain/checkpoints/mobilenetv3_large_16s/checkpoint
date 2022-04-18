@@ -1,0 +1,2 @@
+model_checkpoint_path: "E:\\pycharm_project\\segmentation_project\\pretrain\\checkpoints\\mobilenetv3_large_16s.ckpt-71900"
+all_model_checkpoint_paths: "E:\\pycharm_project\\segmentation_project\\pretrain\\checkpoints\\mobilenetv3_large_16s.ckpt-71900"
